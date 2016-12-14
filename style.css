@@ -30,6 +30,7 @@ h2
 h3
 {
     font-size: 30px;
+    font-weight: 100;
 }
 
 p
@@ -47,4 +48,59 @@ p
 {
     width: 565px;
     float: left;
+}
+
+.vvd
+{
+    fill: hsl(198, 36%, 63%);
+}
+
+.pvda
+{
+    fill: hsl(0, 36%, 63%);
+}
+
+.cda
+{
+    fill: hsl(157, 36%, 63%);
+}
+
+.sp
+{
+    fill: hsl(337, 36%, 63%);
+}
+
+.gl
+{
+    fill : hsl(116, 36%, 63%);
+}
+
+.pvv
+{
+    fill: hsl(226, 36%, 63%);
+}
+
+.d66
+{
+    fill : hsl(74, 36%, 63%);
+}
+
+.pvdd
+{
+    fill : hsl(33, 36%, 63%);
+}
+
+.vijftigplus
+{
+    fill: hsl(287, 36%, 63%);
+}
+
+.sgp
+{
+    fill: hsl(182, 36%, 63%);
+}
+
+.cu
+{
+    fill: hsl(44, 36%, 63%);
 }

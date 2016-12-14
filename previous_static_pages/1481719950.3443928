@@ -1,0 +1,1011 @@
+<html>
+<head>
+    <link href='http://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link href="style.css" media="all" rel="stylesheet" />
+
+ 	<script type="text/javascript">
+
+ 	$(document).ready(function()
+ 	{
+	    // Replace all SVG images with inline SVG
+	    jQuery('img.dynamic_svg').each(function()
+	    {
+	        var $img = jQuery(this);
+	        var imgID = $img.attr('id');
+	        var imgClass = $img.attr('class');
+	        var imgURL = $img.attr('src');
+
+	        jQuery.get(imgURL, function(data)
+	        {
+	            // Get the SVG tag, ignore the rest
+	            var $svg = jQuery(data).find('svg');
+
+	            // Add replaced image's ID to the new SVG
+	            if(typeof imgID !== 'undefined') {
+	                $svg = $svg.attr('id', imgID);
+	            }
+	            // Add replaced image's classes to the new SVG
+	            if(typeof imgClass !== 'undefined') {
+	                $svg = $svg.attr('class', imgClass+' replaced-svg');
+	            }
+
+	            // Remove any invalid XML tags as per http://validator.w3.org
+	            $svg = $svg.removeAttr('xmlns:a');
+
+	            // Replace image with new SVG
+	            $img.replaceWith($svg);
+
+			    //Recolor first path
+			    $('svg path:first-child').css("fill", red);
+
+	        }, 'xml');
+
+	    });
+	});
+	</script>
+
+    <title>Stemming 2017</title>
+</head>
+<body>
+
+<h1>Wat stemt Nederland?</h1>
+
+<h2>Onze beste gok op basis van taalanalyse op Twitter</h2>
+
+<div id="chair_visualization">
+    <div id="chairs">
+        <table><tr>
+            
+
+            <td><img class="dynamic_svg vvd" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg vvd" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg vvd" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg vvd" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg vvd" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg vvd" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg vvd" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg vvd" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg vvd" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg vvd" src="svg/chair.svg"></td>
+
+            
+                </tr><tr>
+            
+
+        
+
+            <td><img class="dynamic_svg vvd" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg vvd" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg vvd" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg vvd" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg vvd" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg vvd" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg vvd" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg vvd" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg vvd" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg vvd" src="svg/chair.svg"></td>
+
+            
+                </tr><tr>
+            
+
+        
+
+            <td><img class="dynamic_svg vvd" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg vvd" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg vvd" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg vvd" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg vvd" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg vvd" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg vvd" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg vvd" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg vvd" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg vvd" src="svg/chair.svg"></td>
+
+            
+                </tr><tr>
+            
+
+        
+
+            <td><img class="dynamic_svg vvd" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg vvd" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg vvd" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg vvd" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg vvd" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg vvd" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg vvd" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg vvd" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg vvd" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg vvd" src="svg/chair.svg"></td>
+
+            
+                </tr><tr>
+            
+
+        
+
+            <td><img class="dynamic_svg pvda" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg pvda" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg pvda" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg pvda" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg pvda" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg pvda" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg pvda" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg pvda" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg pvda" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg pvda" src="svg/chair.svg"></td>
+
+            
+                </tr><tr>
+            
+
+        
+
+            <td><img class="dynamic_svg pvda" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg pvda" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg pvda" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg pvda" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg pvda" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg pvda" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg pvda" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg pvda" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg pvda" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg pvda" src="svg/chair.svg"></td>
+
+            
+                </tr><tr>
+            
+
+        
+
+            <td><img class="dynamic_svg pvda" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg pvda" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg pvda" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg pvda" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg pvda" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg pvda" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg pvda" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg pvda" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg pvda" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg pvda" src="svg/chair.svg"></td>
+
+            
+                </tr><tr>
+            
+
+        
+
+            <td><img class="dynamic_svg pvda" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg pvda" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg pvda" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg pvda" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg pvda" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg pvda" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg sp" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg sp" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg sp" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg sp" src="svg/chair.svg"></td>
+
+            
+                </tr><tr>
+            
+
+        
+
+            <td><img class="dynamic_svg sp" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg sp" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg sp" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg sp" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg sp" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg sp" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg sp" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg sp" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg sp" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg sp" src="svg/chair.svg"></td>
+
+            
+                </tr><tr>
+            
+
+        
+
+            <td><img class="dynamic_svg sp" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg cda" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg cda" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg cda" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg cda" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg cda" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg cda" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg cda" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg cda" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg cda" src="svg/chair.svg"></td>
+
+            
+                </tr><tr>
+            
+
+        
+
+            <td><img class="dynamic_svg cda" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg cda" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg cda" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg cda" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg pvv" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg pvv" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg pvv" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg pvv" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg pvv" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg pvv" src="svg/chair.svg"></td>
+
+            
+                </tr><tr>
+            
+
+        
+
+            <td><img class="dynamic_svg pvv" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg pvv" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg pvv" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg pvv" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg pvv" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg pvv" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg d66" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg d66" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg d66" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg d66" src="svg/chair.svg"></td>
+
+            
+                </tr><tr>
+            
+
+        
+
+            <td><img class="dynamic_svg d66" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg d66" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg d66" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg d66" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg d66" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg d66" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg d66" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg d66" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg pvvd" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg pvvd" src="svg/chair.svg"></td>
+
+            
+                </tr><tr>
+            
+
+        
+
+            <td><img class="dynamic_svg pvvd" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg pvvd" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg pvvd" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg gl" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg gl" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg gl" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg gl" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg gl" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg sgp" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg sgp" src="svg/chair.svg"></td>
+
+            
+                </tr><tr>
+            
+
+        
+
+            <td><img class="dynamic_svg sgp" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg sgp" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg cu" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg cu" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg cu" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg cu" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg 50+" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg 50+" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg 50+" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td><img class="dynamic_svg 50+" src="svg/chair.svg"></td>
+
+            
+                </tr><tr>
+            
+
+        
+        </tr></table>
+    </div>
+    <div id="legend"></div>
+</div>
+
+<div class="item_row">
+    <div class="item">
+        <h3>Over dit onderzoek</h3>
+        <p>Onderzoekers van het Centre for Language and Speech Technology onderzoeken in hoeverre er een verband is te vinden tussen hoe vaak een politieke partij genoemd wordt op Twitter en hoe deze partij het doet in de peilingen en bij de verkiezingen zelf. Bij de parlementsverkiezingen van 2012 bleek er een sterk verband tussen deze twee te zijn (zie ons artikel Relating Political Party Mentions on Twitter with Polls and Election Results). Op deze pagina zijn een aantal grafieken te vinden met hoe vaak de naam van een politiek partij wordt genoemd in een tweet. De metingen beginnen op woensdag 18 februari en worden per uur bijgewerkt. De meest recente meting is altijd van drie uur geleden. De metingen worden gedaan op de tweets uit Twiqs, een dienst waarin ongeveer 40% van de Nederlandse tweets doorzoekbaar zijn.</p>
+    </div>
+    <div class="item">
+        <h3>% vermeldingen</h3>
+        <div class="percentage_mentions_graph">
+        </div>
+    </div>
+</div>
+
+<!-- Here we would like to add another two graphs maybe -->
+
+</body>
+</html>
