@@ -50,57 +50,149 @@ p
     float: left;
 }
 
-.vvd
+.legend_item
+{
+    padding: 10px;
+}
+
+.party_name
+{
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 11px;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+
+.vvd_graphic
 {
     fill: hsl(198, 36%, 63%);
 }
 
-.pvda
+.vvd_background
+{
+    background-color: hsl(198, 36%, 63%);
+}
+
+.pvda_graphic
 {
     fill: hsl(0, 36%, 63%);
 }
 
-.cda
+.pvda_background
+{
+    background-color: hsl(0, 36%, 63%);
+}
+
+.cda_graphic
 {
     fill: hsl(157, 36%, 63%);
 }
 
-.sp
+.cda_background
+{
+    background-color: hsl(157, 36%, 63%);
+}
+
+.sp_graphic
 {
     fill: hsl(337, 36%, 63%);
 }
 
-.gl
+.sp_background
+{
+    background-color: hsl(337, 36%, 63%);
+}
+
+.gl_graphic
 {
     fill : hsl(116, 36%, 63%);
 }
 
-.pvv
+.gl_background
+{
+    background-color: hsl(116, 36%, 63%);
+}
+
+.pvv_graphic
 {
     fill: hsl(226, 36%, 63%);
 }
 
-.d66
+.pvv_background
+{
+    background-color: hsl(226, 36%, 63%);
+}
+
+.d66_graphic
 {
     fill : hsl(74, 36%, 63%);
 }
 
-.pvdd
+.d66_background
+{
+    background-color: hsl(74, 36%, 63%);
+}
+
+.pvdd_graphic
 {
     fill : hsl(33, 36%, 63%);
 }
 
-.vijftigplus
+.pvdd_background
+{
+    background-color: hsl(33, 36%, 63%);
+}
+
+.vijftigplus_graphic
 {
     fill: hsl(287, 36%, 63%);
 }
 
-.sgp
+.vijftigplus_background
+{
+    background-color: hsl(287, 36%, 63%);
+}
+
+.sgp_graphic
 {
     fill: hsl(182, 36%, 63%);
 }
 
-.cu
+.sgp_background
+{
+    background-color: hsl(182, 36%, 63%);
+}
+
+.cu_graphic
 {
     fill: hsl(44, 36%, 63%);
+}
+
+.cu_background
+{
+    background-color: hsl(44, 36%, 63%);
+}
+
+#chair_visualization
+{
+    width: 675px;
+    margin: auto;
+}
+
+#chairs
+{
+    display: inline-block;
+}
+
+#legend
+{
+    display: inline-block;
+    vertical-align: top;
+}
+
+#legend_table
+{
+    border-spacing: 25px;
 }

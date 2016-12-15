@@ -59,7 +59,7 @@
         <table><tr>
             {% for chair_index, party_name in chairs %}
 
-            <td class="{{party_name}}"><img class="dynamic_svg" src="svg/chair.svg"></td>
+            <td class="chair {{party_name}}_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
 
             {% if (chair_index+1) %10 == 0 %}
                 </tr><tr>
@@ -68,7 +68,13 @@
         {% endfor %}
         </tr></table>
     </div>
-    <div id="legend"></div>
+    <div id="legend">
+        <table id="legend_table">
+            {% for party_name, number_of_chairs in chairs_per_party %}
+            <tr><td class="legend_item">{{number_of_chairs}} x </td><td class="party_name {{party_name}}_background">{{party_name}}</td></tr>
+            {% endfor %}
+        </table>
+    </div>
 </div>
 
 <div class="item_row">

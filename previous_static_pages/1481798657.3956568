@@ -851,13 +851,13 @@
 
         
 
-            <td class="chair pvdd_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+            <td class="chair gl_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
 
             
 
         
 
-            <td class="chair pvdd_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+            <td class="chair gl_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
 
             
                 </tr><tr>
@@ -865,6 +865,24 @@
 
         
 
+            <td class="chair gl_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td class="chair gl_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td class="chair gl_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+            
+
+        
+
             <td class="chair pvdd_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
 
             
@@ -883,43 +901,25 @@
 
         
 
-            <td class="chair gl_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+            <td class="chair pvdd_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
 
             
 
         
 
-            <td class="chair gl_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+            <td class="chair pvdd_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
 
             
 
         
 
-            <td class="chair gl_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+            <td class="chair sgp_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
 
             
 
         
 
-            <td class="chair gl_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
-
-            
-
-        
-
-            <td class="chair gl_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
-
-            
-
-        
-
-            <td class="chair cu_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
-
-            
-
-        
-
-            <td class="chair cu_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+            <td class="chair sgp_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
 
             
                 </tr><tr>
@@ -927,6 +927,18 @@
 
         
 
+            <td class="chair sgp_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td class="chair sgp_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+            
+
+        
+
             <td class="chair cu_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
 
             
@@ -939,25 +951,13 @@
 
         
 
-            <td class="chair sgp_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+            <td class="chair cu_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
 
             
 
         
 
-            <td class="chair sgp_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
-
-            
-
-        
-
-            <td class="chair sgp_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
-
-            
-
-        
-
-            <td class="chair sgp_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+            <td class="chair cu_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
 
             
 
@@ -991,31 +991,29 @@
         </tr></table>
     </div>
     <div id="legend">
-        <table id="legend_table">
-            
-            <tr><td class="legend_item">40 x </td><td class="party_name vvd_background">vvd</td></tr>
-            
-            <tr><td class="legend_item">36 x </td><td class="party_name pvda_background">pvda</td></tr>
-            
-            <tr><td class="legend_item">15 x </td><td class="party_name sp_background">sp</td></tr>
-            
-            <tr><td class="legend_item">13 x </td><td class="party_name cda_background">cda</td></tr>
-            
-            <tr><td class="legend_item">12 x </td><td class="party_name d66_background">d66</td></tr>
-            
-            <tr><td class="legend_item">12 x </td><td class="party_name pvv_background">pvv</td></tr>
-            
-            <tr><td class="legend_item">5 x </td><td class="party_name pvdd_background">pvdd</td></tr>
-            
-            <tr><td class="legend_item">5 x </td><td class="party_name gl_background">gl</td></tr>
-            
-            <tr><td class="legend_item">4 x </td><td class="party_name cu_background">cu</td></tr>
-            
-            <tr><td class="legend_item">4 x </td><td class="party_name sgp_background">sgp</td></tr>
-            
-            <tr><td class="legend_item">4 x </td><td class="party_name vijftigplus_background">vijftigplus</td></tr>
-            
-        </table>
+        
+            <div class="legend_item">40 x <span class="party_name vvd_background">vvd</span></div>
+        
+            <div class="legend_item">36 x <span class="party_name pvda_background">pvda</span></div>
+        
+            <div class="legend_item">15 x <span class="party_name sp_background">sp</span></div>
+        
+            <div class="legend_item">13 x <span class="party_name cda_background">cda</span></div>
+        
+            <div class="legend_item">12 x <span class="party_name d66_background">d66</span></div>
+        
+            <div class="legend_item">12 x <span class="party_name pvv_background">pvv</span></div>
+        
+            <div class="legend_item">5 x <span class="party_name gl_background">gl</span></div>
+        
+            <div class="legend_item">5 x <span class="party_name pvdd_background">pvdd</span></div>
+        
+            <div class="legend_item">4 x <span class="party_name sgp_background">sgp</span></div>
+        
+            <div class="legend_item">4 x <span class="party_name cu_background">cu</span></div>
+        
+            <div class="legend_item">4 x <span class="party_name vijftigplus_background">vijftigplus</span></div>
+        
     </div>
 </div>
 

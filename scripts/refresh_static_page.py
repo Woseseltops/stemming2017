@@ -21,7 +21,7 @@ def refresh_static_page(chairs_per_party,template):
         for chair in range(value):
             chairs.append(party)
 
-    return Template(open(template).read()).render(chairs=enumerate(chairs))
+    return Template(open(template).read()).render(chairs=enumerate(chairs),chairs_per_party=chairs_per_party)
 
 if __name__ == '__main__':
 
