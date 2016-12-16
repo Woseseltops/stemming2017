@@ -30,7 +30,7 @@ h2
 h3
 {
     font-size: 30px;
-    font-weight: 100;
+    color: hsl(0, 26%, 60%);
 }
 
 p
@@ -65,6 +65,18 @@ p
     text-align: center;
 }
 
+.ct-line
+{
+    stroke-dasharray: 20px 4px;
+    animation: dashoffset 3s linear infinite;
+}
+
+@keyframes dashoffset
+{
+    from {stroke-dashoffset: 0px;}
+    to {stroke-dashoffset: -24px;}
+}
+
 .vvd_graphic
 {
     fill: hsl(198, 36%, 63%);
@@ -73,6 +85,11 @@ p
 .vvd_background
 {
     background-color: hsl(198, 36%, 63%);
+}
+
+.ct-series-k .ct-line, .ct-series-k .ct-point
+{
+    stroke: hsl(198, 36%, 63%);
 }
 
 .pvda_graphic
@@ -85,6 +102,11 @@ p
     background-color: hsl(0, 36%, 63%);
 }
 
+.ct-series-e .ct-line, .ct-series-e .ct-point
+{
+    stroke: hsl(0, 36%, 63%);
+}
+
 .cda_graphic
 {
     fill: hsl(157, 36%, 63%);
@@ -93,6 +115,11 @@ p
 .cda_background
 {
     background-color: hsl(157, 36%, 63%);
+}
+
+.ct-series-a .ct-line, .ct-series-a .ct-point
+{
+    stroke: hsl(157, 36%, 63%);
 }
 
 .sp_graphic
@@ -105,6 +132,11 @@ p
     background-color: hsl(337, 36%, 63%);
 }
 
+.ct-series-i .ct-line, .ct-series-i .ct-point
+{
+    stroke: hsl(337, 36%, 63%);
+}
+
 .gl_graphic
 {
     fill : hsl(116, 36%, 63%);
@@ -113,6 +145,11 @@ p
 .gl_background
 {
     background-color: hsl(116, 36%, 63%);
+}
+
+.ct-series-d .ct-line, .ct-series-d .ct-point
+{
+    stroke: hsl(116, 36%, 63%);
 }
 
 .pvv_graphic
@@ -125,6 +162,11 @@ p
     background-color: hsl(226, 36%, 63%);
 }
 
+.ct-series-g .ct-line, .ct-series-g .ct-point
+{
+    stroke: hsl(226, 36%, 63%);
+}
+
 .d66_graphic
 {
     fill : hsl(74, 36%, 63%);
@@ -133,6 +175,11 @@ p
 .d66_background
 {
     background-color: hsl(74, 36%, 63%);
+}
+
+.ct-series-c .ct-line, .ct-series-c .ct-point
+{
+    stroke: hsl(74, 36%, 63%);
 }
 
 .pvdd_graphic
@@ -145,6 +192,11 @@ p
     background-color: hsl(33, 36%, 63%);
 }
 
+.ct-series-f .ct-line, .ct-series-f .ct-point
+{
+    stroke: hsl(33, 36%, 63%);
+}
+
 .vijftigplus_graphic
 {
     fill: hsl(287, 36%, 63%);
@@ -153,6 +205,11 @@ p
 .vijftigplus_background
 {
     background-color: hsl(287, 36%, 63%);
+}
+
+.ct-series-j .ct-line, .ct-series-j .ct-point
+{
+    stroke: hsl(287, 36%, 63%);
 }
 
 .sgp_graphic
@@ -165,6 +222,11 @@ p
     background-color: hsl(182, 36%, 63%);
 }
 
+.ct-series-h .ct-line, .ct-series-h .ct-point
+{
+    stroke: hsl(182, 36%, 63%);
+}
+
 .cu_graphic
 {
     fill: hsl(44, 36%, 63%);
@@ -173,6 +235,11 @@ p
 .cu_background
 {
     background-color: hsl(44, 36%, 63%);
+}
+
+.ct-series-b .ct-line, .ct-series-b .ct-point
+{
+    stroke: hsl(44, 36%, 63%);
 }
 
 #chair_visualization
@@ -195,4 +262,10 @@ p
 #legend_table
 {
     border-spacing: 25px;
+}
+
+#twitter_logo
+{
+    float: right;
+    margin: 25px;
 }

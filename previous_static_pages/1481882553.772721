@@ -57,17 +57,221 @@
           
             [
               
-                7.380073800738007,
+                0.07380073800738007,
               
-                5.250596658711217,
+                0.05250596658711217,
               
-                5.684210526315789,
+                0.056842105263157895,
               
-                7.380073800738007,
+                0.07380073800738007,
               
-                5.250596658711217,
+                0.05250596658711217,
               
-                5.684210526315789,
+                0.056842105263157895,
+              
+                0.07380073800738007,
+              
+                0.05250596658711217,
+              
+                0.056842105263157895,
+              
+            ],
+          
+            [
+              
+                0.0036900369003690036,
+              
+                0.002386634844868735,
+              
+                0.021052631578947368,
+              
+                0.0036900369003690036,
+              
+                0.002386634844868735,
+              
+                0.021052631578947368,
+              
+                0.0036900369003690036,
+              
+                0.002386634844868735,
+              
+                0.021052631578947368,
+              
+            ],
+          
+            [
+              
+                0.04428044280442804,
+              
+                0.1909307875894988,
+              
+                0.06315789473684211,
+              
+                0.04428044280442804,
+              
+                0.1909307875894988,
+              
+                0.06315789473684211,
+              
+                0.04428044280442804,
+              
+                0.1909307875894988,
+              
+                0.06315789473684211,
+              
+            ],
+          
+            [
+              
+                0.01845018450184502,
+              
+                0.03579952267303103,
+              
+                0.04842105263157895,
+              
+                0.01845018450184502,
+              
+                0.03579952267303103,
+              
+                0.04842105263157895,
+              
+                0.01845018450184502,
+              
+                0.03579952267303103,
+              
+                0.04842105263157895,
+              
+            ],
+          
+            [
+              
+                0.22140221402214022,
+              
+                0.3818615751789976,
+              
+                0.25263157894736843,
+              
+                0.22140221402214022,
+              
+                0.3818615751789976,
+              
+                0.25263157894736843,
+              
+                0.22140221402214022,
+              
+                0.3818615751789976,
+              
+                0.25263157894736843,
+              
+            ],
+          
+            [
+              
+                0.007380073800738007,
+              
+                0.00477326968973747,
+              
+                0.021052631578947368,
+              
+                0.007380073800738007,
+              
+                0.00477326968973747,
+              
+                0.021052631578947368,
+              
+                0.007380073800738007,
+              
+                0.00477326968973747,
+              
+                0.021052631578947368,
+              
+            ],
+          
+            [
+              
+                0.12915129151291513,
+              
+                0.007159904534606206,
+              
+                0.21052631578947367,
+              
+                0.12915129151291513,
+              
+                0.007159904534606206,
+              
+                0.21052631578947367,
+              
+                0.12915129151291513,
+              
+                0.007159904534606206,
+              
+                0.21052631578947367,
+              
+            ],
+          
+            [
+              
+                0.014760147601476014,
+              
+                0.00954653937947494,
+              
+                0.07368421052631578,
+              
+                0.014760147601476014,
+              
+                0.00954653937947494,
+              
+                0.07368421052631578,
+              
+                0.014760147601476014,
+              
+                0.00954653937947494,
+              
+                0.07368421052631578,
+              
+            ],
+          
+            [
+              
+                0.11070110701107011,
+              
+                0.0477326968973747,
+              
+                0.06315789473684211,
+              
+                0.11070110701107011,
+              
+                0.0477326968973747,
+              
+                0.06315789473684211,
+              
+                0.11070110701107011,
+              
+                0.0477326968973747,
+              
+                0.06315789473684211,
+              
+            ],
+          
+            [
+              
+                0.007380073800738007,
+              
+                0.00477326968973747,
+              
+                0.021052631578947368,
+              
+                0.007380073800738007,
+              
+                0.00477326968973747,
+              
+                0.021052631578947368,
+              
+                0.007380073800738007,
+              
+                0.00477326968973747,
+              
+                0.021052631578947368,
               
             ],
           
@@ -75,159 +279,21 @@
               
                 0.36900369003690037,
               
-                0.23866348448687352,
+                0.26252983293556087,
               
-                2.1052631578947367,
+                0.16842105263157894,
               
                 0.36900369003690037,
               
-                0.23866348448687352,
+                0.26252983293556087,
               
-                2.1052631578947367,
+                0.16842105263157894,
               
-            ],
-          
-            [
+                0.36900369003690037,
               
-                4.428044280442804,
+                0.26252983293556087,
               
-                19.09307875894988,
-              
-                6.315789473684211,
-              
-                4.428044280442804,
-              
-                19.09307875894988,
-              
-                6.315789473684211,
-              
-            ],
-          
-            [
-              
-                1.8450184501845017,
-              
-                3.579952267303103,
-              
-                4.842105263157895,
-              
-                1.8450184501845017,
-              
-                3.579952267303103,
-              
-                4.842105263157895,
-              
-            ],
-          
-            [
-              
-                22.14022140221402,
-              
-                38.18615751789976,
-              
-                25.263157894736842,
-              
-                22.14022140221402,
-              
-                38.18615751789976,
-              
-                25.263157894736842,
-              
-            ],
-          
-            [
-              
-                0.7380073800738007,
-              
-                0.47732696897374705,
-              
-                2.1052631578947367,
-              
-                0.7380073800738007,
-              
-                0.47732696897374705,
-              
-                2.1052631578947367,
-              
-            ],
-          
-            [
-              
-                12.915129151291513,
-              
-                0.7159904534606205,
-              
-                21.052631578947366,
-              
-                12.915129151291513,
-              
-                0.7159904534606205,
-              
-                21.052631578947366,
-              
-            ],
-          
-            [
-              
-                1.4760147601476015,
-              
-                0.9546539379474941,
-              
-                7.368421052631578,
-              
-                1.4760147601476015,
-              
-                0.9546539379474941,
-              
-                7.368421052631578,
-              
-            ],
-          
-            [
-              
-                11.07011070110701,
-              
-                4.77326968973747,
-              
-                6.315789473684211,
-              
-                11.07011070110701,
-              
-                4.77326968973747,
-              
-                6.315789473684211,
-              
-            ],
-          
-            [
-              
-                0.7380073800738007,
-              
-                0.47732696897374705,
-              
-                2.1052631578947367,
-              
-                0.7380073800738007,
-              
-                0.47732696897374705,
-              
-                2.1052631578947367,
-              
-            ],
-          
-            [
-              
-                36.90036900369004,
-              
-                26.25298329355609,
-              
-                16.842105263157894,
-              
-                36.90036900369004,
-              
-                26.25298329355609,
-              
-                16.842105263157894,
+                0.16842105263157894,
               
             ],
           
@@ -243,6 +309,76 @@
         var chart = new Chartist.Line('.ct-chart', data, options);
 
         //Chart animations
+        var seq = 0,
+            delays = 80,
+            durations = 500;
+
+        chart.on('draw', function(data) {
+          seq++;
+
+          if(data.type === 'line') {
+            // If the drawn element is a line we do a simple opacity fade in. This could also be achieved using CSS3 animations.
+            data.element.animate({
+              opacity: {
+                // The delay when we like to start the animation
+                begin: seq * delays + 1000,
+                // Duration of the animation
+                dur: durations,
+                // The value where the animation should start
+                from: 0,
+                // The value where it should end
+                to: 1
+              }
+            });
+          } else if(data.type === 'label' && data.axis === 'x') {
+            data.element.animate({
+              y: {
+                begin: seq * delays,
+                dur: durations,
+                from: data.y + 100,
+                to: data.y,
+                // We can specify an easing function from Chartist.Svg.Easing
+                easing: 'easeOutQuart'
+              }
+            });
+          } else if(data.type === 'label' && data.axis === 'y') {
+            data.element.animate({
+              x: {
+                begin: seq * delays,
+                dur: durations,
+                from: data.x - 100,
+                to: data.x,
+                easing: 'easeOutQuart'
+              }
+            });
+          } else if(data.type === 'point') {
+            data.element.animate({
+              x1: {
+                begin: seq * delays,
+                dur: durations,
+                from: data.x - 10,
+                to: data.x,
+                easing: 'easeOutQuart'
+              },
+              x2: {
+                begin: seq * delays,
+                dur: durations,
+                from: data.x - 10,
+                to: data.x,
+                easing: 'easeOutQuart'
+              },
+              opacity: {
+                begin: seq * delays,
+                dur: durations,
+                from: 0,
+                to: 1,
+                easing: 'easeOutQuart'
+              }
+            });
+
+            data.element.animate(animations);
+          }
+        });
 
 
 	});
@@ -905,75 +1041,13 @@
 
         
 
-            <td class="chair pvv_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+            <td class="chair d66_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
 
             
 
         
 
-            <td class="chair pvv_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
-
-            
-
-        
-
-            <td class="chair pvv_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
-
-            
-
-        
-
-            <td class="chair pvv_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
-
-            
-
-        
-
-            <td class="chair pvv_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
-
-            
-
-        
-
-            <td class="chair pvv_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
-
-            
-                </tr><tr>
-            
-
-        
-
-            <td class="chair pvv_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
-
-            
-
-        
-
-            <td class="chair pvv_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
-
-            
-
-        
-
-            <td class="chair pvv_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
-
-            
-
-        
-
-            <td class="chair pvv_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
-
-            
-
-        
-
-            <td class="chair pvv_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
-
-            
-
-        
-
-            <td class="chair pvv_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+            <td class="chair d66_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
 
             
 
@@ -1041,13 +1115,75 @@
 
         
 
-            <td class="chair d66_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+            <td class="chair pvv_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
 
             
 
         
 
-            <td class="chair d66_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+            <td class="chair pvv_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td class="chair pvv_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td class="chair pvv_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+            
+                </tr><tr>
+            
+
+        
+
+            <td class="chair pvv_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td class="chair pvv_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td class="chair pvv_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td class="chair pvv_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td class="chair pvv_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td class="chair pvv_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td class="chair pvv_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td class="chair pvv_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
 
             
 
@@ -1115,13 +1251,13 @@
 
         
 
-            <td class="chair vijftigplus_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+            <td class="chair sgp_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
 
             
 
         
 
-            <td class="chair vijftigplus_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+            <td class="chair sgp_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
 
             
                 </tr><tr>
@@ -1129,6 +1265,42 @@
 
         
 
+            <td class="chair sgp_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td class="chair sgp_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td class="chair cu_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td class="chair cu_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td class="chair cu_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td class="chair cu_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+            
+
+        
+
             <td class="chair vijftigplus_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
 
             
@@ -1141,49 +1313,13 @@
 
         
 
-            <td class="chair sgp_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+            <td class="chair vijftigplus_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
 
             
 
         
 
-            <td class="chair sgp_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
-
-            
-
-        
-
-            <td class="chair sgp_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
-
-            
-
-        
-
-            <td class="chair sgp_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
-
-            
-
-        
-
-            <td class="chair cu_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
-
-            
-
-        
-
-            <td class="chair cu_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
-
-            
-
-        
-
-            <td class="chair cu_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
-
-            
-
-        
-
-            <td class="chair cu_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+            <td class="chair vijftigplus_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
 
             
                 </tr><tr>
@@ -1203,19 +1339,19 @@
             
             <tr><td class="legend_item">13 x </td><td class="party_name cda_background">cda</td></tr>
             
-            <tr><td class="legend_item">12 x </td><td class="party_name pvv_background">pvv</td></tr>
-            
             <tr><td class="legend_item">12 x </td><td class="party_name d66_background">d66</td></tr>
+            
+            <tr><td class="legend_item">12 x </td><td class="party_name pvv_background">pvv</td></tr>
             
             <tr><td class="legend_item">5 x </td><td class="party_name gl_background">gl</td></tr>
             
             <tr><td class="legend_item">5 x </td><td class="party_name pvdd_background">pvdd</td></tr>
             
-            <tr><td class="legend_item">4 x </td><td class="party_name vijftigplus_background">vijftigplus</td></tr>
-            
             <tr><td class="legend_item">4 x </td><td class="party_name sgp_background">sgp</td></tr>
             
             <tr><td class="legend_item">4 x </td><td class="party_name cu_background">cu</td></tr>
+            
+            <tr><td class="legend_item">4 x </td><td class="party_name vijftigplus_background">vijftigplus</td></tr>
             
         </table>
     </div>
@@ -1224,7 +1360,7 @@
 <div class="item_row">
     <div class="item">
         <h3>Over dit onderzoek</h3>
-        <p><img id="twitter_logo" src="svg/twitter.svg">Onderzoekers van het Centre for Language and Speech Technology onderzoeken in hoeverre er een verband is te vinden tussen hoe vaak een politieke partij genoemd wordt op Twitter en hoe deze partij het doet in de peilingen en bij de verkiezingen zelf. Bij de parlementsverkiezingen van 2012 bleek er een sterk verband tussen deze twee te zijn (zie ons artikel Relating Political Party Mentions on Twitter with Polls and Election Results). Op deze pagina zijn een aantal grafieken te vinden met hoe vaak de naam van een politiek partij wordt genoemd in een tweet. De metingen beginnen op woensdag 18 februari en worden per uur bijgewerkt. De meest recente meting is altijd van drie uur geleden. De metingen worden gedaan op de tweets uit Twiqs, een dienst waarin ongeveer 40% van de Nederlandse tweets doorzoekbaar zijn.</p>
+        <p>Onderzoekers van het Centre for Language and Speech Technology onderzoeken in hoeverre er een verband is te vinden tussen hoe vaak een politieke partij genoemd wordt op Twitter en hoe deze partij het doet in de peilingen en bij de verkiezingen zelf. Bij de parlementsverkiezingen van 2012 bleek er een sterk verband tussen deze twee te zijn (zie ons artikel Relating Political Party Mentions on Twitter with Polls and Election Results). Op deze pagina zijn een aantal grafieken te vinden met hoe vaak de naam van een politiek partij wordt genoemd in een tweet. De metingen beginnen op woensdag 18 februari en worden per uur bijgewerkt. De meest recente meting is altijd van drie uur geleden. De metingen worden gedaan op de tweets uit Twiqs, een dienst waarin ongeveer 40% van de Nederlandse tweets doorzoekbaar zijn.</p>
     </div>
     <div class="item">
         <h3>% vermeldingen</h3>
