@@ -5,9 +5,11 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+    <script src="js/chartist-plugin-tooltip.min.js"></script>
 
     <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
-    <link rel="stylesheet" href="style.css" media="all"/>
+    <link rel="stylesheet" href="css/style.css" media="all"/>
+    <link rel="stylesheet" href="css/chartist-plugin-tooltip.css" media="all"/>
 
  	<script type="text/javascript">
 
@@ -57,177 +59,177 @@
           
             [
               
-                7.380073800738007,
+                7.38,
               
-                5.250596658711217,
+                5.25,
               
-                5.684210526315789,
+                5.68,
               
-                7.380073800738007,
+                7.38,
               
-                5.250596658711217,
+                5.25,
               
-                5.684210526315789,
-              
-            ],
-          
-            [
-              
-                0.36900369003690037,
-              
-                0.23866348448687352,
-              
-                2.1052631578947367,
-              
-                0.36900369003690037,
-              
-                0.23866348448687352,
-              
-                2.1052631578947367,
+                5.68,
               
             ],
           
             [
               
-                4.428044280442804,
+                0.37,
               
-                19.09307875894988,
+                0.24,
               
-                6.315789473684211,
+                2.11,
               
-                4.428044280442804,
+                0.37,
               
-                19.09307875894988,
+                0.24,
               
-                6.315789473684211,
-              
-            ],
-          
-            [
-              
-                1.8450184501845017,
-              
-                3.579952267303103,
-              
-                4.842105263157895,
-              
-                1.8450184501845017,
-              
-                3.579952267303103,
-              
-                4.842105263157895,
+                2.11,
               
             ],
           
             [
               
-                22.14022140221402,
+                4.43,
               
-                38.18615751789976,
+                19.09,
               
-                25.263157894736842,
+                6.32,
               
-                22.14022140221402,
+                4.43,
               
-                38.18615751789976,
+                19.09,
               
-                25.263157894736842,
-              
-            ],
-          
-            [
-              
-                0.7380073800738007,
-              
-                0.47732696897374705,
-              
-                2.1052631578947367,
-              
-                0.7380073800738007,
-              
-                0.47732696897374705,
-              
-                2.1052631578947367,
+                6.32,
               
             ],
           
             [
               
-                12.915129151291513,
+                1.85,
               
-                0.7159904534606205,
+                3.58,
               
-                21.052631578947366,
+                4.84,
               
-                12.915129151291513,
+                1.85,
               
-                0.7159904534606205,
+                3.58,
               
-                21.052631578947366,
-              
-            ],
-          
-            [
-              
-                1.4760147601476015,
-              
-                0.9546539379474941,
-              
-                7.368421052631578,
-              
-                1.4760147601476015,
-              
-                0.9546539379474941,
-              
-                7.368421052631578,
+                4.84,
               
             ],
           
             [
               
-                11.07011070110701,
+                22.14,
               
-                4.77326968973747,
+                38.19,
               
-                6.315789473684211,
+                25.26,
               
-                11.07011070110701,
+                22.14,
               
-                4.77326968973747,
+                38.19,
               
-                6.315789473684211,
-              
-            ],
-          
-            [
-              
-                0.7380073800738007,
-              
-                0.47732696897374705,
-              
-                2.1052631578947367,
-              
-                0.7380073800738007,
-              
-                0.47732696897374705,
-              
-                2.1052631578947367,
+                25.26,
               
             ],
           
             [
               
-                36.90036900369004,
+                0.74,
               
-                26.25298329355609,
+                0.48,
               
-                16.842105263157894,
+                2.11,
               
-                36.90036900369004,
+                0.74,
               
-                26.25298329355609,
+                0.48,
               
-                16.842105263157894,
+                2.11,
+              
+            ],
+          
+            [
+              
+                12.92,
+              
+                0.72,
+              
+                21.05,
+              
+                12.92,
+              
+                0.72,
+              
+                21.05,
+              
+            ],
+          
+            [
+              
+                1.48,
+              
+                0.95,
+              
+                7.37,
+              
+                1.48,
+              
+                0.95,
+              
+                7.37,
+              
+            ],
+          
+            [
+              
+                11.07,
+              
+                4.77,
+              
+                6.32,
+              
+                11.07,
+              
+                4.77,
+              
+                6.32,
+              
+            ],
+          
+            [
+              
+                0.74,
+              
+                0.48,
+              
+                2.11,
+              
+                0.74,
+              
+                0.48,
+              
+                2.11,
+              
+            ],
+          
+            [
+              
+                36.9,
+              
+                26.25,
+              
+                16.84,
+              
+                36.9,
+              
+                26.25,
+              
+                16.84,
               
             ],
           
@@ -238,7 +240,8 @@
         var options =
         {
           width: 550,
-          height: 275
+          height: 275,
+	  plugins: [Chartist.plugins.tooltip()]
         };
         var chart = new Chartist.Line('.ct-chart', data, options);
 
@@ -905,75 +908,13 @@
 
         
 
-            <td class="chair pvv_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+            <td class="chair d66_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
 
             
 
         
 
-            <td class="chair pvv_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
-
-            
-
-        
-
-            <td class="chair pvv_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
-
-            
-
-        
-
-            <td class="chair pvv_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
-
-            
-
-        
-
-            <td class="chair pvv_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
-
-            
-
-        
-
-            <td class="chair pvv_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
-
-            
-                </tr><tr>
-            
-
-        
-
-            <td class="chair pvv_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
-
-            
-
-        
-
-            <td class="chair pvv_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
-
-            
-
-        
-
-            <td class="chair pvv_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
-
-            
-
-        
-
-            <td class="chair pvv_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
-
-            
-
-        
-
-            <td class="chair pvv_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
-
-            
-
-        
-
-            <td class="chair pvv_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+            <td class="chair d66_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
 
             
 
@@ -1041,13 +982,75 @@
 
         
 
-            <td class="chair d66_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+            <td class="chair pvv_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
 
             
 
         
 
-            <td class="chair d66_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+            <td class="chair pvv_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td class="chair pvv_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td class="chair pvv_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+            
+                </tr><tr>
+            
+
+        
+
+            <td class="chair pvv_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td class="chair pvv_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td class="chair pvv_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td class="chair pvv_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td class="chair pvv_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td class="chair pvv_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td class="chair pvv_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td class="chair pvv_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
 
             
 
@@ -1115,13 +1118,13 @@
 
         
 
-            <td class="chair vijftigplus_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+            <td class="chair cu_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
 
             
 
         
 
-            <td class="chair vijftigplus_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+            <td class="chair cu_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
 
             
                 </tr><tr>
@@ -1129,6 +1132,42 @@
 
         
 
+            <td class="chair cu_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td class="chair cu_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td class="chair sgp_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td class="chair sgp_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td class="chair sgp_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td class="chair sgp_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+            
+
+        
+
             <td class="chair vijftigplus_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
 
             
@@ -1141,49 +1180,13 @@
 
         
 
-            <td class="chair sgp_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+            <td class="chair vijftigplus_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
 
             
 
         
 
-            <td class="chair sgp_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
-
-            
-
-        
-
-            <td class="chair sgp_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
-
-            
-
-        
-
-            <td class="chair sgp_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
-
-            
-
-        
-
-            <td class="chair cu_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
-
-            
-
-        
-
-            <td class="chair cu_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
-
-            
-
-        
-
-            <td class="chair cu_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
-
-            
-
-        
-
-            <td class="chair cu_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+            <td class="chair vijftigplus_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
 
             
                 </tr><tr>
@@ -1203,19 +1206,19 @@
             
             <tr><td class="legend_item">13 x </td><td class="party_name cda_background">cda</td></tr>
             
-            <tr><td class="legend_item">12 x </td><td class="party_name pvv_background">pvv</td></tr>
-            
             <tr><td class="legend_item">12 x </td><td class="party_name d66_background">d66</td></tr>
+            
+            <tr><td class="legend_item">12 x </td><td class="party_name pvv_background">pvv</td></tr>
             
             <tr><td class="legend_item">5 x </td><td class="party_name gl_background">gl</td></tr>
             
             <tr><td class="legend_item">5 x </td><td class="party_name pvdd_background">pvdd</td></tr>
             
-            <tr><td class="legend_item">4 x </td><td class="party_name vijftigplus_background">vijftigplus</td></tr>
+            <tr><td class="legend_item">4 x </td><td class="party_name cu_background">cu</td></tr>
             
             <tr><td class="legend_item">4 x </td><td class="party_name sgp_background">sgp</td></tr>
             
-            <tr><td class="legend_item">4 x </td><td class="party_name cu_background">cu</td></tr>
+            <tr><td class="legend_item">4 x </td><td class="party_name vijftigplus_background">vijftigplus</td></tr>
             
         </table>
     </div>

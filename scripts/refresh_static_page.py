@@ -29,7 +29,7 @@ def refresh_static_page(chairs_per_party,history_of_party_mentions,template):
 
         for party_name, number_of_mentions in mentions_in_period.items():
 
-            percentage = 100*(number_of_mentions/total_mentions_this_period)
+            percentage = round(100*(number_of_mentions/total_mentions_this_period),2)
 
             try:
                 series_of_percentages_per_party[party_name].append(percentage)

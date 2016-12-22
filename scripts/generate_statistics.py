@@ -23,4 +23,4 @@ def get_history_of_party_mentions(fake=False):
         return None
 
 if __name__ == '__main__':
-    print(main(fake=True))
+    print(get_chairs_per_party(fake=True))
