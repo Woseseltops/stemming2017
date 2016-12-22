@@ -8,17 +8,18 @@ body
 h1
 {
     width: 631px;
-    height: 84px;
+    height: 82px;
     margin: auto;
     padding: 17px;
+    padding-top: 19px;
     margin-top: 100px;
     margin-bottom: 100px;
     text-align: center;
-
     font-family: 'Oswald';
-    letter-spacing: 5px;
+    letter-spacing: 3px;
     background-image: url('../svg/logo_background.svg');
     color: hsl(40, 13%, 95%);
+    font-size: 27px;
 }
 
 h2

@@ -59,177 +59,177 @@
           
             [
               
-                {meta: 'cda' , value: 7.38 },
+                {meta: 'party_name' , value: 7.38 },
               
-                {meta: 'cda' , value: 5.25 },
+                {meta: 'party_name' , value: 5.25 },
               
-                {meta: 'cda' , value: 5.68 },
+                {meta: 'party_name' , value: 5.68 },
               
-                {meta: 'cda' , value: 7.38 },
+                {meta: 'party_name' , value: 7.38 },
               
-                {meta: 'cda' , value: 5.25 },
+                {meta: 'party_name' , value: 5.25 },
               
-                {meta: 'cda' , value: 5.68 },
-              
-            ],
-          
-            [
-              
-                {meta: 'cu' , value: 0.37 },
-              
-                {meta: 'cu' , value: 0.24 },
-              
-                {meta: 'cu' , value: 2.11 },
-              
-                {meta: 'cu' , value: 0.37 },
-              
-                {meta: 'cu' , value: 0.24 },
-              
-                {meta: 'cu' , value: 2.11 },
+                {meta: 'party_name' , value: 5.68 },
               
             ],
           
             [
               
-                {meta: 'd66' , value: 4.43 },
+                {meta: 'party_name' , value: 0.37 },
               
-                {meta: 'd66' , value: 19.09 },
+                {meta: 'party_name' , value: 0.24 },
               
-                {meta: 'd66' , value: 6.32 },
+                {meta: 'party_name' , value: 2.11 },
               
-                {meta: 'd66' , value: 4.43 },
+                {meta: 'party_name' , value: 0.37 },
               
-                {meta: 'd66' , value: 19.09 },
+                {meta: 'party_name' , value: 0.24 },
               
-                {meta: 'd66' , value: 6.32 },
-              
-            ],
-          
-            [
-              
-                {meta: 'gl' , value: 1.85 },
-              
-                {meta: 'gl' , value: 3.58 },
-              
-                {meta: 'gl' , value: 4.84 },
-              
-                {meta: 'gl' , value: 1.85 },
-              
-                {meta: 'gl' , value: 3.58 },
-              
-                {meta: 'gl' , value: 4.84 },
+                {meta: 'party_name' , value: 2.11 },
               
             ],
           
             [
               
-                {meta: 'pvda' , value: 22.14 },
+                {meta: 'party_name' , value: 4.43 },
               
-                {meta: 'pvda' , value: 38.19 },
+                {meta: 'party_name' , value: 19.09 },
               
-                {meta: 'pvda' , value: 25.26 },
+                {meta: 'party_name' , value: 6.32 },
               
-                {meta: 'pvda' , value: 22.14 },
+                {meta: 'party_name' , value: 4.43 },
               
-                {meta: 'pvda' , value: 38.19 },
+                {meta: 'party_name' , value: 19.09 },
               
-                {meta: 'pvda' , value: 25.26 },
-              
-            ],
-          
-            [
-              
-                {meta: 'pvdd' , value: 0.74 },
-              
-                {meta: 'pvdd' , value: 0.48 },
-              
-                {meta: 'pvdd' , value: 2.11 },
-              
-                {meta: 'pvdd' , value: 0.74 },
-              
-                {meta: 'pvdd' , value: 0.48 },
-              
-                {meta: 'pvdd' , value: 2.11 },
+                {meta: 'party_name' , value: 6.32 },
               
             ],
           
             [
               
-                {meta: 'pvv' , value: 12.92 },
+                {meta: 'party_name' , value: 1.85 },
               
-                {meta: 'pvv' , value: 0.72 },
+                {meta: 'party_name' , value: 3.58 },
               
-                {meta: 'pvv' , value: 21.05 },
+                {meta: 'party_name' , value: 4.84 },
               
-                {meta: 'pvv' , value: 12.92 },
+                {meta: 'party_name' , value: 1.85 },
               
-                {meta: 'pvv' , value: 0.72 },
+                {meta: 'party_name' , value: 3.58 },
               
-                {meta: 'pvv' , value: 21.05 },
-              
-            ],
-          
-            [
-              
-                {meta: 'sgp' , value: 1.48 },
-              
-                {meta: 'sgp' , value: 0.95 },
-              
-                {meta: 'sgp' , value: 7.37 },
-              
-                {meta: 'sgp' , value: 1.48 },
-              
-                {meta: 'sgp' , value: 0.95 },
-              
-                {meta: 'sgp' , value: 7.37 },
+                {meta: 'party_name' , value: 4.84 },
               
             ],
           
             [
               
-                {meta: 'sp' , value: 11.07 },
+                {meta: 'party_name' , value: 22.14 },
               
-                {meta: 'sp' , value: 4.77 },
+                {meta: 'party_name' , value: 38.19 },
               
-                {meta: 'sp' , value: 6.32 },
+                {meta: 'party_name' , value: 25.26 },
               
-                {meta: 'sp' , value: 11.07 },
+                {meta: 'party_name' , value: 22.14 },
               
-                {meta: 'sp' , value: 4.77 },
+                {meta: 'party_name' , value: 38.19 },
               
-                {meta: 'sp' , value: 6.32 },
-              
-            ],
-          
-            [
-              
-                {meta: 'vijftigplus' , value: 0.74 },
-              
-                {meta: 'vijftigplus' , value: 0.48 },
-              
-                {meta: 'vijftigplus' , value: 2.11 },
-              
-                {meta: 'vijftigplus' , value: 0.74 },
-              
-                {meta: 'vijftigplus' , value: 0.48 },
-              
-                {meta: 'vijftigplus' , value: 2.11 },
+                {meta: 'party_name' , value: 25.26 },
               
             ],
           
             [
               
-                {meta: 'vvd' , value: 36.9 },
+                {meta: 'party_name' , value: 0.74 },
               
-                {meta: 'vvd' , value: 26.25 },
+                {meta: 'party_name' , value: 0.48 },
               
-                {meta: 'vvd' , value: 16.84 },
+                {meta: 'party_name' , value: 2.11 },
               
-                {meta: 'vvd' , value: 36.9 },
+                {meta: 'party_name' , value: 0.74 },
               
-                {meta: 'vvd' , value: 26.25 },
+                {meta: 'party_name' , value: 0.48 },
               
-                {meta: 'vvd' , value: 16.84 },
+                {meta: 'party_name' , value: 2.11 },
+              
+            ],
+          
+            [
+              
+                {meta: 'party_name' , value: 12.92 },
+              
+                {meta: 'party_name' , value: 0.72 },
+              
+                {meta: 'party_name' , value: 21.05 },
+              
+                {meta: 'party_name' , value: 12.92 },
+              
+                {meta: 'party_name' , value: 0.72 },
+              
+                {meta: 'party_name' , value: 21.05 },
+              
+            ],
+          
+            [
+              
+                {meta: 'party_name' , value: 1.48 },
+              
+                {meta: 'party_name' , value: 0.95 },
+              
+                {meta: 'party_name' , value: 7.37 },
+              
+                {meta: 'party_name' , value: 1.48 },
+              
+                {meta: 'party_name' , value: 0.95 },
+              
+                {meta: 'party_name' , value: 7.37 },
+              
+            ],
+          
+            [
+              
+                {meta: 'party_name' , value: 11.07 },
+              
+                {meta: 'party_name' , value: 4.77 },
+              
+                {meta: 'party_name' , value: 6.32 },
+              
+                {meta: 'party_name' , value: 11.07 },
+              
+                {meta: 'party_name' , value: 4.77 },
+              
+                {meta: 'party_name' , value: 6.32 },
+              
+            ],
+          
+            [
+              
+                {meta: 'party_name' , value: 0.74 },
+              
+                {meta: 'party_name' , value: 0.48 },
+              
+                {meta: 'party_name' , value: 2.11 },
+              
+                {meta: 'party_name' , value: 0.74 },
+              
+                {meta: 'party_name' , value: 0.48 },
+              
+                {meta: 'party_name' , value: 2.11 },
+              
+            ],
+          
+            [
+              
+                {meta: 'party_name' , value: 36.9 },
+              
+                {meta: 'party_name' , value: 26.25 },
+              
+                {meta: 'party_name' , value: 16.84 },
+              
+                {meta: 'party_name' , value: 36.9 },
+              
+                {meta: 'party_name' , value: 26.25 },
+              
+                {meta: 'party_name' , value: 16.84 },
               
             ],
           
@@ -908,75 +908,13 @@
 
         
 
-            <td class="chair pvv_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+            <td class="chair d66_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
 
             
 
         
 
-            <td class="chair pvv_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
-
-            
-
-        
-
-            <td class="chair pvv_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
-
-            
-
-        
-
-            <td class="chair pvv_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
-
-            
-
-        
-
-            <td class="chair pvv_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
-
-            
-
-        
-
-            <td class="chair pvv_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
-
-            
-                </tr><tr>
-            
-
-        
-
-            <td class="chair pvv_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
-
-            
-
-        
-
-            <td class="chair pvv_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
-
-            
-
-        
-
-            <td class="chair pvv_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
-
-            
-
-        
-
-            <td class="chair pvv_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
-
-            
-
-        
-
-            <td class="chair pvv_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
-
-            
-
-        
-
-            <td class="chair pvv_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+            <td class="chair d66_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
 
             
 
@@ -1044,25 +982,25 @@
 
         
 
-            <td class="chair d66_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+            <td class="chair pvv_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
 
             
 
         
 
-            <td class="chair d66_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+            <td class="chair pvv_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
 
             
 
         
 
-            <td class="chair gl_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+            <td class="chair pvv_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
 
             
 
         
 
-            <td class="chair gl_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+            <td class="chair pvv_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
 
             
                 </tr><tr>
@@ -1070,19 +1008,49 @@
 
         
 
-            <td class="chair gl_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+            <td class="chair pvv_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
 
             
 
         
 
-            <td class="chair gl_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+            <td class="chair pvv_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
 
             
 
         
 
-            <td class="chair gl_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+            <td class="chair pvv_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td class="chair pvv_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td class="chair pvv_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td class="chair pvv_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td class="chair pvv_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td class="chair pvv_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
 
             
 
@@ -1095,36 +1063,6 @@
         
 
             <td class="chair pvdd_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
-
-            
-
-        
-
-            <td class="chair pvdd_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
-
-            
-
-        
-
-            <td class="chair pvdd_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
-
-            
-
-        
-
-            <td class="chair pvdd_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
-
-            
-
-        
-
-            <td class="chair sgp_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
-
-            
-
-        
-
-            <td class="chair sgp_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
 
             
                 </tr><tr>
@@ -1132,6 +1070,104 @@
 
         
 
+            <td class="chair pvdd_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td class="chair pvdd_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td class="chair pvdd_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td class="chair gl_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td class="chair gl_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td class="chair gl_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td class="chair gl_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td class="chair gl_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td class="chair cu_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td class="chair cu_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+            
+                </tr><tr>
+            
+
+        
+
+            <td class="chair cu_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td class="chair cu_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td class="chair vijftigplus_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td class="chair vijftigplus_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td class="chair vijftigplus_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td class="chair vijftigplus_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+            
+
+        
+
             <td class="chair sgp_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
 
             
@@ -1144,49 +1180,13 @@
 
         
 
-            <td class="chair vijftigplus_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+            <td class="chair sgp_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
 
             
 
         
 
-            <td class="chair vijftigplus_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
-
-            
-
-        
-
-            <td class="chair vijftigplus_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
-
-            
-
-        
-
-            <td class="chair vijftigplus_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
-
-            
-
-        
-
-            <td class="chair cu_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
-
-            
-
-        
-
-            <td class="chair cu_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
-
-            
-
-        
-
-            <td class="chair cu_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
-
-            
-
-        
-
-            <td class="chair cu_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+            <td class="chair sgp_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
 
             
                 </tr><tr>
@@ -1206,19 +1206,19 @@
             
             <tr><td class="legend_item">13 x </td><td class="party_name cda_background">cda</td></tr>
             
-            <tr><td class="legend_item">12 x </td><td class="party_name pvv_background">pvv</td></tr>
-            
             <tr><td class="legend_item">12 x </td><td class="party_name d66_background">d66</td></tr>
             
-            <tr><td class="legend_item">5 x </td><td class="party_name gl_background">gl</td></tr>
+            <tr><td class="legend_item">12 x </td><td class="party_name pvv_background">pvv</td></tr>
             
             <tr><td class="legend_item">5 x </td><td class="party_name pvdd_background">pvdd</td></tr>
             
-            <tr><td class="legend_item">4 x </td><td class="party_name sgp_background">sgp</td></tr>
+            <tr><td class="legend_item">5 x </td><td class="party_name gl_background">gl</td></tr>
+            
+            <tr><td class="legend_item">4 x </td><td class="party_name cu_background">cu</td></tr>
             
             <tr><td class="legend_item">4 x </td><td class="party_name vijftigplus_background">vijftigplus</td></tr>
             
-            <tr><td class="legend_item">4 x </td><td class="party_name cu_background">cu</td></tr>
+            <tr><td class="legend_item">4 x </td><td class="party_name sgp_background">sgp</td></tr>
             
         </table>
     </div>

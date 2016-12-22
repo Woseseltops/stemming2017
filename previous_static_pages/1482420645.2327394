@@ -5,7 +5,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
-    <script src="js/chartist-plugin-tooltip.min.js"></script>
+    <script src="js/chartist-plugin-tooltip.js"></script>
 
     <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
     <link rel="stylesheet" href="css/style.css" media="all"/>
@@ -59,177 +59,177 @@
           
             [
               
-                {meta: 'cda' , value: 7.38 },
+                7.380073800738007,
               
-                {meta: 'cda' , value: 5.25 },
+                5.250596658711217,
               
-                {meta: 'cda' , value: 5.68 },
+                5.684210526315789,
               
-                {meta: 'cda' , value: 7.38 },
+                7.380073800738007,
               
-                {meta: 'cda' , value: 5.25 },
+                5.250596658711217,
               
-                {meta: 'cda' , value: 5.68 },
-              
-            ],
-          
-            [
-              
-                {meta: 'cu' , value: 0.37 },
-              
-                {meta: 'cu' , value: 0.24 },
-              
-                {meta: 'cu' , value: 2.11 },
-              
-                {meta: 'cu' , value: 0.37 },
-              
-                {meta: 'cu' , value: 0.24 },
-              
-                {meta: 'cu' , value: 2.11 },
+                5.684210526315789,
               
             ],
           
             [
               
-                {meta: 'd66' , value: 4.43 },
+                0.36900369003690037,
               
-                {meta: 'd66' , value: 19.09 },
+                0.23866348448687352,
               
-                {meta: 'd66' , value: 6.32 },
+                2.1052631578947367,
               
-                {meta: 'd66' , value: 4.43 },
+                0.36900369003690037,
               
-                {meta: 'd66' , value: 19.09 },
+                0.23866348448687352,
               
-                {meta: 'd66' , value: 6.32 },
-              
-            ],
-          
-            [
-              
-                {meta: 'gl' , value: 1.85 },
-              
-                {meta: 'gl' , value: 3.58 },
-              
-                {meta: 'gl' , value: 4.84 },
-              
-                {meta: 'gl' , value: 1.85 },
-              
-                {meta: 'gl' , value: 3.58 },
-              
-                {meta: 'gl' , value: 4.84 },
+                2.1052631578947367,
               
             ],
           
             [
               
-                {meta: 'pvda' , value: 22.14 },
+                4.428044280442804,
               
-                {meta: 'pvda' , value: 38.19 },
+                19.09307875894988,
               
-                {meta: 'pvda' , value: 25.26 },
+                6.315789473684211,
               
-                {meta: 'pvda' , value: 22.14 },
+                4.428044280442804,
               
-                {meta: 'pvda' , value: 38.19 },
+                19.09307875894988,
               
-                {meta: 'pvda' , value: 25.26 },
-              
-            ],
-          
-            [
-              
-                {meta: 'pvdd' , value: 0.74 },
-              
-                {meta: 'pvdd' , value: 0.48 },
-              
-                {meta: 'pvdd' , value: 2.11 },
-              
-                {meta: 'pvdd' , value: 0.74 },
-              
-                {meta: 'pvdd' , value: 0.48 },
-              
-                {meta: 'pvdd' , value: 2.11 },
+                6.315789473684211,
               
             ],
           
             [
               
-                {meta: 'pvv' , value: 12.92 },
+                1.8450184501845017,
               
-                {meta: 'pvv' , value: 0.72 },
+                3.579952267303103,
               
-                {meta: 'pvv' , value: 21.05 },
+                4.842105263157895,
               
-                {meta: 'pvv' , value: 12.92 },
+                1.8450184501845017,
               
-                {meta: 'pvv' , value: 0.72 },
+                3.579952267303103,
               
-                {meta: 'pvv' , value: 21.05 },
-              
-            ],
-          
-            [
-              
-                {meta: 'sgp' , value: 1.48 },
-              
-                {meta: 'sgp' , value: 0.95 },
-              
-                {meta: 'sgp' , value: 7.37 },
-              
-                {meta: 'sgp' , value: 1.48 },
-              
-                {meta: 'sgp' , value: 0.95 },
-              
-                {meta: 'sgp' , value: 7.37 },
+                4.842105263157895,
               
             ],
           
             [
               
-                {meta: 'sp' , value: 11.07 },
+                22.14022140221402,
               
-                {meta: 'sp' , value: 4.77 },
+                38.18615751789976,
               
-                {meta: 'sp' , value: 6.32 },
+                25.263157894736842,
               
-                {meta: 'sp' , value: 11.07 },
+                22.14022140221402,
               
-                {meta: 'sp' , value: 4.77 },
+                38.18615751789976,
               
-                {meta: 'sp' , value: 6.32 },
-              
-            ],
-          
-            [
-              
-                {meta: 'vijftigplus' , value: 0.74 },
-              
-                {meta: 'vijftigplus' , value: 0.48 },
-              
-                {meta: 'vijftigplus' , value: 2.11 },
-              
-                {meta: 'vijftigplus' , value: 0.74 },
-              
-                {meta: 'vijftigplus' , value: 0.48 },
-              
-                {meta: 'vijftigplus' , value: 2.11 },
+                25.263157894736842,
               
             ],
           
             [
               
-                {meta: 'vvd' , value: 36.9 },
+                0.7380073800738007,
               
-                {meta: 'vvd' , value: 26.25 },
+                0.47732696897374705,
               
-                {meta: 'vvd' , value: 16.84 },
+                2.1052631578947367,
               
-                {meta: 'vvd' , value: 36.9 },
+                0.7380073800738007,
               
-                {meta: 'vvd' , value: 26.25 },
+                0.47732696897374705,
               
-                {meta: 'vvd' , value: 16.84 },
+                2.1052631578947367,
+              
+            ],
+          
+            [
+              
+                12.915129151291513,
+              
+                0.7159904534606205,
+              
+                21.052631578947366,
+              
+                12.915129151291513,
+              
+                0.7159904534606205,
+              
+                21.052631578947366,
+              
+            ],
+          
+            [
+              
+                1.4760147601476015,
+              
+                0.9546539379474941,
+              
+                7.368421052631578,
+              
+                1.4760147601476015,
+              
+                0.9546539379474941,
+              
+                7.368421052631578,
+              
+            ],
+          
+            [
+              
+                11.07011070110701,
+              
+                4.77326968973747,
+              
+                6.315789473684211,
+              
+                11.07011070110701,
+              
+                4.77326968973747,
+              
+                6.315789473684211,
+              
+            ],
+          
+            [
+              
+                0.7380073800738007,
+              
+                0.47732696897374705,
+              
+                2.1052631578947367,
+              
+                0.7380073800738007,
+              
+                0.47732696897374705,
+              
+                2.1052631578947367,
+              
+            ],
+          
+            [
+              
+                36.90036900369004,
+              
+                26.25298329355609,
+              
+                16.842105263157894,
+              
+                36.90036900369004,
+              
+                26.25298329355609,
+              
+                16.842105263157894,
               
             ],
           
@@ -255,7 +255,7 @@
 </head>
 <body>
 
-<h1>Wat is de stemming in Nederland?</h1>
+<h1>Wat stemt Nederland?</h1>
 
 <h2>Onze beste gok op basis van taalanalyse op Twitter</h2>
 
@@ -1118,13 +1118,13 @@
 
         
 
-            <td class="chair sgp_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+            <td class="chair cu_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
 
             
 
         
 
-            <td class="chair sgp_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+            <td class="chair cu_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
 
             
                 </tr><tr>
@@ -1132,6 +1132,42 @@
 
         
 
+            <td class="chair cu_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td class="chair cu_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td class="chair vijftigplus_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td class="chair vijftigplus_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td class="chair vijftigplus_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td class="chair vijftigplus_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+            
+
+        
+
             <td class="chair sgp_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
 
             
@@ -1144,49 +1180,13 @@
 
         
 
-            <td class="chair vijftigplus_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+            <td class="chair sgp_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
 
             
 
         
 
-            <td class="chair vijftigplus_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
-
-            
-
-        
-
-            <td class="chair vijftigplus_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
-
-            
-
-        
-
-            <td class="chair vijftigplus_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
-
-            
-
-        
-
-            <td class="chair cu_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
-
-            
-
-        
-
-            <td class="chair cu_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
-
-            
-
-        
-
-            <td class="chair cu_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
-
-            
-
-        
-
-            <td class="chair cu_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+            <td class="chair sgp_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
 
             
                 </tr><tr>
@@ -1214,11 +1214,11 @@
             
             <tr><td class="legend_item">5 x </td><td class="party_name pvdd_background">pvdd</td></tr>
             
-            <tr><td class="legend_item">4 x </td><td class="party_name sgp_background">sgp</td></tr>
+            <tr><td class="legend_item">4 x </td><td class="party_name cu_background">cu</td></tr>
             
             <tr><td class="legend_item">4 x </td><td class="party_name vijftigplus_background">vijftigplus</td></tr>
             
-            <tr><td class="legend_item">4 x </td><td class="party_name cu_background">cu</td></tr>
+            <tr><td class="legend_item">4 x </td><td class="party_name sgp_background">sgp</td></tr>
             
         </table>
     </div>
