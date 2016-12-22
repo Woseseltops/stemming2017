@@ -17,7 +17,7 @@ h1
 
     font-family: 'Oswald';
     letter-spacing: 5px;
-    background-image: url('svg/logo_background.svg');
+    background-image: url('../svg/logo_background.svg');
     color: hsl(40, 13%, 95%);
 }
 
