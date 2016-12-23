@@ -1056,13 +1056,13 @@
 
         
 
-            <td class="chair pvdd_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+            <td class="chair gl_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
 
             
 
         
 
-            <td class="chair pvdd_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+            <td class="chair gl_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
 
             
                 </tr><tr>
@@ -1070,6 +1070,24 @@
 
         
 
+            <td class="chair gl_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td class="chair gl_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td class="chair gl_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+            
+
+        
+
             <td class="chair pvdd_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
 
             
@@ -1088,43 +1106,25 @@
 
         
 
-            <td class="chair gl_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+            <td class="chair pvdd_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
 
             
 
         
 
-            <td class="chair gl_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+            <td class="chair pvdd_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
 
             
 
         
 
-            <td class="chair gl_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+            <td class="chair sgp_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
 
             
 
         
 
-            <td class="chair gl_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
-
-            
-
-        
-
-            <td class="chair gl_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
-
-            
-
-        
-
-            <td class="chair cu_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
-
-            
-
-        
-
-            <td class="chair cu_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+            <td class="chair sgp_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
 
             
                 </tr><tr>
@@ -1132,6 +1132,42 @@
 
         
 
+            <td class="chair sgp_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td class="chair sgp_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td class="chair vijftigplus_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td class="chair vijftigplus_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td class="chair vijftigplus_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+            
+
+        
+
+            <td class="chair vijftigplus_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+            
+
+        
+
             <td class="chair cu_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
 
             
@@ -1144,49 +1180,13 @@
 
         
 
-            <td class="chair vijftigplus_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+            <td class="chair cu_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
 
             
 
         
 
-            <td class="chair vijftigplus_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
-
-            
-
-        
-
-            <td class="chair vijftigplus_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
-
-            
-
-        
-
-            <td class="chair vijftigplus_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
-
-            
-
-        
-
-            <td class="chair sgp_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
-
-            
-
-        
-
-            <td class="chair sgp_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
-
-            
-
-        
-
-            <td class="chair sgp_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
-
-            
-
-        
-
-            <td class="chair sgp_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+            <td class="chair cu_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
 
             
                 </tr><tr>
@@ -1210,15 +1210,15 @@
             
             <tr><td class="legend_item">12 x </td><td class="party_name d66_background">d66</td></tr>
             
-            <tr><td class="legend_item">5 x </td><td class="party_name pvdd_background">pvdd</td></tr>
-            
             <tr><td class="legend_item">5 x </td><td class="party_name gl_background">gl</td></tr>
             
-            <tr><td class="legend_item">4 x </td><td class="party_name cu_background">cu</td></tr>
+            <tr><td class="legend_item">5 x </td><td class="party_name pvdd_background">pvdd</td></tr>
+            
+            <tr><td class="legend_item">4 x </td><td class="party_name sgp_background">sgp</td></tr>
             
             <tr><td class="legend_item">4 x </td><td class="party_name vijftigplus_background">vijftigplus</td></tr>
             
-            <tr><td class="legend_item">4 x </td><td class="party_name sgp_background">sgp</td></tr>
+            <tr><td class="legend_item">4 x </td><td class="party_name cu_background">cu</td></tr>
             
         </table>
     </div>
@@ -1236,7 +1236,7 @@
     </div>
 </div>
 
-<div><img src="http://applejack.science.ru.nl/lamabadge.php/stemming2017" alt="badge" /></div>
+<!-- Here we would like to add another two graphs maybe -->
 
 </body>
 </html>
