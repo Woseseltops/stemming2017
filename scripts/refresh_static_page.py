@@ -1,6 +1,6 @@
 from shutil import copyfile
 from settings import import_settings
-from scripts import generate_statistics
+from scripts import electionstats
 from time import time
 from jinja2 import Template
 
@@ -11,15 +11,15 @@ def backup_previous_static_page(static_page_location,backup_folder):
     except FileNotFoundError:
         pass
 
-def refresh_static_page(chairs_per_party,history_of_party_mentions,template):
+def refresh_static_page(seats_per_party,history_of_party_mentions,template):
 
     #Translate the chair statistics to a value for each chair
-    chairs_per_party = sorted(chairs_per_party.items(),key=lambda x: x[1],reverse=True)
-    chairs = []
+    seats_per_party = sorted(seats_per_party.items(),key=lambda x: x[1],reverse=True)
+    seats = []
 
-    for party,value in chairs_per_party:
+    for party,value in seats_per_party:
         for chair in range(value):
-            chairs.append(party)
+            seats.append(party)
 
     #Translate the history of party mentions to series of percentages
     series_of_percentages_per_party = {}
@@ -40,7 +40,7 @@ def refresh_static_page(chairs_per_party,history_of_party_mentions,template):
     series_of_percentages_per_party = sorted(series_of_percentages_per_party.items(),key=lambda x: x[0])
 
     #Generate the page
-    return Template(open(template).read()).render(chairs=enumerate(chairs),chairs_per_party=chairs_per_party,
+    return Template(open(template).read()).render(seats=enumerate(seats),seats_per_party=seats_per_party,
                                                   series_of_percentages_per_party=series_of_percentages_per_party)
 
 if __name__ == '__main__':
@@ -49,8 +49,10 @@ if __name__ == '__main__':
     backup_previous_static_page(current_settings['static_page'],current_settings['previous_static_pages_folder'])
 
     #Create a new one
-    chairs_per_party = generate_statistics.get_chairs_per_party(fake=True)
-    history_of_party_mentions = generate_statistics.get_history_of_party_mentions(fake=True)
-    new_page_content = refresh_static_page(chairs_per_party,history_of_party_mentions,current_settings['template'])
+    politicaltweets = electionstats.PoliticalTweets()
+    politicaltweets.readtweets()
+    seats_per_party = politicaltweets.get_seats_per_party()
+    history_of_party_mentions = politicaltweets.get_history_of_party_mentions()
+    new_page_content = refresh_static_page(seats_per_party,history_of_party_mentions,current_settings['template'])
 
     open(current_settings['static_page'],'w').write(new_page_content)
