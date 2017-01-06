@@ -15,7 +15,7 @@ def import_settings():
         if overriding_settings_file not in ['__init__.py','__init__.pyc','default.conf','__pycache__']:
 
             print(overriding_settings_file)
-            for setting,value in json.load(open(SETTINGS_FOLDER+overriding_settings_file)).keys():
+            for setting,value in json.load(open(SETTINGS_FOLDER+overriding_settings_file)).items():
                 settings[setting] = value
 
     #Make an absolute path of some paths
