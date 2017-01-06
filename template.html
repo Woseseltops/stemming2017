@@ -75,9 +75,6 @@
         };
         var chart = new Chartist.Line('.ct-chart', data, options);
 
-        //Chart animations
-
-
 	});
 	</script>
 
@@ -92,7 +89,7 @@
 <div id="chair_visualization">
     <div id="chairs">
         <table><tr>
-            {% for chair_index, party_name in chairs %}
+            {% for chair_index, party_name in seats %}
 
             <td class="chair _{{party_name}}_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
 
@@ -105,8 +102,8 @@
     </div>
     <div id="legend">
         <table id="legend_table">
-            {% for party_name, number_of_chairs in chairs_per_party %}
-            <tr><td class="legend_item">{{number_of_chairs}} x </td><td class="party_name {{party_name}}_background">{{party_name}}</td></tr>
+            {% for party_name, number_of_chairs in seats_per_party %}
+            	<tr><td class="legend_item">{{number_of_chairs}} x </td><td class="party_name _{{party_name}}_background">{{party_name}}</td></tr>
             {% endfor %}
         </table>
     </div>
