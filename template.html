@@ -94,7 +94,7 @@
         <table><tr>
             {% for chair_index, party_name in chairs %}
 
-            <td class="chair {{party_name}}_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+            <td class="chair _{{party_name}}_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
 
             {% if (chair_index+1) %10 == 0 %}
                 </tr><tr>

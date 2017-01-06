@@ -79,12 +79,12 @@ p
     to {stroke-dashoffset: -24px;}
 }
 
-.vvd_graphic
+._vvd_graphic
 {
     fill: hsl(198, 36%, 63%);
 }
 
-.vvd_background
+._vvd_background
 {
     background-color: hsl(198, 36%, 63%);
 }
@@ -94,12 +94,12 @@ p
     stroke: hsl(198, 36%, 63%);
 }
 
-.pvda_graphic
+._pvda_graphic
 {
     fill: hsl(0, 36%, 63%);
 }
 
-.pvda_background
+._pvda_background
 {
     background-color: hsl(0, 36%, 63%);
 }
@@ -109,12 +109,12 @@ p
     stroke: hsl(0, 36%, 63%);
 }
 
-.cda_graphic
+._cda_graphic
 {
     fill: hsl(157, 36%, 63%);
 }
 
-.cda_background
+._cda_background
 {
     background-color: hsl(157, 36%, 63%);
 }
@@ -124,12 +124,12 @@ p
     stroke: hsl(157, 36%, 63%);
 }
 
-.sp_graphic
+._sp_graphic
 {
     fill: hsl(337, 36%, 63%);
 }
 
-.sp_background
+._sp_background
 {
     background-color: hsl(337, 36%, 63%);
 }
@@ -139,12 +139,12 @@ p
     stroke: hsl(337, 36%, 63%);
 }
 
-.gl_graphic
+._gl_graphic
 {
     fill : hsl(116, 36%, 63%);
 }
 
-.gl_background
+._gl_background
 {
     background-color: hsl(116, 36%, 63%);
 }
@@ -154,12 +154,12 @@ p
     stroke: hsl(116, 36%, 63%);
 }
 
-.pvv_graphic
+._pvv_graphic
 {
     fill: hsl(226, 36%, 63%);
 }
 
-.pvv_background
+._pvv_background
 {
     background-color: hsl(226, 36%, 63%);
 }
@@ -169,12 +169,12 @@ p
     stroke: hsl(226, 36%, 63%);
 }
 
-.d66_graphic
+._d66_graphic
 {
     fill : hsl(74, 36%, 63%);
 }
 
-.d66_background
+._d66_background
 {
     background-color: hsl(74, 36%, 63%);
 }
@@ -184,12 +184,12 @@ p
     stroke: hsl(74, 36%, 63%);
 }
 
-.pvdd_graphic
+._pvdd_graphic
 {
     fill : hsl(33, 36%, 63%);
 }
 
-.pvdd_background
+._pvdd_background
 {
     background-color: hsl(33, 36%, 63%);
 }
@@ -199,12 +199,12 @@ p
     stroke: hsl(33, 36%, 63%);
 }
 
-.vijftigplus_graphic
+._50plus_graphic
 {
     fill: hsl(287, 36%, 63%);
 }
 
-.vijftigplus_background
+._50plus_background
 {
     background-color: hsl(287, 36%, 63%);
 }
@@ -214,12 +214,12 @@ p
     stroke: hsl(287, 36%, 63%);
 }
 
-.sgp_graphic
+._sgp_graphic
 {
     fill: hsl(182, 36%, 63%);
 }
 
-.sgp_background
+._sgp_background
 {
     background-color: hsl(182, 36%, 63%);
 }
@@ -229,12 +229,12 @@ p
     stroke: hsl(182, 36%, 63%);
 }
 
-.cu_graphic
+._cu_graphic
 {
     fill: hsl(44, 36%, 63%);
 }
 
-.cu_background
+._cu_background
 {
     background-color: hsl(44, 36%, 63%);
 }
@@ -242,6 +242,26 @@ p
 .ct-series-b .ct-line, .ct-series-b .ct-point
 {
     stroke: hsl(44, 36%, 63%);
+}
+
+._denk_graphic
+{
+	fill: hsl(258, 36%, 63%);
+}
+
+._denk_background
+{
+	background-color: hsl(258, 36%, 63%);
+}
+
+._vnl_graphic
+{
+	fill: hsl(8, 36%, 63%);
+}
+
+._vnl_background
+{
+	background-color: hsl(8, 36%, 63%);
 }
 
 #chair_visualization
