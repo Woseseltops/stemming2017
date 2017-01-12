@@ -1132,8 +1132,8 @@
           height: 400,
 	  plugins: [Chartist.plugins.tooltip()]
         };
-        var chart = new Chartist.Line('.ten-days-graph', data, options);
-        var chart = new Chartist.Line('.two-months-graph', data, options);
+        var chart = new Chartist.Line('ten-days-graph', data, options);
+        var chart = new Chartist.Line('two-months-graph', data, options);
 
         //hover effect
         $('.chair').mouseenter(function()
@@ -2087,7 +2087,39 @@
 
                 
 
-                <td class="chair _cu_graphic" party="cu"><img class="dynamic_svg" src="svg/chair.svg"></td>
+                <td class="chair _sgp_graphic" party="sgp"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _sgp_graphic" party="sgp"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+                    </tr><tr>
+                
+
+                
+
+                <td class="chair _sgp_graphic" party="sgp"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _50plus_graphic" party="50plus"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _50plus_graphic" party="50plus"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _50plus_graphic" party="50plus"><img class="dynamic_svg" src="svg/chair.svg"></td>
 
                 
 
@@ -2107,39 +2139,7 @@
 
                 
 
-                <td class="chair _sgp_graphic" party="sgp"><img class="dynamic_svg" src="svg/chair.svg"></td>
-
-                
-
-                
-
-                <td class="chair _sgp_graphic" party="sgp"><img class="dynamic_svg" src="svg/chair.svg"></td>
-
-                
-
-                
-
-                <td class="chair _sgp_graphic" party="sgp"><img class="dynamic_svg" src="svg/chair.svg"></td>
-
-                
-
-                
-
-                <td class="chair _50plus_graphic" party="50plus"><img class="dynamic_svg" src="svg/chair.svg"></td>
-
-                
-                    </tr><tr>
-                
-
-                
-
-                <td class="chair _50plus_graphic" party="50plus"><img class="dynamic_svg" src="svg/chair.svg"></td>
-
-                
-
-                
-
-                <td class="chair _50plus_graphic" party="50plus"><img class="dynamic_svg" src="svg/chair.svg"></td>
+                <td class="chair _cu_graphic" party="cu"><img class="dynamic_svg" src="svg/chair.svg"></td>
 
                 
 
@@ -2192,11 +2192,11 @@
             
             	<tr><td class="legend_item">6 x </td><td class="party_name _cda_background" party="cda">cda</td></tr>
             
-            	<tr><td class="legend_item">3 x </td><td class="party_name _cu_background" party="cu">cu</td></tr>
-            
             	<tr><td class="legend_item">3 x </td><td class="party_name _sgp_background" party="sgp">sgp</td></tr>
             
             	<tr><td class="legend_item">3 x </td><td class="party_name _50plus_background" party="50plus">50plus</td></tr>
+            
+            	<tr><td class="legend_item">3 x </td><td class="party_name _cu_background" party="cu">cu</td></tr>
             
             	<tr><td class="legend_item">2 x </td><td class="party_name _vnl_background" party="vnl">vnl</td></tr>
             
@@ -2209,8 +2209,6 @@
 <div id="explanation_and_graphs">
     <h3>Over dit onderzoek</h3>
     <p><img id="twitter_logo" src="svg/twitter.svg">Onderzoekers van het Centre for Language and Speech Technology onderzoeken in hoeverre er een verband is te vinden tussen hoe vaak een politieke partij genoemd wordt op Twitter en hoe deze partij het doet in de peilingen en bij de verkiezingen zelf. Bij de parlementsverkiezingen van 2012 bleek er een sterk verband tussen deze twee te zijn (zie ons artikel Relating Political Party Mentions on Twitter with Polls and Election Results). Op deze pagina zijn een aantal grafieken te vinden met hoe vaak de naam van een politiek partij wordt genoemd in een tweet. De metingen beginnen op woensdag 18 februari en worden per uur bijgewerkt. De meest recente meting is altijd van drie uur geleden. De metingen worden gedaan op de tweets uit Twiqs, een dienst waarin ongeveer 40% van de Nederlandse tweets doorzoekbaar zijn.</p>
-
-    <div class="whitespace"></div>
 
     <h3>% vermeldingen laatste 10 dagen</h3>
     <div class="ct-chart ct-golden-section ten-days-graph">
