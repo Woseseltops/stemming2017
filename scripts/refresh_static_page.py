@@ -41,6 +41,8 @@ def refresh_static_page(seats_per_party,history_of_party_mentions,template):
     day_names = [number_to_date_string(date_number) for date_number in history_of_party_mentions.keys()]
     party_mentions_ordered_by_time = sorted(history_of_party_mentions.items(),key=lambda x:x[0],reverse=False)
     series_of_percentages_per_party = {}
+    series_of_last_ten_percentages_per_party = {}
+    date_index = 0
 
     for date_name, mentions_in_period in party_mentions_ordered_by_time:
 
@@ -57,12 +59,33 @@ def refresh_static_page(seats_per_party,history_of_party_mentions,template):
             except KeyError:
                 series_of_percentages_per_party[party_name] = [percentage_of_mentions]
 
+            if len(party_mentions_ordered_by_time) - date_index <= 10:
+                try:
+                    series_of_last_ten_percentages_per_party[party_name].append(percentage_of_mentions)
+                except KeyError:
+                    series_of_last_ten_percentages_per_party[party_name] = [percentage_of_mentions]
+
+        date_index += 1
+
+    #Add empty values if we don't have all data until the elections yet
+    NR_OF_DAYS_TO_SHOW_BEFORE_ELECTIONS = 56
+
+    for party_name, series_of_percentages in series_of_percentages_per_party.items():
+
+        while len(series_of_percentages) < NR_OF_DAYS_TO_SHOW_BEFORE_ELECTIONS:
+            series_of_percentages.append(None)
+
+        series_of_percentages_per_party[party_name] = series_of_percentages
+
+
     #Order the series, so the parties will always be presented to the Javascript in the same order
     series_of_percentages_per_party = sorted(series_of_percentages_per_party.items(),key=lambda x: x[0])
+    series_of_last_ten_percentages_per_party = sorted(series_of_last_ten_percentages_per_party.items(),key=lambda x: x[0])
 
     #Generate the page
     return Template(open(template).read()).render(seats=enumerate(seats),seats_per_party=seats_per_party,
-                                                  series_of_percentages_per_party=series_of_percentages_per_party)
+                                                  series_of_percentages_per_party=series_of_percentages_per_party,
+                                                  series_of_last_ten_percentages_per_party=series_of_last_ten_percentages_per_party)
 
 def number_to_date_string(date_number):
 

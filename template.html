@@ -52,12 +52,19 @@
 	    });
 
         //Generate the line graph
-        var data =
+        var options =
         {
-          labels: ['2 maanden','','','','1 maand','','','stemmen!'],
+          width: 800,
+          height: 400,
+	  plugins: [Chartist.plugins.tooltip()]
+        };
+
+        var tenDaysData =
+        {
+          labels: [],
           series: [
 
-          {% for party_name,series_of_percentages in series_of_percentages_per_party %}
+          {% for party_name,series_of_percentages in series_of_last_ten_percentages_per_party %}
             [
               {% for percentage in series_of_percentages %}
                 {meta: '{{party_name}}' , value: {{percentage}} },
@@ -68,14 +75,25 @@
           ]
         };
 
-        var options =
+        var chart = new Chartist.Line('.ten-days-graph', tenDaysData, options);
+
+        var twoMonthsData =
         {
-          width: 800,
-          height: 400,
-	  plugins: [Chartist.plugins.tooltip()]
+          labels: [],
+          series: [
+
+          {% for party_name,series_of_percentages in series_of_percentages_per_party %}
+            [
+              {% for percentage in series_of_percentages %}
+                {meta: '{{party_name}}' , value: {% if percentage == None %}null{% else %}{{percentage}}{% endif %} },
+              {% endfor %}
+            ],
+          {% endfor %}
+
+          ]
         };
-        var chart = new Chartist.Line('.ten-days-graph', data, options);
-        var chart = new Chartist.Line('.two-months-graph', data, options);
+
+        var chart = new Chartist.Line('.two-months-graph', twoMonthsData, options);
 
         //hover effect
         $('.chair').mouseenter(function()
@@ -160,7 +178,7 @@
     <div class="ct-chart ct-golden-section ten-days-graph">
     </div>
 
-    <h3>% vermeldingen laatste 2 maanden</h3>
+    <h3>% vermeldingen vanaf 2 maanden voor de verkiezingen</h3>
     <div class="ct-chart ct-golden-section two-months-graph">
     </div>
 
