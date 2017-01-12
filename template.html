@@ -9,6 +9,7 @@
 
     <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
     <link rel="stylesheet" href="css/style.css" media="all"/>
+    <link rel="stylesheet" href="css/party_colors.css" media="all"/>
     <link rel="stylesheet" href="css/chartist-plugin-tooltip.css" media="all"/>
 
  	<script type="text/javascript">
@@ -69,11 +70,41 @@
 
         var options =
         {
-          width: 550,
-          height: 275,
+          width: 800,
+          height: 400,
 	  plugins: [Chartist.plugins.tooltip()]
         };
-        var chart = new Chartist.Line('.ct-chart', data, options);
+        var chart = new Chartist.Line('.ten-days-graph', data, options);
+        var chart = new Chartist.Line('.two-months-graph', data, options);
+
+        //hover effect
+        $('.chair').mouseenter(function()
+        {
+            $('._'+$(this).attr('party')+'_graphic').addClass('highlighted_cell');
+            $('._'+$(this).attr('party')+'_background').addClass('highlighted_legend_item');
+            $('._'+$(this).attr('party')+'_background').addClass('_'+$(this).attr('party')+'_highlighted');
+        });
+
+        $('.chair').mouseleave(function()
+        {
+            $('._'+$(this).attr('party')+'_graphic').removeClass('highlighted_cell');
+            $('._'+$(this).attr('party')+'_background').removeClass('highlighted_legend_item');
+            $('._'+$(this).attr('party')+'_background').removeClass('_'+$(this).attr('party')+'_highlighted');
+        });
+
+        $('.party_name').mouseenter(function()
+        {
+            $('._'+$(this).attr('party')+'_graphic').addClass('highlighted_cell');
+            $(this).addClass('highlighted_legend_item');
+            $(this).addClass('_'+$(this).attr('party')+'_highlighted');
+        });
+
+        $('.party_name').mouseleave(function()
+        {
+            $('._'+$(this).attr('party')+'_graphic').removeClass('highlighted_cell');
+            $(this).removeClass('highlighted_legend_item');
+            $(this).removeClass('_'+$(this).attr('party')+'_highlighted');
+        });
 
 	});
 	</script>
@@ -92,7 +123,7 @@
             <table class="inner_table_6x6"><tr>
                 {% for chair_index, party_name in seats %}
 
-                <td class="chair _{{party_name}}_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+                <td class="chair _{{party_name}}_graphic" party="{{party_name}}"><img class="dynamic_svg" src="svg/chair.svg"></td>
 
                 {% if (chair_index+1) %25 == 0 %}
                     </tr></table></td>
@@ -113,7 +144,7 @@
     <div id="legend">
         <table id="legend_table">
             {% for party_name, number_of_chairs in seats_per_party %}
-            	<tr><td class="legend_item">{{number_of_chairs}} x </td><td class="party_name _{{party_name}}_background">{{party_name}}</td></tr>
+            	<tr><td class="legend_item">{{number_of_chairs}} x </td><td class="party_name _{{party_name}}_background" party="{{party_name}}">{{party_name}}</td></tr>
             {% endfor %}
         </table>
     </div>
