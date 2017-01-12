@@ -2003,13 +2003,13 @@
 
         
 
-            <td class="chair _cu_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+            <td class="chair _50plus_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
 
             
 
         
 
-            <td class="chair _cu_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+            <td class="chair _50plus_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
 
             
                 </tr><tr>
@@ -2017,25 +2017,25 @@
 
         
 
+            <td class="chair _50plus_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+            
+
+        
+
             <td class="chair _cu_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
 
             
 
         
 
-            <td class="chair _50plus_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+            <td class="chair _cu_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
 
             
 
         
 
-            <td class="chair _50plus_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
-
-            
-
-        
-
-            <td class="chair _50plus_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+            <td class="chair _cu_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
 
             
 
@@ -2099,9 +2099,9 @@
             
             	<tr><td class="legend_item">6 x </td><td class="party_name _cda_background">cda</td></tr>
             
-            	<tr><td class="legend_item">3 x </td><td class="party_name _cu_background">cu</td></tr>
-            
             	<tr><td class="legend_item">3 x </td><td class="party_name _50plus_background">50plus</td></tr>
+            
+            	<tr><td class="legend_item">3 x </td><td class="party_name _cu_background">cu</td></tr>
             
             	<tr><td class="legend_item">3 x </td><td class="party_name _sgp_background">sgp</td></tr>
             
