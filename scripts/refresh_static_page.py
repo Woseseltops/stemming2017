@@ -39,7 +39,7 @@ def refresh_static_page(seats_per_party,history_of_party_mentions,template):
 
     #Translate the history of party mentions to series of percentages
     day_names = [number_to_date_string(date_number) for date_number in history_of_party_mentions.keys()]
-    party_mentions_ordered_by_time = sorted(history_of_party_mentions.items(),key=lambda x:x[0],reverse=True)
+    party_mentions_ordered_by_time = sorted(history_of_party_mentions.items(),key=lambda x:x[0],reverse=False)
     series_of_percentages_per_party = {}
 
     for date_name, mentions_in_period in party_mentions_ordered_by_time:
@@ -61,7 +61,6 @@ def refresh_static_page(seats_per_party,history_of_party_mentions,template):
     series_of_percentages_per_party = sorted(series_of_percentages_per_party.items(),key=lambda x: x[0])
 
     #Generate the page
-    print(enumerate(seats))
     return Template(open(template).read()).render(seats=enumerate(seats),seats_per_party=seats_per_party,
                                                   series_of_percentages_per_party=series_of_percentages_per_party)
 

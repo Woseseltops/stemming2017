@@ -88,17 +88,27 @@
 
 <div id="chair_visualization">
     <div id="chairs">
-        <table><tr>
-            {% for chair_index, party_name in seats %}
+        <table class="outer_table_2x3"><tr><td>
+            <table class="inner_table_6x6"><tr>
+                {% for chair_index, party_name in seats %}
 
-            <td class="chair _{{party_name}}_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+                <td class="chair _{{party_name}}_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
 
-            {% if (chair_index+1) %10 == 0 %}
-                </tr><tr>
-            {% endif %}
+                {% if (chair_index+1) %25 == 0 %}
+                    </tr></table></td>
 
-        {% endfor %}
-        </tr></table>
+                    {% if (chair_index+1) %50 == 0 %}
+                        </tr><tr>
+                    {% endif %}
+
+                    <td><table><tr>
+                {% elif (chair_index+1) %5 == 0 %}
+                    </tr><tr>
+                {% endif %}
+
+                {% endfor %}
+            </tr></table>
+        </td></tr></table>
     </div>
     <div id="legend">
         <table id="legend_table">
