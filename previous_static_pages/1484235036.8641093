@@ -67,354 +67,6 @@
           
             [
               
-                {meta: '_50plus' , value: 1.1 },
-              
-                {meta: '_50plus' , value: 2.57 },
-              
-                {meta: '_50plus' , value: 1.28 },
-              
-                {meta: '_50plus' , value: 1.58 },
-              
-                {meta: '_50plus' , value: 1.04 },
-              
-                {meta: '_50plus' , value: 7.86 },
-              
-                {meta: '_50plus' , value: 3.81 },
-              
-                {meta: '_50plus' , value: 2.06 },
-              
-                {meta: '_50plus' , value: 0.71 },
-              
-                {meta: '_50plus' , value: 3.0 },
-              
-            ],
-          
-            [
-              
-                {meta: 'cda' , value: 3.41 },
-              
-                {meta: 'cda' , value: 3.76 },
-              
-                {meta: 'cda' , value: 4.05 },
-              
-                {meta: 'cda' , value: 4.05 },
-              
-                {meta: 'cda' , value: 3.34 },
-              
-                {meta: 'cda' , value: 2.11 },
-              
-                {meta: 'cda' , value: 6.78 },
-              
-                {meta: 'cda' , value: 3.37 },
-              
-                {meta: 'cda' , value: 5.84 },
-              
-                {meta: 'cda' , value: 4.53 },
-              
-            ],
-          
-            [
-              
-                {meta: 'cu' , value: 2.35 },
-              
-                {meta: 'cu' , value: 1.6 },
-              
-                {meta: 'cu' , value: 1.79 },
-              
-                {meta: 'cu' , value: 2.89 },
-              
-                {meta: 'cu' , value: 2.62 },
-              
-                {meta: 'cu' , value: 1.08 },
-              
-                {meta: 'cu' , value: 1.69 },
-              
-                {meta: 'cu' , value: 1.64 },
-              
-                {meta: 'cu' , value: 1.66 },
-              
-                {meta: 'cu' , value: 2.58 },
-              
-            ],
-          
-            [
-              
-                {meta: 'd66' , value: 6.58 },
-              
-                {meta: 'd66' , value: 7.4 },
-              
-                {meta: 'd66' , value: 6.83 },
-              
-                {meta: 'd66' , value: 7.47 },
-              
-                {meta: 'd66' , value: 7.45 },
-              
-                {meta: 'd66' , value: 9.97 },
-              
-                {meta: 'd66' , value: 7.94 },
-              
-                {meta: 'd66' , value: 9.06 },
-              
-                {meta: 'd66' , value: 6.93 },
-              
-                {meta: 'd66' , value: 8.07 },
-              
-            ],
-          
-            [
-              
-                {meta: 'denk' , value: 13.5 },
-              
-                {meta: 'denk' , value: 11.23 },
-              
-                {meta: 'denk' , value: 18.54 },
-              
-                {meta: 'denk' , value: 17.75 },
-              
-                {meta: 'denk' , value: 17.52 },
-              
-                {meta: 'denk' , value: 12.14 },
-              
-                {meta: 'denk' , value: 8.68 },
-              
-                {meta: 'denk' , value: 6.84 },
-              
-                {meta: 'denk' , value: 6.09 },
-              
-                {meta: 'denk' , value: 7.77 },
-              
-            ],
-          
-            [
-              
-                {meta: 'gl' , value: 5.33 },
-              
-                {meta: 'gl' , value: 7.13 },
-              
-                {meta: 'gl' , value: 6.71 },
-              
-                {meta: 'gl' , value: 7.29 },
-              
-                {meta: 'gl' , value: 6.52 },
-              
-                {meta: 'gl' , value: 12.82 },
-              
-                {meta: 'gl' , value: 7.4 },
-              
-                {meta: 'gl' , value: 5.26 },
-              
-                {meta: 'gl' , value: 7.78 },
-              
-                {meta: 'gl' , value: 7.1 },
-              
-            ],
-          
-            [
-              
-                {meta: 'ppnl' , value: 0.05 },
-              
-                {meta: 'ppnl' , value: 0.16 },
-              
-                {meta: 'ppnl' , value: 0.29 },
-              
-                {meta: 'ppnl' , value: 0.1 },
-              
-                {meta: 'ppnl' , value: 0.0 },
-              
-                {meta: 'ppnl' , value: 0.03 },
-              
-                {meta: 'ppnl' , value: 0.05 },
-              
-                {meta: 'ppnl' , value: 0.05 },
-              
-                {meta: 'ppnl' , value: 0.05 },
-              
-                {meta: 'ppnl' , value: 0.0 },
-              
-            ],
-          
-            [
-              
-                {meta: 'pvda' , value: 20.68 },
-              
-                {meta: 'pvda' , value: 13.5 },
-              
-                {meta: 'pvda' , value: 10.03 },
-              
-                {meta: 'pvda' , value: 13.93 },
-              
-                {meta: 'pvda' , value: 20.2 },
-              
-                {meta: 'pvda' , value: 14.3 },
-              
-                {meta: 'pvda' , value: 18.18 },
-              
-                {meta: 'pvda' , value: 11.41 },
-              
-                {meta: 'pvda' , value: 11.99 },
-              
-                {meta: 'pvda' , value: 16.6 },
-              
-            ],
-          
-            [
-              
-                {meta: 'pvdd' , value: 0.9 },
-              
-                {meta: 'pvdd' , value: 0.71 },
-              
-                {meta: 'pvdd' , value: 0.92 },
-              
-                {meta: 'pvdd' , value: 1.43 },
-              
-                {meta: 'pvdd' , value: 0.74 },
-              
-                {meta: 'pvdd' , value: 0.71 },
-              
-                {meta: 'pvdd' , value: 1.07 },
-              
-                {meta: 'pvdd' , value: 0.78 },
-              
-                {meta: 'pvdd' , value: 1.71 },
-              
-                {meta: 'pvdd' , value: 0.8 },
-              
-            ],
-          
-            [
-              
-                {meta: 'pvv' , value: 19.43 },
-              
-                {meta: 'pvv' , value: 29.54 },
-              
-                {meta: 'pvv' , value: 29.04 },
-              
-                {meta: 'pvv' , value: 21.37 },
-              
-                {meta: 'pvv' , value: 19.27 },
-              
-                {meta: 'pvv' , value: 18.39 },
-              
-                {meta: 'pvv' , value: 19.38 },
-              
-                {meta: 'pvv' , value: 16.13 },
-              
-                {meta: 'pvv' , value: 17.36 },
-              
-                {meta: 'pvv' , value: 18.39 },
-              
-            ],
-          
-            [
-              
-                {meta: 'sgp' , value: 1.23 },
-              
-                {meta: 'sgp' , value: 1.28 },
-              
-                {meta: 'sgp' , value: 1.11 },
-              
-                {meta: 'sgp' , value: 1.86 },
-              
-                {meta: 'sgp' , value: 2.26 },
-              
-                {meta: 'sgp' , value: 0.59 },
-              
-                {meta: 'sgp' , value: 1.56 },
-              
-                {meta: 'sgp' , value: 2.67 },
-              
-                {meta: 'sgp' , value: 2.62 },
-              
-                {meta: 'sgp' , value: 2.47 },
-              
-            ],
-          
-            [
-              
-                {meta: 'sp' , value: 5.53 },
-              
-                {meta: 'sp' , value: 4.67 },
-              
-                {meta: 'sp' , value: 5.07 },
-              
-                {meta: 'sp' , value: 5.3 },
-              
-                {meta: 'sp' , value: 4.92 },
-              
-                {meta: 'sp' , value: 5.79 },
-              
-                {meta: 'sp' , value: 5.62 },
-              
-                {meta: 'sp' , value: 3.35 },
-              
-                {meta: 'sp' , value: 2.89 },
-              
-                {meta: 'sp' , value: 3.7 },
-              
-            ],
-          
-            [
-              
-                {meta: 'vnl' , value: 1.33 },
-              
-                {meta: 'vnl' , value: 1.6 },
-              
-                {meta: 'vnl' , value: 0.97 },
-              
-                {meta: 'vnl' , value: 1.38 },
-              
-                {meta: 'vnl' , value: 1.85 },
-              
-                {meta: 'vnl' , value: 1.05 },
-              
-                {meta: 'vnl' , value: 1.09 },
-              
-                {meta: 'vnl' , value: 0.9 },
-              
-                {meta: 'vnl' , value: 1.28 },
-              
-                {meta: 'vnl' , value: 2.6 },
-              
-            ],
-          
-            [
-              
-                {meta: 'vvd' , value: 18.58 },
-              
-                {meta: 'vvd' , value: 14.85 },
-              
-                {meta: 'vvd' , value: 13.35 },
-              
-                {meta: 'vvd' , value: 13.6 },
-              
-                {meta: 'vvd' , value: 12.27 },
-              
-                {meta: 'vvd' , value: 13.16 },
-              
-                {meta: 'vvd' , value: 16.76 },
-              
-                {meta: 'vvd' , value: 36.48 },
-              
-                {meta: 'vvd' , value: 33.11 },
-              
-                {meta: 'vvd' , value: 22.39 },
-              
-            ],
-          
-
-          ]
-        };
-
-        var chart = new Chartist.Line('.ten-days-graph', tenDaysData, options);
-
-        var twoMonthsData =
-        {
-          labels: [],
-          series: [
-
-          
-            [
-              
                 {meta: '_50plus' , value: 0.79 },
               
                 {meta: '_50plus' , value: 0.93 },
@@ -486,46 +138,6 @@
                 {meta: '_50plus' , value: 0.71 },
               
                 {meta: '_50plus' , value: 3.0 },
-              
-                {meta: '_50plus' , value: null },
-              
-                {meta: '_50plus' , value: null },
-              
-                {meta: '_50plus' , value: null },
-              
-                {meta: '_50plus' , value: null },
-              
-                {meta: '_50plus' , value: null },
-              
-                {meta: '_50plus' , value: null },
-              
-                {meta: '_50plus' , value: null },
-              
-                {meta: '_50plus' , value: null },
-              
-                {meta: '_50plus' , value: null },
-              
-                {meta: '_50plus' , value: null },
-              
-                {meta: '_50plus' , value: null },
-              
-                {meta: '_50plus' , value: null },
-              
-                {meta: '_50plus' , value: null },
-              
-                {meta: '_50plus' , value: null },
-              
-                {meta: '_50plus' , value: null },
-              
-                {meta: '_50plus' , value: null },
-              
-                {meta: '_50plus' , value: null },
-              
-                {meta: '_50plus' , value: null },
-              
-                {meta: '_50plus' , value: null },
-              
-                {meta: '_50plus' , value: null },
               
             ],
           
@@ -603,46 +215,6 @@
               
                 {meta: 'cda' , value: 4.53 },
               
-                {meta: 'cda' , value: null },
-              
-                {meta: 'cda' , value: null },
-              
-                {meta: 'cda' , value: null },
-              
-                {meta: 'cda' , value: null },
-              
-                {meta: 'cda' , value: null },
-              
-                {meta: 'cda' , value: null },
-              
-                {meta: 'cda' , value: null },
-              
-                {meta: 'cda' , value: null },
-              
-                {meta: 'cda' , value: null },
-              
-                {meta: 'cda' , value: null },
-              
-                {meta: 'cda' , value: null },
-              
-                {meta: 'cda' , value: null },
-              
-                {meta: 'cda' , value: null },
-              
-                {meta: 'cda' , value: null },
-              
-                {meta: 'cda' , value: null },
-              
-                {meta: 'cda' , value: null },
-              
-                {meta: 'cda' , value: null },
-              
-                {meta: 'cda' , value: null },
-              
-                {meta: 'cda' , value: null },
-              
-                {meta: 'cda' , value: null },
-              
             ],
           
             [
@@ -718,46 +290,6 @@
                 {meta: 'cu' , value: 1.66 },
               
                 {meta: 'cu' , value: 2.58 },
-              
-                {meta: 'cu' , value: null },
-              
-                {meta: 'cu' , value: null },
-              
-                {meta: 'cu' , value: null },
-              
-                {meta: 'cu' , value: null },
-              
-                {meta: 'cu' , value: null },
-              
-                {meta: 'cu' , value: null },
-              
-                {meta: 'cu' , value: null },
-              
-                {meta: 'cu' , value: null },
-              
-                {meta: 'cu' , value: null },
-              
-                {meta: 'cu' , value: null },
-              
-                {meta: 'cu' , value: null },
-              
-                {meta: 'cu' , value: null },
-              
-                {meta: 'cu' , value: null },
-              
-                {meta: 'cu' , value: null },
-              
-                {meta: 'cu' , value: null },
-              
-                {meta: 'cu' , value: null },
-              
-                {meta: 'cu' , value: null },
-              
-                {meta: 'cu' , value: null },
-              
-                {meta: 'cu' , value: null },
-              
-                {meta: 'cu' , value: null },
               
             ],
           
@@ -835,46 +367,6 @@
               
                 {meta: 'd66' , value: 8.07 },
               
-                {meta: 'd66' , value: null },
-              
-                {meta: 'd66' , value: null },
-              
-                {meta: 'd66' , value: null },
-              
-                {meta: 'd66' , value: null },
-              
-                {meta: 'd66' , value: null },
-              
-                {meta: 'd66' , value: null },
-              
-                {meta: 'd66' , value: null },
-              
-                {meta: 'd66' , value: null },
-              
-                {meta: 'd66' , value: null },
-              
-                {meta: 'd66' , value: null },
-              
-                {meta: 'd66' , value: null },
-              
-                {meta: 'd66' , value: null },
-              
-                {meta: 'd66' , value: null },
-              
-                {meta: 'd66' , value: null },
-              
-                {meta: 'd66' , value: null },
-              
-                {meta: 'd66' , value: null },
-              
-                {meta: 'd66' , value: null },
-              
-                {meta: 'd66' , value: null },
-              
-                {meta: 'd66' , value: null },
-              
-                {meta: 'd66' , value: null },
-              
             ],
           
             [
@@ -950,46 +442,6 @@
                 {meta: 'denk' , value: 6.09 },
               
                 {meta: 'denk' , value: 7.77 },
-              
-                {meta: 'denk' , value: null },
-              
-                {meta: 'denk' , value: null },
-              
-                {meta: 'denk' , value: null },
-              
-                {meta: 'denk' , value: null },
-              
-                {meta: 'denk' , value: null },
-              
-                {meta: 'denk' , value: null },
-              
-                {meta: 'denk' , value: null },
-              
-                {meta: 'denk' , value: null },
-              
-                {meta: 'denk' , value: null },
-              
-                {meta: 'denk' , value: null },
-              
-                {meta: 'denk' , value: null },
-              
-                {meta: 'denk' , value: null },
-              
-                {meta: 'denk' , value: null },
-              
-                {meta: 'denk' , value: null },
-              
-                {meta: 'denk' , value: null },
-              
-                {meta: 'denk' , value: null },
-              
-                {meta: 'denk' , value: null },
-              
-                {meta: 'denk' , value: null },
-              
-                {meta: 'denk' , value: null },
-              
-                {meta: 'denk' , value: null },
               
             ],
           
@@ -1067,46 +519,6 @@
               
                 {meta: 'gl' , value: 7.1 },
               
-                {meta: 'gl' , value: null },
-              
-                {meta: 'gl' , value: null },
-              
-                {meta: 'gl' , value: null },
-              
-                {meta: 'gl' , value: null },
-              
-                {meta: 'gl' , value: null },
-              
-                {meta: 'gl' , value: null },
-              
-                {meta: 'gl' , value: null },
-              
-                {meta: 'gl' , value: null },
-              
-                {meta: 'gl' , value: null },
-              
-                {meta: 'gl' , value: null },
-              
-                {meta: 'gl' , value: null },
-              
-                {meta: 'gl' , value: null },
-              
-                {meta: 'gl' , value: null },
-              
-                {meta: 'gl' , value: null },
-              
-                {meta: 'gl' , value: null },
-              
-                {meta: 'gl' , value: null },
-              
-                {meta: 'gl' , value: null },
-              
-                {meta: 'gl' , value: null },
-              
-                {meta: 'gl' , value: null },
-              
-                {meta: 'gl' , value: null },
-              
             ],
           
             [
@@ -1182,46 +594,6 @@
                 {meta: 'ppnl' , value: 0.05 },
               
                 {meta: 'ppnl' , value: 0.0 },
-              
-                {meta: 'ppnl' , value: null },
-              
-                {meta: 'ppnl' , value: null },
-              
-                {meta: 'ppnl' , value: null },
-              
-                {meta: 'ppnl' , value: null },
-              
-                {meta: 'ppnl' , value: null },
-              
-                {meta: 'ppnl' , value: null },
-              
-                {meta: 'ppnl' , value: null },
-              
-                {meta: 'ppnl' , value: null },
-              
-                {meta: 'ppnl' , value: null },
-              
-                {meta: 'ppnl' , value: null },
-              
-                {meta: 'ppnl' , value: null },
-              
-                {meta: 'ppnl' , value: null },
-              
-                {meta: 'ppnl' , value: null },
-              
-                {meta: 'ppnl' , value: null },
-              
-                {meta: 'ppnl' , value: null },
-              
-                {meta: 'ppnl' , value: null },
-              
-                {meta: 'ppnl' , value: null },
-              
-                {meta: 'ppnl' , value: null },
-              
-                {meta: 'ppnl' , value: null },
-              
-                {meta: 'ppnl' , value: null },
               
             ],
           
@@ -1299,46 +671,6 @@
               
                 {meta: 'pvda' , value: 16.6 },
               
-                {meta: 'pvda' , value: null },
-              
-                {meta: 'pvda' , value: null },
-              
-                {meta: 'pvda' , value: null },
-              
-                {meta: 'pvda' , value: null },
-              
-                {meta: 'pvda' , value: null },
-              
-                {meta: 'pvda' , value: null },
-              
-                {meta: 'pvda' , value: null },
-              
-                {meta: 'pvda' , value: null },
-              
-                {meta: 'pvda' , value: null },
-              
-                {meta: 'pvda' , value: null },
-              
-                {meta: 'pvda' , value: null },
-              
-                {meta: 'pvda' , value: null },
-              
-                {meta: 'pvda' , value: null },
-              
-                {meta: 'pvda' , value: null },
-              
-                {meta: 'pvda' , value: null },
-              
-                {meta: 'pvda' , value: null },
-              
-                {meta: 'pvda' , value: null },
-              
-                {meta: 'pvda' , value: null },
-              
-                {meta: 'pvda' , value: null },
-              
-                {meta: 'pvda' , value: null },
-              
             ],
           
             [
@@ -1414,46 +746,6 @@
                 {meta: 'pvdd' , value: 1.71 },
               
                 {meta: 'pvdd' , value: 0.8 },
-              
-                {meta: 'pvdd' , value: null },
-              
-                {meta: 'pvdd' , value: null },
-              
-                {meta: 'pvdd' , value: null },
-              
-                {meta: 'pvdd' , value: null },
-              
-                {meta: 'pvdd' , value: null },
-              
-                {meta: 'pvdd' , value: null },
-              
-                {meta: 'pvdd' , value: null },
-              
-                {meta: 'pvdd' , value: null },
-              
-                {meta: 'pvdd' , value: null },
-              
-                {meta: 'pvdd' , value: null },
-              
-                {meta: 'pvdd' , value: null },
-              
-                {meta: 'pvdd' , value: null },
-              
-                {meta: 'pvdd' , value: null },
-              
-                {meta: 'pvdd' , value: null },
-              
-                {meta: 'pvdd' , value: null },
-              
-                {meta: 'pvdd' , value: null },
-              
-                {meta: 'pvdd' , value: null },
-              
-                {meta: 'pvdd' , value: null },
-              
-                {meta: 'pvdd' , value: null },
-              
-                {meta: 'pvdd' , value: null },
               
             ],
           
@@ -1531,46 +823,6 @@
               
                 {meta: 'pvv' , value: 18.39 },
               
-                {meta: 'pvv' , value: null },
-              
-                {meta: 'pvv' , value: null },
-              
-                {meta: 'pvv' , value: null },
-              
-                {meta: 'pvv' , value: null },
-              
-                {meta: 'pvv' , value: null },
-              
-                {meta: 'pvv' , value: null },
-              
-                {meta: 'pvv' , value: null },
-              
-                {meta: 'pvv' , value: null },
-              
-                {meta: 'pvv' , value: null },
-              
-                {meta: 'pvv' , value: null },
-              
-                {meta: 'pvv' , value: null },
-              
-                {meta: 'pvv' , value: null },
-              
-                {meta: 'pvv' , value: null },
-              
-                {meta: 'pvv' , value: null },
-              
-                {meta: 'pvv' , value: null },
-              
-                {meta: 'pvv' , value: null },
-              
-                {meta: 'pvv' , value: null },
-              
-                {meta: 'pvv' , value: null },
-              
-                {meta: 'pvv' , value: null },
-              
-                {meta: 'pvv' , value: null },
-              
             ],
           
             [
@@ -1646,46 +898,6 @@
                 {meta: 'sgp' , value: 2.62 },
               
                 {meta: 'sgp' , value: 2.47 },
-              
-                {meta: 'sgp' , value: null },
-              
-                {meta: 'sgp' , value: null },
-              
-                {meta: 'sgp' , value: null },
-              
-                {meta: 'sgp' , value: null },
-              
-                {meta: 'sgp' , value: null },
-              
-                {meta: 'sgp' , value: null },
-              
-                {meta: 'sgp' , value: null },
-              
-                {meta: 'sgp' , value: null },
-              
-                {meta: 'sgp' , value: null },
-              
-                {meta: 'sgp' , value: null },
-              
-                {meta: 'sgp' , value: null },
-              
-                {meta: 'sgp' , value: null },
-              
-                {meta: 'sgp' , value: null },
-              
-                {meta: 'sgp' , value: null },
-              
-                {meta: 'sgp' , value: null },
-              
-                {meta: 'sgp' , value: null },
-              
-                {meta: 'sgp' , value: null },
-              
-                {meta: 'sgp' , value: null },
-              
-                {meta: 'sgp' , value: null },
-              
-                {meta: 'sgp' , value: null },
               
             ],
           
@@ -1763,46 +975,6 @@
               
                 {meta: 'sp' , value: 3.7 },
               
-                {meta: 'sp' , value: null },
-              
-                {meta: 'sp' , value: null },
-              
-                {meta: 'sp' , value: null },
-              
-                {meta: 'sp' , value: null },
-              
-                {meta: 'sp' , value: null },
-              
-                {meta: 'sp' , value: null },
-              
-                {meta: 'sp' , value: null },
-              
-                {meta: 'sp' , value: null },
-              
-                {meta: 'sp' , value: null },
-              
-                {meta: 'sp' , value: null },
-              
-                {meta: 'sp' , value: null },
-              
-                {meta: 'sp' , value: null },
-              
-                {meta: 'sp' , value: null },
-              
-                {meta: 'sp' , value: null },
-              
-                {meta: 'sp' , value: null },
-              
-                {meta: 'sp' , value: null },
-              
-                {meta: 'sp' , value: null },
-              
-                {meta: 'sp' , value: null },
-              
-                {meta: 'sp' , value: null },
-              
-                {meta: 'sp' , value: null },
-              
             ],
           
             [
@@ -1878,46 +1050,6 @@
                 {meta: 'vnl' , value: 1.28 },
               
                 {meta: 'vnl' , value: 2.6 },
-              
-                {meta: 'vnl' , value: null },
-              
-                {meta: 'vnl' , value: null },
-              
-                {meta: 'vnl' , value: null },
-              
-                {meta: 'vnl' , value: null },
-              
-                {meta: 'vnl' , value: null },
-              
-                {meta: 'vnl' , value: null },
-              
-                {meta: 'vnl' , value: null },
-              
-                {meta: 'vnl' , value: null },
-              
-                {meta: 'vnl' , value: null },
-              
-                {meta: 'vnl' , value: null },
-              
-                {meta: 'vnl' , value: null },
-              
-                {meta: 'vnl' , value: null },
-              
-                {meta: 'vnl' , value: null },
-              
-                {meta: 'vnl' , value: null },
-              
-                {meta: 'vnl' , value: null },
-              
-                {meta: 'vnl' , value: null },
-              
-                {meta: 'vnl' , value: null },
-              
-                {meta: 'vnl' , value: null },
-              
-                {meta: 'vnl' , value: null },
-              
-                {meta: 'vnl' , value: null },
               
             ],
           
@@ -1995,45 +1127,353 @@
               
                 {meta: 'vvd' , value: 22.39 },
               
-                {meta: 'vvd' , value: null },
+            ],
+          
+
+          ]
+        };
+
+        var chart = new Chartist.Line('.ten-days-graph', tenDaysData, options);
+
+        var twoMonthsData =
+        {
+          labels: [],
+          series: [
+
+          
+            [
               
-                {meta: 'vvd' , value: null },
+                {meta: '_50plus' , value: 1.1 },
               
-                {meta: 'vvd' , value: null },
+                {meta: '_50plus' , value: 2.57 },
               
-                {meta: 'vvd' , value: null },
+                {meta: '_50plus' , value: 1.28 },
               
-                {meta: 'vvd' , value: null },
+                {meta: '_50plus' , value: 1.58 },
               
-                {meta: 'vvd' , value: null },
+                {meta: '_50plus' , value: 1.04 },
               
-                {meta: 'vvd' , value: null },
+                {meta: '_50plus' , value: 7.86 },
               
-                {meta: 'vvd' , value: null },
+                {meta: '_50plus' , value: 3.81 },
               
-                {meta: 'vvd' , value: null },
+                {meta: '_50plus' , value: 2.06 },
               
-                {meta: 'vvd' , value: null },
+                {meta: '_50plus' , value: 0.71 },
               
-                {meta: 'vvd' , value: null },
+                {meta: '_50plus' , value: 3.0 },
               
-                {meta: 'vvd' , value: null },
+            ],
+          
+            [
               
-                {meta: 'vvd' , value: null },
+                {meta: 'cda' , value: 3.41 },
               
-                {meta: 'vvd' , value: null },
+                {meta: 'cda' , value: 3.76 },
               
-                {meta: 'vvd' , value: null },
+                {meta: 'cda' , value: 4.05 },
               
-                {meta: 'vvd' , value: null },
+                {meta: 'cda' , value: 4.05 },
               
-                {meta: 'vvd' , value: null },
+                {meta: 'cda' , value: 3.34 },
               
-                {meta: 'vvd' , value: null },
+                {meta: 'cda' , value: 2.11 },
               
-                {meta: 'vvd' , value: null },
+                {meta: 'cda' , value: 6.78 },
               
-                {meta: 'vvd' , value: null },
+                {meta: 'cda' , value: 3.37 },
+              
+                {meta: 'cda' , value: 5.84 },
+              
+                {meta: 'cda' , value: 4.53 },
+              
+            ],
+          
+            [
+              
+                {meta: 'cu' , value: 2.35 },
+              
+                {meta: 'cu' , value: 1.6 },
+              
+                {meta: 'cu' , value: 1.79 },
+              
+                {meta: 'cu' , value: 2.89 },
+              
+                {meta: 'cu' , value: 2.62 },
+              
+                {meta: 'cu' , value: 1.08 },
+              
+                {meta: 'cu' , value: 1.69 },
+              
+                {meta: 'cu' , value: 1.64 },
+              
+                {meta: 'cu' , value: 1.66 },
+              
+                {meta: 'cu' , value: 2.58 },
+              
+            ],
+          
+            [
+              
+                {meta: 'd66' , value: 6.58 },
+              
+                {meta: 'd66' , value: 7.4 },
+              
+                {meta: 'd66' , value: 6.83 },
+              
+                {meta: 'd66' , value: 7.47 },
+              
+                {meta: 'd66' , value: 7.45 },
+              
+                {meta: 'd66' , value: 9.97 },
+              
+                {meta: 'd66' , value: 7.94 },
+              
+                {meta: 'd66' , value: 9.06 },
+              
+                {meta: 'd66' , value: 6.93 },
+              
+                {meta: 'd66' , value: 8.07 },
+              
+            ],
+          
+            [
+              
+                {meta: 'denk' , value: 13.5 },
+              
+                {meta: 'denk' , value: 11.23 },
+              
+                {meta: 'denk' , value: 18.54 },
+              
+                {meta: 'denk' , value: 17.75 },
+              
+                {meta: 'denk' , value: 17.52 },
+              
+                {meta: 'denk' , value: 12.14 },
+              
+                {meta: 'denk' , value: 8.68 },
+              
+                {meta: 'denk' , value: 6.84 },
+              
+                {meta: 'denk' , value: 6.09 },
+              
+                {meta: 'denk' , value: 7.77 },
+              
+            ],
+          
+            [
+              
+                {meta: 'gl' , value: 5.33 },
+              
+                {meta: 'gl' , value: 7.13 },
+              
+                {meta: 'gl' , value: 6.71 },
+              
+                {meta: 'gl' , value: 7.29 },
+              
+                {meta: 'gl' , value: 6.52 },
+              
+                {meta: 'gl' , value: 12.82 },
+              
+                {meta: 'gl' , value: 7.4 },
+              
+                {meta: 'gl' , value: 5.26 },
+              
+                {meta: 'gl' , value: 7.78 },
+              
+                {meta: 'gl' , value: 7.1 },
+              
+            ],
+          
+            [
+              
+                {meta: 'ppnl' , value: 0.05 },
+              
+                {meta: 'ppnl' , value: 0.16 },
+              
+                {meta: 'ppnl' , value: 0.29 },
+              
+                {meta: 'ppnl' , value: 0.1 },
+              
+                {meta: 'ppnl' , value: 0.0 },
+              
+                {meta: 'ppnl' , value: 0.03 },
+              
+                {meta: 'ppnl' , value: 0.05 },
+              
+                {meta: 'ppnl' , value: 0.05 },
+              
+                {meta: 'ppnl' , value: 0.05 },
+              
+                {meta: 'ppnl' , value: 0.0 },
+              
+            ],
+          
+            [
+              
+                {meta: 'pvda' , value: 20.68 },
+              
+                {meta: 'pvda' , value: 13.5 },
+              
+                {meta: 'pvda' , value: 10.03 },
+              
+                {meta: 'pvda' , value: 13.93 },
+              
+                {meta: 'pvda' , value: 20.2 },
+              
+                {meta: 'pvda' , value: 14.3 },
+              
+                {meta: 'pvda' , value: 18.18 },
+              
+                {meta: 'pvda' , value: 11.41 },
+              
+                {meta: 'pvda' , value: 11.99 },
+              
+                {meta: 'pvda' , value: 16.6 },
+              
+            ],
+          
+            [
+              
+                {meta: 'pvdd' , value: 0.9 },
+              
+                {meta: 'pvdd' , value: 0.71 },
+              
+                {meta: 'pvdd' , value: 0.92 },
+              
+                {meta: 'pvdd' , value: 1.43 },
+              
+                {meta: 'pvdd' , value: 0.74 },
+              
+                {meta: 'pvdd' , value: 0.71 },
+              
+                {meta: 'pvdd' , value: 1.07 },
+              
+                {meta: 'pvdd' , value: 0.78 },
+              
+                {meta: 'pvdd' , value: 1.71 },
+              
+                {meta: 'pvdd' , value: 0.8 },
+              
+            ],
+          
+            [
+              
+                {meta: 'pvv' , value: 19.43 },
+              
+                {meta: 'pvv' , value: 29.54 },
+              
+                {meta: 'pvv' , value: 29.04 },
+              
+                {meta: 'pvv' , value: 21.37 },
+              
+                {meta: 'pvv' , value: 19.27 },
+              
+                {meta: 'pvv' , value: 18.39 },
+              
+                {meta: 'pvv' , value: 19.38 },
+              
+                {meta: 'pvv' , value: 16.13 },
+              
+                {meta: 'pvv' , value: 17.36 },
+              
+                {meta: 'pvv' , value: 18.39 },
+              
+            ],
+          
+            [
+              
+                {meta: 'sgp' , value: 1.23 },
+              
+                {meta: 'sgp' , value: 1.28 },
+              
+                {meta: 'sgp' , value: 1.11 },
+              
+                {meta: 'sgp' , value: 1.86 },
+              
+                {meta: 'sgp' , value: 2.26 },
+              
+                {meta: 'sgp' , value: 0.59 },
+              
+                {meta: 'sgp' , value: 1.56 },
+              
+                {meta: 'sgp' , value: 2.67 },
+              
+                {meta: 'sgp' , value: 2.62 },
+              
+                {meta: 'sgp' , value: 2.47 },
+              
+            ],
+          
+            [
+              
+                {meta: 'sp' , value: 5.53 },
+              
+                {meta: 'sp' , value: 4.67 },
+              
+                {meta: 'sp' , value: 5.07 },
+              
+                {meta: 'sp' , value: 5.3 },
+              
+                {meta: 'sp' , value: 4.92 },
+              
+                {meta: 'sp' , value: 5.79 },
+              
+                {meta: 'sp' , value: 5.62 },
+              
+                {meta: 'sp' , value: 3.35 },
+              
+                {meta: 'sp' , value: 2.89 },
+              
+                {meta: 'sp' , value: 3.7 },
+              
+            ],
+          
+            [
+              
+                {meta: 'vnl' , value: 1.33 },
+              
+                {meta: 'vnl' , value: 1.6 },
+              
+                {meta: 'vnl' , value: 0.97 },
+              
+                {meta: 'vnl' , value: 1.38 },
+              
+                {meta: 'vnl' , value: 1.85 },
+              
+                {meta: 'vnl' , value: 1.05 },
+              
+                {meta: 'vnl' , value: 1.09 },
+              
+                {meta: 'vnl' , value: 0.9 },
+              
+                {meta: 'vnl' , value: 1.28 },
+              
+                {meta: 'vnl' , value: 2.6 },
+              
+            ],
+          
+            [
+              
+                {meta: 'vvd' , value: 18.58 },
+              
+                {meta: 'vvd' , value: 14.85 },
+              
+                {meta: 'vvd' , value: 13.35 },
+              
+                {meta: 'vvd' , value: 13.6 },
+              
+                {meta: 'vvd' , value: 12.27 },
+              
+                {meta: 'vvd' , value: 13.16 },
+              
+                {meta: 'vvd' , value: 16.76 },
+              
+                {meta: 'vvd' , value: 36.48 },
+              
+                {meta: 'vvd' , value: 33.11 },
+              
+                {meta: 'vvd' , value: 22.39 },
               
             ],
           
@@ -3124,7 +2564,7 @@
     <div class="ct-chart ct-golden-section ten-days-graph">
     </div>
 
-    <h3>% vermeldingen vanaf 2 maanden voor de verkiezingen</h3>
+    <h3>% vermeldingen laatste 2 maanden</h3>
     <div class="ct-chart ct-golden-section two-months-graph">
     </div>
 
