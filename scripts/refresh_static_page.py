@@ -84,8 +84,10 @@ if __name__ == '__main__':
     backup_previous_static_page(current_settings['static_page'],current_settings['previous_static_pages_folder'])
 
     #Create a new one
-    politicaltweets = electionstats.PoliticalTweets()
+    politicaltweets = electionstats.PoliticalTweets(current_settings['db_host'],current_settings['db_user'],
+                                                    current_settings['db_password'],current_settings['db_name'])
     politicaltweets.readtweets()
+
     seats_per_party = politicaltweets.get_seats_per_party()
     history_of_party_mentions = politicaltweets.get_history_of_party_mentions()
     new_page_content = refresh_static_page(seats_per_party,history_of_party_mentions,current_settings['template'])

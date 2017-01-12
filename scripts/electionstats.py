@@ -2,8 +2,9 @@ import pymysql
 from fake_data import FAKE_SEATS_PER_PARTY, FAKE_HISTORY_OF_PARTY_MENTIONS_PERCENTAGES
 
 class PoliticalTweets:
-    def __init__(self):
-        self.db = {'host':'spitfire.science.ru.nl','user':'landsdb_admin','passwd':'queeveehiozei','dbname':'landsdb'}
+
+    def __init__(self, db_host, db_user, db_password, db_name):
+        self.db = {'host':db_host,'user':db_user,'passwd':db_password,'dbname':db_name}
         self.allparties = []
         self.seats_per_party = {}
         self.history_of_party_mentions_counts = {}
