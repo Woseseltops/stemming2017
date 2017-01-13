@@ -130,3 +130,60 @@ p
     width: 800px;
     margin: auto;
 }
+
+.chartist-tooltip:before
+{
+    border-top-color: hsla(40,12%,90%,1);
+}
+
+.chartist-tooltip
+{
+    background: hsla(40,12%,90%,1);
+    font-family: 'Muli';
+}
+
+/* Mobile only */
+
+@media only screen and (max-width: 500px)
+{
+    h2
+    {
+        font-size: 10vw;
+        width: 200vw;
+    }
+
+    h3
+    {
+        font-size: 14vw;
+    }
+
+    p
+    {
+        font-size: 10vw;
+    }
+
+    .party_name
+    {
+        font-size: 35px;
+    }
+
+    .legend_item
+    {
+        font-size: 8vw;
+    }
+
+    #chairs
+    {
+        display: none;
+    }
+
+    #legend
+    {
+        margin-left: 54vw;
+    }
+
+    #twitter_logo
+    {
+        width: 25%
+    }
+}
