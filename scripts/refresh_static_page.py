@@ -38,8 +38,8 @@ def refresh_static_page(seats_per_party,history_of_party_mentions,template):
             seats.append(party_name)
 
     #Translate the history of party mentions to series of percentages
-    day_names = [number_to_date_string(date_number) for date_number in history_of_party_mentions.keys()]
     party_mentions_ordered_by_time = sorted(history_of_party_mentions.items(),key=lambda x:x[0],reverse=False)
+    date_names = [number_to_date_string(date_number) for date_number,value in party_mentions_ordered_by_time]
     series_of_percentages_per_party = {}
     series_of_last_ten_percentages_per_party = {}
     date_index = 0
@@ -82,10 +82,21 @@ def refresh_static_page(seats_per_party,history_of_party_mentions,template):
     series_of_percentages_per_party = sorted(series_of_percentages_per_party.items(),key=lambda x: x[0])
     series_of_last_ten_percentages_per_party = sorted(series_of_last_ten_percentages_per_party.items(),key=lambda x: x[0])
 
+    #Remove every other label
+    even_date_names = []
+
+    for n, date_name in enumerate(date_names):
+        if n%2 == 0:
+            even_date_names.append(date_name)
+        else:
+            even_date_names.append(None)
+
     #Generate the page
     return Template(open(template).read()).render(seats=enumerate(seats),seats_per_party=seats_per_party,
                                                   series_of_percentages_per_party=series_of_percentages_per_party,
-                                                  series_of_last_ten_percentages_per_party=series_of_last_ten_percentages_per_party)
+                                                  series_of_last_ten_percentages_per_party=series_of_last_ten_percentages_per_party,
+                                                  date_names=even_date_names,
+                                                  last_ten_date_names=date_names[-10:])
 
 def number_to_date_string(date_number):
 

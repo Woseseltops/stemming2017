@@ -1,5 +1,7 @@
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link href='http://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 
@@ -8,9 +10,9 @@
     <script src="js/chartist-plugin-tooltip.min.js"></script>
 
     <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+    <link rel="stylesheet" href="css/chartist-plugin-tooltip.css" media="all"/>
     <link rel="stylesheet" href="css/style.css" media="all"/>
     <link rel="stylesheet" href="css/party_colors.css" media="all"/>
-    <link rel="stylesheet" href="css/chartist-plugin-tooltip.css" media="all"/>
 
  	<script type="text/javascript">
 
@@ -61,7 +63,7 @@
 
         var tenDaysData =
         {
-          labels: [],
+          labels: [ {% for date_name in last_ten_date_names %} '{{ date_name }}', {% endfor %}],
           series: [
 
           {% for party_name,series_of_percentages in series_of_last_ten_percentages_per_party %}
@@ -79,7 +81,16 @@
 
         var twoMonthsData =
         {
-          labels: [],
+          labels: [
+            {% for date_name in date_names %}
+
+                {% if date_name == None %}
+                    '',
+                {% else %}
+                    '{{ date_name }}',
+                {% endif %}
+
+            {% endfor %}],
           series: [
 
           {% for party_name,series_of_percentages in series_of_percentages_per_party %}
@@ -133,7 +144,7 @@
 
 <h1>Wat is de stemming in Nederland?</h1>
 
-<h2>Onze beste gok op basis van taalanalyse op Twitter</h2>
+<h2>Onze beste gok voor het aantal zetels, op basis van taalanalyse op Twitter</h2>
 
 <div id="chair_visualization">
     <div id="chairs">
@@ -182,8 +193,9 @@
     <div class="ct-chart ct-golden-section two-months-graph">
     </div>
 
-    <div><img src="http://applejack.science.ru.nl/lamabadge.php/stemming2017" alt="badge" /></div>
 </div>
+
+<div><img src="http://applejack.science.ru.nl/lamabadge.php/stemming2017" alt="badge" /></div>
 
 </body>
 </html>
