@@ -11,7 +11,7 @@ def backup_previous_static_page(static_page_location,backup_folder):
     except FileNotFoundError:
         pass
 
-def refresh_static_page(seats_per_party,history_of_party_mentions,template):
+def refresh_static_page(seats_per_party,history_of_party_mentions,peak_explanation_file_location,template):
 
     #Clean the party names
     seats_per_party_cleaned = {}
@@ -91,12 +91,15 @@ def refresh_static_page(seats_per_party,history_of_party_mentions,template):
         else:
             even_date_names.append(None)
 
+    peak_explanation = open(peak_explanation_file_location).read()
+
     #Generate the page
     return Template(open(template).read()).render(seats=enumerate(seats),seats_per_party=seats_per_party,
                                                   series_of_percentages_per_party=series_of_percentages_per_party,
                                                   series_of_last_ten_percentages_per_party=series_of_last_ten_percentages_per_party,
                                                   date_names=even_date_names,
-                                                  last_ten_date_names=date_names[-10:])
+                                                  last_ten_date_names=date_names[-10:],
+                                                  peak_explanation=peak_explanation)
 
 def number_to_date_string(date_number):
 
@@ -123,6 +126,7 @@ if __name__ == '__main__':
 
     seats_per_party = politicaltweets.get_seats_per_party()
     history_of_party_mentions = politicaltweets.get_history_of_party_mentions()
-    new_page_content = refresh_static_page(seats_per_party,history_of_party_mentions,current_settings['template'])
+    new_page_content = refresh_static_page(seats_per_party,history_of_party_mentions,
+                                           current_settings['peak_explanation_file_location'],current_settings['template'])
 
     open(current_settings['static_page'],'w').write(new_page_content)
