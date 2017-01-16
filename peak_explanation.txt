@@ -1,1 +1,4 @@
-Een tekstje over pieken in grafieken.
+<ul>
+<li>16 december: partijcongres GroenLinks</li>
+<li>8 december: uitslag lijsttrekkersverkiezing PVDA</li>
+</ul>
