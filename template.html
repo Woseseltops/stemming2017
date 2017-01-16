@@ -1,5 +1,7 @@
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link href='http://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 
@@ -8,8 +10,9 @@
     <script src="js/chartist-plugin-tooltip.min.js"></script>
 
     <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
-    <link rel="stylesheet" href="css/style.css" media="all"/>
     <link rel="stylesheet" href="css/chartist-plugin-tooltip.css" media="all"/>
+    <link rel="stylesheet" href="css/style.css" media="all"/>
+    <link rel="stylesheet" href="css/party_colors.css" media="all"/>
 
  	<script type="text/javascript">
 
@@ -51,12 +54,19 @@
 	    });
 
         //Generate the line graph
-        var data =
+        var options =
         {
-          labels: ['2 maanden','','','','1 maand','','','stemmen!'],
+          width: 800,
+          height: 400,
+	  plugins: [Chartist.plugins.tooltip()]
+        };
+
+        var tenDaysData =
+        {
+          labels: [ {% for date_name in last_ten_date_names %} '{{ date_name }}', {% endfor %}],
           series: [
 
-          {% for party_name,series_of_percentages in series_of_percentages_per_party %}
+          {% for party_name,series_of_percentages in series_of_last_ten_percentages_per_party %}
             [
               {% for percentage in series_of_percentages %}
                 {meta: '{{party_name}}' , value: {{percentage}} },
@@ -67,16 +77,63 @@
           ]
         };
 
-        var options =
+        var chart = new Chartist.Line('.ten-days-graph', tenDaysData, options);
+
+        var twoMonthsData =
         {
-          width: 550,
-          height: 275,
-	  plugins: [Chartist.plugins.tooltip()]
+          labels: [
+            {% for date_name in date_names %}
+
+                {% if date_name == None %}
+                    '',
+                {% else %}
+                    '{{ date_name }}',
+                {% endif %}
+
+            {% endfor %}],
+          series: [
+
+          {% for party_name,series_of_percentages in series_of_percentages_per_party %}
+            [
+              {% for percentage in series_of_percentages %}
+                {meta: '{{party_name}}' , value: {% if percentage == None %}null{% else %}{{percentage}}{% endif %} },
+              {% endfor %}
+            ],
+          {% endfor %}
+
+          ]
         };
-        var chart = new Chartist.Line('.ct-chart', data, options);
 
-        //Chart animations
+        var chart = new Chartist.Line('.two-months-graph', twoMonthsData, options);
 
+        //hover effect
+        $('.chair').mouseenter(function()
+        {
+            $('._'+$(this).attr('party')+'_graphic').addClass('highlighted_cell');
+            $('._'+$(this).attr('party')+'_background').addClass('highlighted_legend_item');
+            $('._'+$(this).attr('party')+'_background').addClass('_'+$(this).attr('party')+'_highlighted');
+        });
+
+        $('.chair').mouseleave(function()
+        {
+            $('._'+$(this).attr('party')+'_graphic').removeClass('highlighted_cell');
+            $('._'+$(this).attr('party')+'_background').removeClass('highlighted_legend_item');
+            $('._'+$(this).attr('party')+'_background').removeClass('_'+$(this).attr('party')+'_highlighted');
+        });
+
+        $('.party_name').mouseenter(function()
+        {
+            $('._'+$(this).attr('party')+'_graphic').addClass('highlighted_cell');
+            $(this).addClass('highlighted_legend_item');
+            $(this).addClass('_'+$(this).attr('party')+'_highlighted');
+        });
+
+        $('.party_name').mouseleave(function()
+        {
+            $('._'+$(this).attr('party')+'_graphic').removeClass('highlighted_cell');
+            $(this).removeClass('highlighted_legend_item');
+            $(this).removeClass('_'+$(this).attr('party')+'_highlighted');
+        });
 
 	});
 	</script>
@@ -87,41 +144,57 @@
 
 <h1>Wat is de stemming in Nederland?</h1>
 
-<h2>Onze beste gok op basis van taalanalyse op Twitter</h2>
+<h2>Onze beste gok voor het aantal zetels, op basis van taalanalyse op Twitter</h2>
 
 <div id="chair_visualization">
     <div id="chairs">
-        <table><tr>
-            {% for chair_index, party_name in chairs %}
+        <table class="outer_table_2x3"><tr><td>
+            <table class="inner_table_6x6"><tr>
+                {% for chair_index, party_name in seats %}
 
-            <td class="chair {{party_name}}_graphic"><img class="dynamic_svg" src="svg/chair.svg"></td>
+                <td class="chair _{{party_name}}_graphic" party="{{party_name}}"><img class="dynamic_svg" src="svg/chair.svg"></td>
 
-            {% if (chair_index+1) %10 == 0 %}
-                </tr><tr>
-            {% endif %}
+                {% if (chair_index+1) %25 == 0 %}
+                    </tr></table></td>
 
-        {% endfor %}
-        </tr></table>
+                    {% if (chair_index+1) %50 == 0 %}
+                        </tr><tr>
+                    {% endif %}
+
+                    <td><table><tr>
+                {% elif (chair_index+1) %5 == 0 %}
+                    </tr><tr>
+                {% endif %}
+
+                {% endfor %}
+            </tr></table>
+        </td></tr></table>
     </div>
     <div id="legend">
         <table id="legend_table">
-            {% for party_name, number_of_chairs in chairs_per_party %}
-            <tr><td class="legend_item">{{number_of_chairs}} x </td><td class="party_name {{party_name}}_background">{{party_name}}</td></tr>
+            {% for party_name, number_of_chairs in seats_per_party %}
+            	<tr><td class="legend_item">{{number_of_chairs}} x </td><td class="party_name _{{party_name}}_background" party="{{party_name}}">{{party_name}}</td></tr>
             {% endfor %}
         </table>
     </div>
 </div>
 
-<div class="item_row">
-    <div class="item">
-        <h3>Over dit onderzoek</h3>
-        <p><img id="twitter_logo" src="svg/twitter.svg">Onderzoekers van het Centre for Language and Speech Technology onderzoeken in hoeverre er een verband is te vinden tussen hoe vaak een politieke partij genoemd wordt op Twitter en hoe deze partij het doet in de peilingen en bij de verkiezingen zelf. Bij de parlementsverkiezingen van 2012 bleek er een sterk verband tussen deze twee te zijn (zie ons artikel Relating Political Party Mentions on Twitter with Polls and Election Results). Op deze pagina zijn een aantal grafieken te vinden met hoe vaak de naam van een politiek partij wordt genoemd in een tweet. De metingen beginnen op woensdag 18 februari en worden per uur bijgewerkt. De meest recente meting is altijd van drie uur geleden. De metingen worden gedaan op de tweets uit Twiqs, een dienst waarin ongeveer 40% van de Nederlandse tweets doorzoekbaar zijn.</p>
+<div id="explanation_and_graphs">
+    <h3>Over dit onderzoek</h3>
+    <p><img id="twitter_logo" src="svg/twitter.svg">Onderzoekers van het Centre for Language and Speech Technology onderzoeken in hoeverre er een verband is te vinden tussen hoe vaak een politieke partij genoemd wordt op Twitter en hoe deze partij het doet in de peilingen en bij de verkiezingen zelf. Bij de parlementsverkiezingen van 2012 bleek er een sterk verband tussen deze twee te zijn (zie ons artikel Relating Political Party Mentions on Twitter with Polls and Election Results). Op deze pagina zijn een aantal grafieken te vinden met hoe vaak de naam van een politiek partij wordt genoemd in een tweet. De metingen beginnen op woensdag 18 februari en worden per uur bijgewerkt. De meest recente meting is altijd van drie uur geleden. De metingen worden gedaan op de tweets uit Twiqs, een dienst waarin ongeveer 40% van de Nederlandse tweets doorzoekbaar zijn.</p>
+
+    <div class="whitespace"></div>
+
+    <h3>% vermeldingen laatste 10 dagen</h3>
+    <div class="ct-chart ct-golden-section ten-days-graph">
     </div>
-    <div class="item">
-        <h3>% vermeldingen</h3>
-        <div class="ct-chart ct-golden-section percentage_mentions_graph">
-        </div>
+
+    <h3>% vermeldingen vanaf 2 maanden voor de verkiezingen</h3>
+    <div class="ct-chart ct-golden-section two-months-graph">
     </div>
+
+    <p>{{ peak_explanation }}</p>
+
 </div>
 
 <div><img src="http://applejack.science.ru.nl/lamabadge.php/stemming2017" alt="badge" /></div>

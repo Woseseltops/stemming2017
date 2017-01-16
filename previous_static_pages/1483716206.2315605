@@ -1,0 +1,1178 @@
+<html>
+<head>
+    <link href='http://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+    <script src="js/chartist-plugin-tooltip.min.js"></script>
+
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+    <link rel="stylesheet" href="css/style.css" media="all"/>
+    <link rel="stylesheet" href="css/chartist-plugin-tooltip.css" media="all"/>
+
+ 	<script type="text/javascript">
+
+ 	$(document).ready(function()
+ 	{
+	    // Replace all SVG images with inline SVG
+	    jQuery('img.dynamic_svg').each(function()
+	    {
+	        var $img = jQuery(this);
+	        var imgID = $img.attr('id');
+	        var imgClass = $img.attr('class');
+	        var imgURL = $img.attr('src');
+
+	        jQuery.get(imgURL, function(data)
+	        {
+	            // Get the SVG tag, ignore the rest
+	            var $svg = jQuery(data).find('svg');
+
+	            // Add replaced image's ID to the new SVG
+	            if(typeof imgID !== 'undefined') {
+	                $svg = $svg.attr('id', imgID);
+	            }
+	            // Add replaced image's classes to the new SVG
+	            if(typeof imgClass !== 'undefined') {
+	                $svg = $svg.attr('class', imgClass+' replaced-svg');
+	            }
+
+	            // Remove any invalid XML tags as per http://validator.w3.org
+	            $svg = $svg.removeAttr('xmlns:a');
+
+	            // Replace image with new SVG
+	            $img.replaceWith($svg);
+
+			    //Recolor first path
+			    $('path.seat').css("fill", 'inherit');
+
+	        }, 'xml');
+
+	    });
+
+        //Generate the line graph
+        var data =
+        {
+          labels: ['2 maanden','','','','1 maand','','','stemmen!'],
+          series: [
+
+          
+            [
+              
+                {meta: '50plus' , value: 0.03 },
+              
+                {meta: '50plus' , value: 0.01 },
+              
+                {meta: '50plus' , value: 0.02 },
+              
+                {meta: '50plus' , value: 0.04 },
+              
+                {meta: '50plus' , value: 0.08 },
+              
+                {meta: '50plus' , value: 0.01 },
+              
+                {meta: '50plus' , value: 0.02 },
+              
+                {meta: '50plus' , value: 0.01 },
+              
+                {meta: '50plus' , value: 0.03 },
+              
+                {meta: '50plus' , value: 0.01 },
+              
+                {meta: '50plus' , value: 0.01 },
+              
+                {meta: '50plus' , value: 0.01 },
+              
+                {meta: '50plus' , value: 0.01 },
+              
+                {meta: '50plus' , value: 0.01 },
+              
+                {meta: '50plus' , value: 0.01 },
+              
+                {meta: '50plus' , value: 0.01 },
+              
+                {meta: '50plus' , value: 0.02 },
+              
+                {meta: '50plus' , value: 0.03 },
+              
+                {meta: '50plus' , value: 0.01 },
+              
+                {meta: '50plus' , value: 0.01 },
+              
+                {meta: '50plus' , value: 0.01 },
+              
+                {meta: '50plus' , value: 0.01 },
+              
+                {meta: '50plus' , value: 0.01 },
+              
+                {meta: '50plus' , value: 0.01 },
+              
+                {meta: '50plus' , value: 0.03 },
+              
+                {meta: '50plus' , value: 0.04 },
+              
+                {meta: '50plus' , value: 0.08 },
+              
+                {meta: '50plus' , value: 0.01 },
+              
+                {meta: '50plus' , value: 0.01 },
+              
+                {meta: '50plus' , value: 0.03 },
+              
+                {meta: '50plus' , value: 0.09 },
+              
+                {meta: '50plus' , value: 0.02 },
+              
+                {meta: '50plus' , value: 0.05 },
+              
+                {meta: '50plus' , value: 0.01 },
+              
+                {meta: '50plus' , value: 0.01 },
+              
+                {meta: '50plus' , value: 0.01 },
+              
+            ],
+          
+            [
+              
+                {meta: 'cda' , value: 0.05 },
+              
+                {meta: 'cda' , value: 0.06 },
+              
+                {meta: 'cda' , value: 0.03 },
+              
+                {meta: 'cda' , value: 0.07 },
+              
+                {meta: 'cda' , value: 0.02 },
+              
+                {meta: 'cda' , value: 0.03 },
+              
+                {meta: 'cda' , value: 0.04 },
+              
+                {meta: 'cda' , value: 0.04 },
+              
+                {meta: 'cda' , value: 0.04 },
+              
+                {meta: 'cda' , value: 0.03 },
+              
+                {meta: 'cda' , value: 0.03 },
+              
+                {meta: 'cda' , value: 0.02 },
+              
+                {meta: 'cda' , value: 0.02 },
+              
+                {meta: 'cda' , value: 0.04 },
+              
+                {meta: 'cda' , value: 0.05 },
+              
+                {meta: 'cda' , value: 0.08 },
+              
+                {meta: 'cda' , value: 0.07 },
+              
+                {meta: 'cda' , value: 0.04 },
+              
+                {meta: 'cda' , value: 0.03 },
+              
+                {meta: 'cda' , value: 0.03 },
+              
+                {meta: 'cda' , value: 0.08 },
+              
+                {meta: 'cda' , value: 0.09 },
+              
+                {meta: 'cda' , value: 0.05 },
+              
+                {meta: 'cda' , value: 0.07 },
+              
+                {meta: 'cda' , value: 0.06 },
+              
+                {meta: 'cda' , value: 0.03 },
+              
+                {meta: 'cda' , value: 0.03 },
+              
+                {meta: 'cda' , value: 0.02 },
+              
+                {meta: 'cda' , value: 0.06 },
+              
+                {meta: 'cda' , value: 0.04 },
+              
+                {meta: 'cda' , value: 0.06 },
+              
+                {meta: 'cda' , value: 0.03 },
+              
+                {meta: 'cda' , value: 0.03 },
+              
+                {meta: 'cda' , value: 0.03 },
+              
+                {meta: 'cda' , value: 0.03 },
+              
+                {meta: 'cda' , value: 0.03 },
+              
+            ],
+          
+            [
+              
+                {meta: 'cu' , value: 0.03 },
+              
+                {meta: 'cu' , value: 0.02 },
+              
+                {meta: 'cu' , value: 0.02 },
+              
+                {meta: 'cu' , value: 0.02 },
+              
+                {meta: 'cu' , value: 0.01 },
+              
+                {meta: 'cu' , value: 0.03 },
+              
+                {meta: 'cu' , value: 0.03 },
+              
+                {meta: 'cu' , value: 0.02 },
+              
+                {meta: 'cu' , value: 0.02 },
+              
+                {meta: 'cu' , value: 0.02 },
+              
+                {meta: 'cu' , value: 0.03 },
+              
+                {meta: 'cu' , value: 0.01 },
+              
+                {meta: 'cu' , value: 0.02 },
+              
+                {meta: 'cu' , value: 0.02 },
+              
+                {meta: 'cu' , value: 0.03 },
+              
+                {meta: 'cu' , value: 0.03 },
+              
+                {meta: 'cu' , value: 0.08 },
+              
+                {meta: 'cu' , value: 0.02 },
+              
+                {meta: 'cu' , value: 0.01 },
+              
+                {meta: 'cu' , value: 0.01 },
+              
+                {meta: 'cu' , value: 0.02 },
+              
+                {meta: 'cu' , value: 0.03 },
+              
+                {meta: 'cu' , value: 0.02 },
+              
+                {meta: 'cu' , value: 0.01 },
+              
+                {meta: 'cu' , value: 0.02 },
+              
+                {meta: 'cu' , value: 0.01 },
+              
+                {meta: 'cu' , value: 0.01 },
+              
+                {meta: 'cu' , value: 0.01 },
+              
+                {meta: 'cu' , value: 0.03 },
+              
+                {meta: 'cu' , value: 0.02 },
+              
+                {meta: 'cu' , value: 0.02 },
+              
+                {meta: 'cu' , value: 0.02 },
+              
+                {meta: 'cu' , value: 0.01 },
+              
+                {meta: 'cu' , value: 0.02 },
+              
+                {meta: 'cu' , value: 0.03 },
+              
+                {meta: 'cu' , value: 0.04 },
+              
+            ],
+          
+            [
+              
+                {meta: 'd66' , value: 0.08 },
+              
+                {meta: 'd66' , value: 0.07 },
+              
+                {meta: 'd66' , value: 0.09 },
+              
+                {meta: 'd66' , value: 0.08 },
+              
+                {meta: 'd66' , value: 0.1 },
+              
+                {meta: 'd66' , value: 0.07 },
+              
+                {meta: 'd66' , value: 0.07 },
+              
+                {meta: 'd66' , value: 0.07 },
+              
+                {meta: 'd66' , value: 0.07 },
+              
+                {meta: 'd66' , value: 0.07 },
+              
+                {meta: 'd66' , value: 0.06 },
+              
+                {meta: 'd66' , value: 0.05 },
+              
+                {meta: 'd66' , value: 0.03 },
+              
+                {meta: 'd66' , value: 0.08 },
+              
+                {meta: 'd66' , value: 0.08 },
+              
+                {meta: 'd66' , value: 0.09 },
+              
+                {meta: 'd66' , value: 0.13 },
+              
+                {meta: 'd66' , value: 0.15 },
+              
+                {meta: 'd66' , value: 0.14 },
+              
+                {meta: 'd66' , value: 0.04 },
+              
+                {meta: 'd66' , value: 0.13 },
+              
+                {meta: 'd66' , value: 0.09 },
+              
+                {meta: 'd66' , value: 0.08 },
+              
+                {meta: 'd66' , value: 0.08 },
+              
+                {meta: 'd66' , value: 0.06 },
+              
+                {meta: 'd66' , value: 0.07 },
+              
+                {meta: 'd66' , value: 0.08 },
+              
+                {meta: 'd66' , value: 0.07 },
+              
+                {meta: 'd66' , value: 0.09 },
+              
+                {meta: 'd66' , value: 0.1 },
+              
+                {meta: 'd66' , value: 0.07 },
+              
+                {meta: 'd66' , value: 0.08 },
+              
+                {meta: 'd66' , value: 0.08 },
+              
+                {meta: 'd66' , value: 0.07 },
+              
+                {meta: 'd66' , value: 0.09 },
+              
+                {meta: 'd66' , value: 0.09 },
+              
+            ],
+          
+            [
+              
+                {meta: 'denk' , value: 0.08 },
+              
+                {meta: 'denk' , value: 0.06 },
+              
+                {meta: 'denk' , value: 0.07 },
+              
+                {meta: 'denk' , value: 0.09 },
+              
+                {meta: 'denk' , value: 0.12 },
+              
+                {meta: 'denk' , value: 0.18 },
+              
+                {meta: 'denk' , value: 0.18 },
+              
+                {meta: 'denk' , value: 0.19 },
+              
+                {meta: 'denk' , value: 0.11 },
+              
+                {meta: 'denk' , value: 0.13 },
+              
+                {meta: 'denk' , value: 0.11 },
+              
+                {meta: 'denk' , value: 0.15 },
+              
+                {meta: 'denk' , value: 0.59 },
+              
+                {meta: 'denk' , value: 0.08 },
+              
+                {meta: 'denk' , value: 0.08 },
+              
+                {meta: 'denk' , value: 0.06 },
+              
+                {meta: 'denk' , value: 0.06 },
+              
+                {meta: 'denk' , value: 0.1 },
+              
+                {meta: 'denk' , value: 0.07 },
+              
+                {meta: 'denk' , value: 0.04 },
+              
+                {meta: 'denk' , value: 0.08 },
+              
+                {meta: 'denk' , value: 0.07 },
+              
+                {meta: 'denk' , value: 0.06 },
+              
+                {meta: 'denk' , value: 0.07 },
+              
+                {meta: 'denk' , value: 0.08 },
+              
+                {meta: 'denk' , value: 0.08 },
+              
+                {meta: 'denk' , value: 0.08 },
+              
+                {meta: 'denk' , value: 0.06 },
+              
+                {meta: 'denk' , value: 0.09 },
+              
+                {meta: 'denk' , value: 0.09 },
+              
+                {meta: 'denk' , value: 0.09 },
+              
+                {meta: 'denk' , value: 0.1 },
+              
+                {meta: 'denk' , value: 0.08 },
+              
+                {meta: 'denk' , value: 0.08 },
+              
+                {meta: 'denk' , value: 0.09 },
+              
+                {meta: 'denk' , value: 0.08 },
+              
+            ],
+          
+            [
+              
+                {meta: 'gl' , value: 0.07 },
+              
+                {meta: 'gl' , value: 0.08 },
+              
+                {meta: 'gl' , value: 0.05 },
+              
+                {meta: 'gl' , value: 0.07 },
+              
+                {meta: 'gl' , value: 0.13 },
+              
+                {meta: 'gl' , value: 0.07 },
+              
+                {meta: 'gl' , value: 0.07 },
+              
+                {meta: 'gl' , value: 0.07 },
+              
+                {meta: 'gl' , value: 0.07 },
+              
+                {meta: 'gl' , value: 0.05 },
+              
+                {meta: 'gl' , value: 0.06 },
+              
+                {meta: 'gl' , value: 0.05 },
+              
+                {meta: 'gl' , value: 0.04 },
+              
+                {meta: 'gl' , value: 0.08 },
+              
+                {meta: 'gl' , value: 0.06 },
+              
+                {meta: 'gl' , value: 0.07 },
+              
+                {meta: 'gl' , value: 0.1 },
+              
+                {meta: 'gl' , value: 0.16 },
+              
+                {meta: 'gl' , value: 0.23 },
+              
+                {meta: 'gl' , value: 0.38 },
+              
+                {meta: 'gl' , value: 0.07 },
+              
+                {meta: 'gl' , value: 0.13 },
+              
+                {meta: 'gl' , value: 0.05 },
+              
+                {meta: 'gl' , value: 0.08 },
+              
+                {meta: 'gl' , value: 0.06 },
+              
+                {meta: 'gl' , value: 0.07 },
+              
+                {meta: 'gl' , value: 0.05 },
+              
+                {meta: 'gl' , value: 0.04 },
+              
+                {meta: 'gl' , value: 0.07 },
+              
+                {meta: 'gl' , value: 0.07 },
+              
+                {meta: 'gl' , value: 0.07 },
+              
+                {meta: 'gl' , value: 0.06 },
+              
+                {meta: 'gl' , value: 0.13 },
+              
+                {meta: 'gl' , value: 0.08 },
+              
+                {meta: 'gl' , value: 0.07 },
+              
+                {meta: 'gl' , value: 0.08 },
+              
+            ],
+          
+            [
+              
+                {meta: 'ppnl' , value: 0.0 },
+              
+                {meta: 'ppnl' , value: 0.0 },
+              
+                {meta: 'ppnl' , value: 0.0 },
+              
+                {meta: 'ppnl' , value: 0.0 },
+              
+                {meta: 'ppnl' , value: 0.0 },
+              
+                {meta: 'ppnl' , value: 0.0 },
+              
+                {meta: 'ppnl' , value: 0.0 },
+              
+                {meta: 'ppnl' , value: 0.0 },
+              
+                {meta: 'ppnl' , value: 0.0 },
+              
+                {meta: 'ppnl' , value: 0.0 },
+              
+                {meta: 'ppnl' , value: 0.0 },
+              
+                {meta: 'ppnl' , value: 0.0 },
+              
+                {meta: 'ppnl' , value: 0.0 },
+              
+                {meta: 'ppnl' , value: 0.0 },
+              
+                {meta: 'ppnl' , value: 0.0 },
+              
+                {meta: 'ppnl' , value: 0.0 },
+              
+                {meta: 'ppnl' , value: 0.0 },
+              
+                {meta: 'ppnl' , value: 0.0 },
+              
+                {meta: 'ppnl' , value: 0.0 },
+              
+                {meta: 'ppnl' , value: 0.0 },
+              
+                {meta: 'ppnl' , value: 0.0 },
+              
+                {meta: 'ppnl' , value: 0.0 },
+              
+                {meta: 'ppnl' , value: 0.0 },
+              
+                {meta: 'ppnl' , value: 0.0 },
+              
+                {meta: 'ppnl' , value: 0.0 },
+              
+                {meta: 'ppnl' , value: 0.0 },
+              
+                {meta: 'ppnl' , value: 0.0 },
+              
+                {meta: 'ppnl' , value: 0.0 },
+              
+                {meta: 'ppnl' , value: 0.0 },
+              
+                {meta: 'ppnl' , value: 0.0 },
+              
+                {meta: 'ppnl' , value: 0.0 },
+              
+                {meta: 'ppnl' , value: 0.0 },
+              
+                {meta: 'ppnl' , value: 0.0 },
+              
+                {meta: 'ppnl' , value: 0.0 },
+              
+                {meta: 'ppnl' , value: 0.0 },
+              
+                {meta: 'ppnl' , value: 0.0 },
+              
+            ],
+          
+            [
+              
+                {meta: 'pvda' , value: 0.17 },
+              
+                {meta: 'pvda' , value: 0.12 },
+              
+                {meta: 'pvda' , value: 0.11 },
+              
+                {meta: 'pvda' , value: 0.18 },
+              
+                {meta: 'pvda' , value: 0.14 },
+              
+                {meta: 'pvda' , value: 0.2 },
+              
+                {meta: 'pvda' , value: 0.14 },
+              
+                {meta: 'pvda' , value: 0.1 },
+              
+                {meta: 'pvda' , value: 0.13 },
+              
+                {meta: 'pvda' , value: 0.21 },
+              
+                {meta: 'pvda' , value: 0.12 },
+              
+                {meta: 'pvda' , value: 0.1 },
+              
+                {meta: 'pvda' , value: 0.07 },
+              
+                {meta: 'pvda' , value: 0.19 },
+              
+                {meta: 'pvda' , value: 0.33 },
+              
+                {meta: 'pvda' , value: 0.22 },
+              
+                {meta: 'pvda' , value: 0.13 },
+              
+                {meta: 'pvda' , value: 0.12 },
+              
+                {meta: 'pvda' , value: 0.12 },
+              
+                {meta: 'pvda' , value: 0.13 },
+              
+                {meta: 'pvda' , value: 0.15 },
+              
+                {meta: 'pvda' , value: 0.1 },
+              
+                {meta: 'pvda' , value: 0.16 },
+              
+                {meta: 'pvda' , value: 0.2 },
+              
+                {meta: 'pvda' , value: 0.26 },
+              
+                {meta: 'pvda' , value: 0.2 },
+              
+                {meta: 'pvda' , value: 0.25 },
+              
+                {meta: 'pvda' , value: 0.38 },
+              
+                {meta: 'pvda' , value: 0.17 },
+              
+                {meta: 'pvda' , value: 0.17 },
+              
+                {meta: 'pvda' , value: 0.17 },
+              
+                {meta: 'pvda' , value: 0.19 },
+              
+                {meta: 'pvda' , value: 0.16 },
+              
+                {meta: 'pvda' , value: 0.19 },
+              
+                {meta: 'pvda' , value: 0.24 },
+              
+                {meta: 'pvda' , value: 0.25 },
+              
+            ],
+          
+            [
+              
+                {meta: 'pvdd' , value: 0.01 },
+              
+                {meta: 'pvdd' , value: 0.02 },
+              
+                {meta: 'pvdd' , value: 0.01 },
+              
+                {meta: 'pvdd' , value: 0.01 },
+              
+                {meta: 'pvdd' , value: 0.01 },
+              
+                {meta: 'pvdd' , value: 0.01 },
+              
+                {meta: 'pvdd' , value: 0.01 },
+              
+                {meta: 'pvdd' , value: 0.01 },
+              
+                {meta: 'pvdd' , value: 0.01 },
+              
+                {meta: 'pvdd' , value: 0.01 },
+              
+                {meta: 'pvdd' , value: 0.01 },
+              
+                {meta: 'pvdd' , value: 0.01 },
+              
+                {meta: 'pvdd' , value: 0.01 },
+              
+                {meta: 'pvdd' , value: 0.01 },
+              
+                {meta: 'pvdd' , value: 0.01 },
+              
+                {meta: 'pvdd' , value: 0.01 },
+              
+                {meta: 'pvdd' , value: 0.01 },
+              
+                {meta: 'pvdd' , value: 0.01 },
+              
+                {meta: 'pvdd' , value: 0.01 },
+              
+                {meta: 'pvdd' , value: 0.01 },
+              
+                {meta: 'pvdd' , value: 0.01 },
+              
+                {meta: 'pvdd' , value: 0.01 },
+              
+                {meta: 'pvdd' , value: 0.01 },
+              
+                {meta: 'pvdd' , value: 0.02 },
+              
+                {meta: 'pvdd' , value: 0.01 },
+              
+                {meta: 'pvdd' , value: 0.01 },
+              
+                {meta: 'pvdd' , value: 0.01 },
+              
+                {meta: 'pvdd' , value: 0.01 },
+              
+                {meta: 'pvdd' , value: 0.01 },
+              
+                {meta: 'pvdd' , value: 0.02 },
+              
+                {meta: 'pvdd' , value: 0.01 },
+              
+                {meta: 'pvdd' , value: 0.01 },
+              
+                {meta: 'pvdd' , value: 0.02 },
+              
+                {meta: 'pvdd' , value: 0.01 },
+              
+                {meta: 'pvdd' , value: 0.01 },
+              
+                {meta: 'pvdd' , value: 0.02 },
+              
+            ],
+          
+            [
+              
+                {meta: 'pvv' , value: 0.18 },
+              
+                {meta: 'pvv' , value: 0.17 },
+              
+                {meta: 'pvv' , value: 0.16 },
+              
+                {meta: 'pvv' , value: 0.19 },
+              
+                {meta: 'pvv' , value: 0.18 },
+              
+                {meta: 'pvv' , value: 0.19 },
+              
+                {meta: 'pvv' , value: 0.21 },
+              
+                {meta: 'pvv' , value: 0.29 },
+              
+                {meta: 'pvv' , value: 0.3 },
+              
+                {meta: 'pvv' , value: 0.19 },
+              
+                {meta: 'pvv' , value: 0.2 },
+              
+                {meta: 'pvv' , value: 0.25 },
+              
+                {meta: 'pvv' , value: 0.09 },
+              
+                {meta: 'pvv' , value: 0.18 },
+              
+                {meta: 'pvv' , value: 0.17 },
+              
+                {meta: 'pvv' , value: 0.2 },
+              
+                {meta: 'pvv' , value: 0.19 },
+              
+                {meta: 'pvv' , value: 0.18 },
+              
+                {meta: 'pvv' , value: 0.19 },
+              
+                {meta: 'pvv' , value: 0.14 },
+              
+                {meta: 'pvv' , value: 0.16 },
+              
+                {meta: 'pvv' , value: 0.16 },
+              
+                {meta: 'pvv' , value: 0.17 },
+              
+                {meta: 'pvv' , value: 0.19 },
+              
+                {meta: 'pvv' , value: 0.18 },
+              
+                {meta: 'pvv' , value: 0.26 },
+              
+                {meta: 'pvv' , value: 0.24 },
+              
+                {meta: 'pvv' , value: 0.26 },
+              
+                {meta: 'pvv' , value: 0.2 },
+              
+                {meta: 'pvv' , value: 0.17 },
+              
+                {meta: 'pvv' , value: 0.17 },
+              
+                {meta: 'pvv' , value: 0.23 },
+              
+                {meta: 'pvv' , value: 0.25 },
+              
+                {meta: 'pvv' , value: 0.28 },
+              
+                {meta: 'pvv' , value: 0.22 },
+              
+                {meta: 'pvv' , value: 0.16 },
+              
+            ],
+          
+            [
+              
+                {meta: 'sgp' , value: 0.02 },
+              
+                {meta: 'sgp' , value: 0.03 },
+              
+                {meta: 'sgp' , value: 0.03 },
+              
+                {meta: 'sgp' , value: 0.02 },
+              
+                {meta: 'sgp' , value: 0.01 },
+              
+                {meta: 'sgp' , value: 0.02 },
+              
+                {meta: 'sgp' , value: 0.02 },
+              
+                {meta: 'sgp' , value: 0.01 },
+              
+                {meta: 'sgp' , value: 0.01 },
+              
+                {meta: 'sgp' , value: 0.01 },
+              
+                {meta: 'sgp' , value: 0.01 },
+              
+                {meta: 'sgp' , value: 0.01 },
+              
+                {meta: 'sgp' , value: 0.01 },
+              
+                {meta: 'sgp' , value: 0.01 },
+              
+                {meta: 'sgp' , value: 0.02 },
+              
+                {meta: 'sgp' , value: 0.01 },
+              
+                {meta: 'sgp' , value: 0.02 },
+              
+                {meta: 'sgp' , value: 0.01 },
+              
+                {meta: 'sgp' , value: 0.01 },
+              
+                {meta: 'sgp' , value: 0.01 },
+              
+                {meta: 'sgp' , value: 0.01 },
+              
+                {meta: 'sgp' , value: 0.01 },
+              
+                {meta: 'sgp' , value: 0.01 },
+              
+                {meta: 'sgp' , value: 0.01 },
+              
+                {meta: 'sgp' , value: 0.01 },
+              
+                {meta: 'sgp' , value: 0.01 },
+              
+                {meta: 'sgp' , value: 0.02 },
+              
+                {meta: 'sgp' , value: 0.01 },
+              
+                {meta: 'sgp' , value: 0.02 },
+              
+                {meta: 'sgp' , value: 0.02 },
+              
+                {meta: 'sgp' , value: 0.01 },
+              
+                {meta: 'sgp' , value: 0.01 },
+              
+                {meta: 'sgp' , value: 0.01 },
+              
+                {meta: 'sgp' , value: 0.01 },
+              
+                {meta: 'sgp' , value: 0.01 },
+              
+                {meta: 'sgp' , value: 0.01 },
+              
+            ],
+          
+            [
+              
+                {meta: 'sp' , value: 0.04 },
+              
+                {meta: 'sp' , value: 0.03 },
+              
+                {meta: 'sp' , value: 0.03 },
+              
+                {meta: 'sp' , value: 0.06 },
+              
+                {meta: 'sp' , value: 0.06 },
+              
+                {meta: 'sp' , value: 0.05 },
+              
+                {meta: 'sp' , value: 0.05 },
+              
+                {meta: 'sp' , value: 0.05 },
+              
+                {meta: 'sp' , value: 0.05 },
+              
+                {meta: 'sp' , value: 0.06 },
+              
+                {meta: 'sp' , value: 0.04 },
+              
+                {meta: 'sp' , value: 0.03 },
+              
+                {meta: 'sp' , value: 0.02 },
+              
+                {meta: 'sp' , value: 0.05 },
+              
+                {meta: 'sp' , value: 0.04 },
+              
+                {meta: 'sp' , value: 0.05 },
+              
+                {meta: 'sp' , value: 0.04 },
+              
+                {meta: 'sp' , value: 0.04 },
+              
+                {meta: 'sp' , value: 0.06 },
+              
+                {meta: 'sp' , value: 0.03 },
+              
+                {meta: 'sp' , value: 0.05 },
+              
+                {meta: 'sp' , value: 0.06 },
+              
+                {meta: 'sp' , value: 0.22 },
+              
+                {meta: 'sp' , value: 0.05 },
+              
+                {meta: 'sp' , value: 0.05 },
+              
+                {meta: 'sp' , value: 0.06 },
+              
+                {meta: 'sp' , value: 0.03 },
+              
+                {meta: 'sp' , value: 0.03 },
+              
+                {meta: 'sp' , value: 0.05 },
+              
+                {meta: 'sp' , value: 0.04 },
+              
+                {meta: 'sp' , value: 0.06 },
+              
+                {meta: 'sp' , value: 0.05 },
+              
+                {meta: 'sp' , value: 0.05 },
+              
+                {meta: 'sp' , value: 0.04 },
+              
+                {meta: 'sp' , value: 0.04 },
+              
+                {meta: 'sp' , value: 0.04 },
+              
+            ],
+          
+            [
+              
+                {meta: 'vnl' , value: 0.03 },
+              
+                {meta: 'vnl' , value: 0.01 },
+              
+                {meta: 'vnl' , value: 0.01 },
+              
+                {meta: 'vnl' , value: 0.01 },
+              
+                {meta: 'vnl' , value: 0.01 },
+              
+                {meta: 'vnl' , value: 0.02 },
+              
+                {meta: 'vnl' , value: 0.01 },
+              
+                {meta: 'vnl' , value: 0.01 },
+              
+                {meta: 'vnl' , value: 0.02 },
+              
+                {meta: 'vnl' , value: 0.01 },
+              
+                {meta: 'vnl' , value: 0.01 },
+              
+                {meta: 'vnl' , value: 0.01 },
+              
+                {meta: 'vnl' , value: 0.01 },
+              
+                {meta: 'vnl' , value: 0.01 },
+              
+                {meta: 'vnl' , value: 0.01 },
+              
+                {meta: 'vnl' , value: 0.02 },
+              
+                {meta: 'vnl' , value: 0.01 },
+              
+                {meta: 'vnl' , value: 0.02 },
+              
+                {meta: 'vnl' , value: 0.01 },
+              
+                {meta: 'vnl' , value: 0.01 },
+              
+                {meta: 'vnl' , value: 0.02 },
+              
+                {meta: 'vnl' , value: 0.01 },
+              
+                {meta: 'vnl' , value: 0.01 },
+              
+                {meta: 'vnl' , value: 0.01 },
+              
+                {meta: 'vnl' , value: 0.01 },
+              
+                {meta: 'vnl' , value: 0.03 },
+              
+                {meta: 'vnl' , value: 0.01 },
+              
+                {meta: 'vnl' , value: 0.01 },
+              
+                {meta: 'vnl' , value: 0.01 },
+              
+                {meta: 'vnl' , value: 0.02 },
+              
+                {meta: 'vnl' , value: 0.02 },
+              
+                {meta: 'vnl' , value: 0.04 },
+              
+                {meta: 'vnl' , value: 0.03 },
+              
+                {meta: 'vnl' , value: 0.05 },
+              
+                {meta: 'vnl' , value: 0.01 },
+              
+                {meta: 'vnl' , value: 0.02 },
+              
+            ],
+          
+            [
+              
+                {meta: 'vvd' , value: 0.22 },
+              
+                {meta: 'vvd' , value: 0.33 },
+              
+                {meta: 'vvd' , value: 0.36 },
+              
+                {meta: 'vvd' , value: 0.17 },
+              
+                {meta: 'vvd' , value: 0.13 },
+              
+                {meta: 'vvd' , value: 0.12 },
+              
+                {meta: 'vvd' , value: 0.14 },
+              
+                {meta: 'vvd' , value: 0.13 },
+              
+                {meta: 'vvd' , value: 0.15 },
+              
+                {meta: 'vvd' , value: 0.19 },
+              
+                {meta: 'vvd' , value: 0.31 },
+              
+                {meta: 'vvd' , value: 0.29 },
+              
+                {meta: 'vvd' , value: 0.09 },
+              
+                {meta: 'vvd' , value: 0.23 },
+              
+                {meta: 'vvd' , value: 0.12 },
+              
+                {meta: 'vvd' , value: 0.15 },
+              
+                {meta: 'vvd' , value: 0.12 },
+              
+                {meta: 'vvd' , value: 0.11 },
+              
+                {meta: 'vvd' , value: 0.13 },
+              
+                {meta: 'vvd' , value: 0.15 },
+              
+                {meta: 'vvd' , value: 0.21 },
+              
+                {meta: 'vvd' , value: 0.23 },
+              
+                {meta: 'vvd' , value: 0.15 },
+              
+                {meta: 'vvd' , value: 0.19 },
+              
+                {meta: 'vvd' , value: 0.17 },
+              
+                {meta: 'vvd' , value: 0.13 },
+              
+                {meta: 'vvd' , value: 0.13 },
+              
+                {meta: 'vvd' , value: 0.09 },
+              
+                {meta: 'vvd' , value: 0.19 },
+              
+                {meta: 'vvd' , value: 0.22 },
+              
+                {meta: 'vvd' , value: 0.16 },
+              
+                {meta: 'vvd' , value: 0.16 },
+              
+                {meta: 'vvd' , value: 0.11 },
+              
+                {meta: 'vvd' , value: 0.13 },
+              
+                {meta: 'vvd' , value: 0.14 },
+              
+                {meta: 'vvd' , value: 0.18 },
+              
+            ],
+          
+
+          ]
+        };
+
+        var options =
+        {
+          width: 550,
+          height: 275,
+	  plugins: [Chartist.plugins.tooltip()]
+        };
+        var chart = new Chartist.Line('.ct-chart', data, options);
+
+        //Chart animations
+
+
+	});
+	</script>
+
+    <title>Stemming 2017</title>
+</head>
+<body>
+
+<h1>Wat is de stemming in Nederland?</h1>
+
+<h2>Onze beste gok op basis van taalanalyse op Twitter</h2>
+
+<div id="chair_visualization">
+    <div id="chairs">
+        <table><tr>
+            
+        </tr></table>
+    </div>
+    <div id="legend">
+        <table id="legend_table">
+            
+        </table>
+    </div>
+</div>
+
+<div class="item_row">
+    <div class="item">
+        <h3>Over dit onderzoek</h3>
+        <p><img id="twitter_logo" src="svg/twitter.svg">Onderzoekers van het Centre for Language and Speech Technology onderzoeken in hoeverre er een verband is te vinden tussen hoe vaak een politieke partij genoemd wordt op Twitter en hoe deze partij het doet in de peilingen en bij de verkiezingen zelf. Bij de parlementsverkiezingen van 2012 bleek er een sterk verband tussen deze twee te zijn (zie ons artikel Relating Political Party Mentions on Twitter with Polls and Election Results). Op deze pagina zijn een aantal grafieken te vinden met hoe vaak de naam van een politiek partij wordt genoemd in een tweet. De metingen beginnen op woensdag 18 februari en worden per uur bijgewerkt. De meest recente meting is altijd van drie uur geleden. De metingen worden gedaan op de tweets uit Twiqs, een dienst waarin ongeveer 40% van de Nederlandse tweets doorzoekbaar zijn.</p>
+    </div>
+    <div class="item">
+        <h3>% vermeldingen</h3>
+        <div class="ct-chart ct-golden-section percentage_mentions_graph">
+        </div>
+    </div>
+</div>
+
+<div><img src="http://applejack.science.ru.nl/lamabadge.php/stemming2017" alt="badge" /></div>
+
+</body>
+</html>

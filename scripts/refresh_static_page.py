@@ -11,37 +11,108 @@ def backup_previous_static_page(static_page_location,backup_folder):
     except FileNotFoundError:
         pass
 
-def refresh_static_page(seats_per_party,history_of_party_mentions,template):
+def refresh_static_page(seats_per_party,history_of_party_mentions,peak_explanation_file_location,template):
 
-    #Translate the chair statistics to a value for each chair
+    #Clean the party names
+    seats_per_party_cleaned = {}
+    for party_name,value in seats_per_party.items():
+
+        skipping_this_party = False
+
+        #We're not interested in parties with no seats
+        if value == 0:
+            skipping_this_party = True
+
+        if not skipping_this_party:
+            seats_per_party_cleaned[party_name] = value
+
+    seats_per_party = seats_per_party_cleaned
+
+    #Translate the chair statistics to a value for each seat
     seats_per_party = sorted(seats_per_party.items(),key=lambda x: x[1],reverse=True)
     seats = []
 
-    for party,value in seats_per_party:
+    for party_name,value in seats_per_party:
+
         for chair in range(value):
-            seats.append(party)
+            seats.append(party_name)
 
     #Translate the history of party mentions to series of percentages
+    party_mentions_ordered_by_time = sorted(history_of_party_mentions.items(),key=lambda x:x[0],reverse=False)
+    date_names = [number_to_date_string(date_number) for date_number,value in party_mentions_ordered_by_time]
     series_of_percentages_per_party = {}
+    series_of_last_ten_percentages_per_party = {}
+    date_index = 0
 
-    for mentions_in_period in history_of_party_mentions:
-        total_mentions_this_period = sum(mentions_in_period.values())
+    for date_name, mentions_in_period in party_mentions_ordered_by_time:
 
-        for party_name, number_of_mentions in mentions_in_period.items():
+        for party_name, percentage_of_mentions in mentions_in_period.items():
 
-            percentage = round(100*(number_of_mentions/total_mentions_this_period),2)
+            #If we discovered an invalid party name, we clean it right away
+            if party_name[0] in '0123456789':
+                party_name = '_'+party_name
+
+            percentage_of_mentions = round(percentage_of_mentions,2)
 
             try:
-                series_of_percentages_per_party[party_name].append(percentage)
+                series_of_percentages_per_party[party_name].append(percentage_of_mentions)
             except KeyError:
-                series_of_percentages_per_party[party_name] = [percentage]
+                series_of_percentages_per_party[party_name] = [percentage_of_mentions]
+
+            if len(party_mentions_ordered_by_time) - date_index <= 10:
+                try:
+                    series_of_last_ten_percentages_per_party[party_name].append(percentage_of_mentions)
+                except KeyError:
+                    series_of_last_ten_percentages_per_party[party_name] = [percentage_of_mentions]
+
+        date_index += 1
+
+    #Add empty values if we don't have all data until the elections yet
+    NR_OF_DAYS_TO_SHOW_BEFORE_ELECTIONS = 56
+
+    for party_name, series_of_percentages in series_of_percentages_per_party.items():
+
+        while len(series_of_percentages) < NR_OF_DAYS_TO_SHOW_BEFORE_ELECTIONS:
+            series_of_percentages.append(None)
+
+        series_of_percentages_per_party[party_name] = series_of_percentages
+
 
     #Order the series, so the parties will always be presented to the Javascript in the same order
     series_of_percentages_per_party = sorted(series_of_percentages_per_party.items(),key=lambda x: x[0])
+    series_of_last_ten_percentages_per_party = sorted(series_of_last_ten_percentages_per_party.items(),key=lambda x: x[0])
+
+    #Remove every other label
+    even_date_names = []
+
+    for n, date_name in enumerate(date_names):
+        if n%2 == 0:
+            even_date_names.append(date_name)
+        else:
+            even_date_names.append(None)
+
+    peak_explanation = open(peak_explanation_file_location).read()
 
     #Generate the page
     return Template(open(template).read()).render(seats=enumerate(seats),seats_per_party=seats_per_party,
-                                                  series_of_percentages_per_party=series_of_percentages_per_party)
+                                                  series_of_percentages_per_party=series_of_percentages_per_party,
+                                                  series_of_last_ten_percentages_per_party=series_of_last_ten_percentages_per_party,
+                                                  date_names=even_date_names,
+                                                  last_ten_date_names=date_names[-10:],
+                                                  peak_explanation=peak_explanation)
+
+def number_to_date_string(date_number):
+
+    if date_number[4:6] == '12':
+        month = 'de'
+    elif date_number[4:6] == '01':
+        month = 'ja'
+    elif date_number[4:6] == '02':
+        month = 'fe'
+    elif date_number[4:6] == '03':
+        month = 'ma'
+
+    return date_number[6:] + ' '+month
 
 if __name__ == '__main__':
 
@@ -49,10 +120,13 @@ if __name__ == '__main__':
     backup_previous_static_page(current_settings['static_page'],current_settings['previous_static_pages_folder'])
 
     #Create a new one
-    politicaltweets = electionstats.PoliticalTweets()
+    politicaltweets = electionstats.PoliticalTweets(current_settings['db_host'],current_settings['db_user'],
+                                                    current_settings['db_password'],current_settings['db_name'])
     politicaltweets.readtweets()
+
     seats_per_party = politicaltweets.get_seats_per_party()
     history_of_party_mentions = politicaltweets.get_history_of_party_mentions()
-    new_page_content = refresh_static_page(seats_per_party,history_of_party_mentions,current_settings['template'])
+    new_page_content = refresh_static_page(seats_per_party,history_of_party_mentions,
+                                           current_settings['peak_explanation_file_location'],current_settings['template'])
 
     open(current_settings['static_page'],'w').write(new_page_content)

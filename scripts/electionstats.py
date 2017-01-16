@@ -1,8 +1,10 @@
 import pymysql
+from fake_data import FAKE_SEATS_PER_PARTY, FAKE_HISTORY_OF_PARTY_MENTIONS_PERCENTAGES
 
 class PoliticalTweets:
-    def __init__(self):
-        self.db = {'host':'spitfire.science.ru.nl','user':'landsdb_admin','passwd':'queeveehiozei','dbname':'landsdb'}
+
+    def __init__(self, db_host, db_user, db_password, db_name):
+        self.db = {'host':db_host,'user':db_user,'passwd':db_password,'dbname':db_name}
         self.allparties = []
         self.seats_per_party = {}
         self.history_of_party_mentions_counts = {}
@@ -37,6 +39,11 @@ class PoliticalTweets:
             pass
 
     def get_history_of_party_mentions(self):
+
+        #If we have no real data, show fake data (for local development)
+        if self.history_of_party_mentions_counts == {}:
+            return FAKE_HISTORY_OF_PARTY_MENTIONS_PERCENTAGES
+
         for day in self.history_of_party_mentions_counts:
             if not day in self.history_of_party_mentions_percentages:
                 self.history_of_party_mentions_percentages[day] = {}
@@ -48,6 +55,11 @@ class PoliticalTweets:
         return self.history_of_party_mentions_percentages
 
     def get_seats_per_party(self,nrdays=10):
+
+        #If we have no real data, show fake data (for local development)
+        if self.history_of_party_mentions_counts == {}:
+            return FAKE_SEATS_PER_PARTY
+
         partycounts = {}
         #partymeans = {}
         partyrestpercentages = {}

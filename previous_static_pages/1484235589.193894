@@ -1,0 +1,3863 @@
+<html>
+<head>
+    <link href='http://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+    <script src="js/chartist-plugin-tooltip.min.js"></script>
+
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+    <link rel="stylesheet" href="css/style.css" media="all"/>
+    <link rel="stylesheet" href="css/party_colors.css" media="all"/>
+    <link rel="stylesheet" href="css/chartist-plugin-tooltip.css" media="all"/>
+
+ 	<script type="text/javascript">
+
+ 	$(document).ready(function()
+ 	{
+	    // Replace all SVG images with inline SVG
+	    jQuery('img.dynamic_svg').each(function()
+	    {
+	        var $img = jQuery(this);
+	        var imgID = $img.attr('id');
+	        var imgClass = $img.attr('class');
+	        var imgURL = $img.attr('src');
+
+	        jQuery.get(imgURL, function(data)
+	        {
+	            // Get the SVG tag, ignore the rest
+	            var $svg = jQuery(data).find('svg');
+
+	            // Add replaced image's ID to the new SVG
+	            if(typeof imgID !== 'undefined') {
+	                $svg = $svg.attr('id', imgID);
+	            }
+	            // Add replaced image's classes to the new SVG
+	            if(typeof imgClass !== 'undefined') {
+	                $svg = $svg.attr('class', imgClass+' replaced-svg');
+	            }
+
+	            // Remove any invalid XML tags as per http://validator.w3.org
+	            $svg = $svg.removeAttr('xmlns:a');
+
+	            // Replace image with new SVG
+	            $img.replaceWith($svg);
+
+			    //Recolor first path
+			    $('path.seat').css("fill", 'inherit');
+
+	        }, 'xml');
+
+	    });
+
+        //Generate the line graph
+        var options =
+        {
+          width: 800,
+          height: 400,
+	  plugins: [Chartist.plugins.tooltip()]
+        };
+
+        var tenDaysData =
+        {
+          labels: [],
+          series: [
+
+          
+            [
+              
+                {meta: '_50plus' , value: 1.1 },
+              
+                {meta: '_50plus' , value: 2.57 },
+              
+                {meta: '_50plus' , value: 1.28 },
+              
+                {meta: '_50plus' , value: 1.58 },
+              
+                {meta: '_50plus' , value: 1.04 },
+              
+                {meta: '_50plus' , value: 7.86 },
+              
+                {meta: '_50plus' , value: 3.81 },
+              
+                {meta: '_50plus' , value: 2.06 },
+              
+                {meta: '_50plus' , value: 0.71 },
+              
+                {meta: '_50plus' , value: 3.0 },
+              
+                {meta: '_50plus' , value: None },
+              
+                {meta: '_50plus' , value: None },
+              
+                {meta: '_50plus' , value: None },
+              
+                {meta: '_50plus' , value: None },
+              
+                {meta: '_50plus' , value: None },
+              
+                {meta: '_50plus' , value: None },
+              
+                {meta: '_50plus' , value: None },
+              
+                {meta: '_50plus' , value: None },
+              
+                {meta: '_50plus' , value: None },
+              
+                {meta: '_50plus' , value: None },
+              
+                {meta: '_50plus' , value: None },
+              
+                {meta: '_50plus' , value: None },
+              
+                {meta: '_50plus' , value: None },
+              
+                {meta: '_50plus' , value: None },
+              
+                {meta: '_50plus' , value: None },
+              
+                {meta: '_50plus' , value: None },
+              
+                {meta: '_50plus' , value: None },
+              
+                {meta: '_50plus' , value: None },
+              
+                {meta: '_50plus' , value: None },
+              
+                {meta: '_50plus' , value: None },
+              
+                {meta: '_50plus' , value: None },
+              
+                {meta: '_50plus' , value: None },
+              
+                {meta: '_50plus' , value: None },
+              
+                {meta: '_50plus' , value: None },
+              
+                {meta: '_50plus' , value: None },
+              
+                {meta: '_50plus' , value: None },
+              
+                {meta: '_50plus' , value: None },
+              
+                {meta: '_50plus' , value: None },
+              
+                {meta: '_50plus' , value: None },
+              
+                {meta: '_50plus' , value: None },
+              
+                {meta: '_50plus' , value: None },
+              
+                {meta: '_50plus' , value: None },
+              
+                {meta: '_50plus' , value: None },
+              
+                {meta: '_50plus' , value: None },
+              
+                {meta: '_50plus' , value: None },
+              
+                {meta: '_50plus' , value: None },
+              
+                {meta: '_50plus' , value: None },
+              
+                {meta: '_50plus' , value: None },
+              
+                {meta: '_50plus' , value: None },
+              
+                {meta: '_50plus' , value: None },
+              
+                {meta: '_50plus' , value: None },
+              
+                {meta: '_50plus' , value: None },
+              
+                {meta: '_50plus' , value: None },
+              
+                {meta: '_50plus' , value: None },
+              
+                {meta: '_50plus' , value: None },
+              
+                {meta: '_50plus' , value: None },
+              
+            ],
+          
+            [
+              
+                {meta: 'cda' , value: 3.41 },
+              
+                {meta: 'cda' , value: 3.76 },
+              
+                {meta: 'cda' , value: 4.05 },
+              
+                {meta: 'cda' , value: 4.05 },
+              
+                {meta: 'cda' , value: 3.34 },
+              
+                {meta: 'cda' , value: 2.11 },
+              
+                {meta: 'cda' , value: 6.78 },
+              
+                {meta: 'cda' , value: 3.37 },
+              
+                {meta: 'cda' , value: 5.84 },
+              
+                {meta: 'cda' , value: 4.53 },
+              
+                {meta: 'cda' , value: None },
+              
+                {meta: 'cda' , value: None },
+              
+                {meta: 'cda' , value: None },
+              
+                {meta: 'cda' , value: None },
+              
+                {meta: 'cda' , value: None },
+              
+                {meta: 'cda' , value: None },
+              
+                {meta: 'cda' , value: None },
+              
+                {meta: 'cda' , value: None },
+              
+                {meta: 'cda' , value: None },
+              
+                {meta: 'cda' , value: None },
+              
+                {meta: 'cda' , value: None },
+              
+                {meta: 'cda' , value: None },
+              
+                {meta: 'cda' , value: None },
+              
+                {meta: 'cda' , value: None },
+              
+                {meta: 'cda' , value: None },
+              
+                {meta: 'cda' , value: None },
+              
+                {meta: 'cda' , value: None },
+              
+                {meta: 'cda' , value: None },
+              
+                {meta: 'cda' , value: None },
+              
+                {meta: 'cda' , value: None },
+              
+                {meta: 'cda' , value: None },
+              
+                {meta: 'cda' , value: None },
+              
+                {meta: 'cda' , value: None },
+              
+                {meta: 'cda' , value: None },
+              
+                {meta: 'cda' , value: None },
+              
+                {meta: 'cda' , value: None },
+              
+                {meta: 'cda' , value: None },
+              
+                {meta: 'cda' , value: None },
+              
+                {meta: 'cda' , value: None },
+              
+                {meta: 'cda' , value: None },
+              
+                {meta: 'cda' , value: None },
+              
+                {meta: 'cda' , value: None },
+              
+                {meta: 'cda' , value: None },
+              
+                {meta: 'cda' , value: None },
+              
+                {meta: 'cda' , value: None },
+              
+                {meta: 'cda' , value: None },
+              
+                {meta: 'cda' , value: None },
+              
+                {meta: 'cda' , value: None },
+              
+                {meta: 'cda' , value: None },
+              
+                {meta: 'cda' , value: None },
+              
+                {meta: 'cda' , value: None },
+              
+                {meta: 'cda' , value: None },
+              
+                {meta: 'cda' , value: None },
+              
+                {meta: 'cda' , value: None },
+              
+                {meta: 'cda' , value: None },
+              
+                {meta: 'cda' , value: None },
+              
+            ],
+          
+            [
+              
+                {meta: 'cu' , value: 2.35 },
+              
+                {meta: 'cu' , value: 1.6 },
+              
+                {meta: 'cu' , value: 1.79 },
+              
+                {meta: 'cu' , value: 2.89 },
+              
+                {meta: 'cu' , value: 2.62 },
+              
+                {meta: 'cu' , value: 1.08 },
+              
+                {meta: 'cu' , value: 1.69 },
+              
+                {meta: 'cu' , value: 1.64 },
+              
+                {meta: 'cu' , value: 1.66 },
+              
+                {meta: 'cu' , value: 2.58 },
+              
+                {meta: 'cu' , value: None },
+              
+                {meta: 'cu' , value: None },
+              
+                {meta: 'cu' , value: None },
+              
+                {meta: 'cu' , value: None },
+              
+                {meta: 'cu' , value: None },
+              
+                {meta: 'cu' , value: None },
+              
+                {meta: 'cu' , value: None },
+              
+                {meta: 'cu' , value: None },
+              
+                {meta: 'cu' , value: None },
+              
+                {meta: 'cu' , value: None },
+              
+                {meta: 'cu' , value: None },
+              
+                {meta: 'cu' , value: None },
+              
+                {meta: 'cu' , value: None },
+              
+                {meta: 'cu' , value: None },
+              
+                {meta: 'cu' , value: None },
+              
+                {meta: 'cu' , value: None },
+              
+                {meta: 'cu' , value: None },
+              
+                {meta: 'cu' , value: None },
+              
+                {meta: 'cu' , value: None },
+              
+                {meta: 'cu' , value: None },
+              
+                {meta: 'cu' , value: None },
+              
+                {meta: 'cu' , value: None },
+              
+                {meta: 'cu' , value: None },
+              
+                {meta: 'cu' , value: None },
+              
+                {meta: 'cu' , value: None },
+              
+                {meta: 'cu' , value: None },
+              
+                {meta: 'cu' , value: None },
+              
+                {meta: 'cu' , value: None },
+              
+                {meta: 'cu' , value: None },
+              
+                {meta: 'cu' , value: None },
+              
+                {meta: 'cu' , value: None },
+              
+                {meta: 'cu' , value: None },
+              
+                {meta: 'cu' , value: None },
+              
+                {meta: 'cu' , value: None },
+              
+                {meta: 'cu' , value: None },
+              
+                {meta: 'cu' , value: None },
+              
+                {meta: 'cu' , value: None },
+              
+                {meta: 'cu' , value: None },
+              
+                {meta: 'cu' , value: None },
+              
+                {meta: 'cu' , value: None },
+              
+                {meta: 'cu' , value: None },
+              
+                {meta: 'cu' , value: None },
+              
+                {meta: 'cu' , value: None },
+              
+                {meta: 'cu' , value: None },
+              
+                {meta: 'cu' , value: None },
+              
+                {meta: 'cu' , value: None },
+              
+            ],
+          
+            [
+              
+                {meta: 'd66' , value: 6.58 },
+              
+                {meta: 'd66' , value: 7.4 },
+              
+                {meta: 'd66' , value: 6.83 },
+              
+                {meta: 'd66' , value: 7.47 },
+              
+                {meta: 'd66' , value: 7.45 },
+              
+                {meta: 'd66' , value: 9.97 },
+              
+                {meta: 'd66' , value: 7.94 },
+              
+                {meta: 'd66' , value: 9.06 },
+              
+                {meta: 'd66' , value: 6.93 },
+              
+                {meta: 'd66' , value: 8.07 },
+              
+                {meta: 'd66' , value: None },
+              
+                {meta: 'd66' , value: None },
+              
+                {meta: 'd66' , value: None },
+              
+                {meta: 'd66' , value: None },
+              
+                {meta: 'd66' , value: None },
+              
+                {meta: 'd66' , value: None },
+              
+                {meta: 'd66' , value: None },
+              
+                {meta: 'd66' , value: None },
+              
+                {meta: 'd66' , value: None },
+              
+                {meta: 'd66' , value: None },
+              
+                {meta: 'd66' , value: None },
+              
+                {meta: 'd66' , value: None },
+              
+                {meta: 'd66' , value: None },
+              
+                {meta: 'd66' , value: None },
+              
+                {meta: 'd66' , value: None },
+              
+                {meta: 'd66' , value: None },
+              
+                {meta: 'd66' , value: None },
+              
+                {meta: 'd66' , value: None },
+              
+                {meta: 'd66' , value: None },
+              
+                {meta: 'd66' , value: None },
+              
+                {meta: 'd66' , value: None },
+              
+                {meta: 'd66' , value: None },
+              
+                {meta: 'd66' , value: None },
+              
+                {meta: 'd66' , value: None },
+              
+                {meta: 'd66' , value: None },
+              
+                {meta: 'd66' , value: None },
+              
+                {meta: 'd66' , value: None },
+              
+                {meta: 'd66' , value: None },
+              
+                {meta: 'd66' , value: None },
+              
+                {meta: 'd66' , value: None },
+              
+                {meta: 'd66' , value: None },
+              
+                {meta: 'd66' , value: None },
+              
+                {meta: 'd66' , value: None },
+              
+                {meta: 'd66' , value: None },
+              
+                {meta: 'd66' , value: None },
+              
+                {meta: 'd66' , value: None },
+              
+                {meta: 'd66' , value: None },
+              
+                {meta: 'd66' , value: None },
+              
+                {meta: 'd66' , value: None },
+              
+                {meta: 'd66' , value: None },
+              
+                {meta: 'd66' , value: None },
+              
+                {meta: 'd66' , value: None },
+              
+                {meta: 'd66' , value: None },
+              
+                {meta: 'd66' , value: None },
+              
+                {meta: 'd66' , value: None },
+              
+                {meta: 'd66' , value: None },
+              
+            ],
+          
+            [
+              
+                {meta: 'denk' , value: 13.5 },
+              
+                {meta: 'denk' , value: 11.23 },
+              
+                {meta: 'denk' , value: 18.54 },
+              
+                {meta: 'denk' , value: 17.75 },
+              
+                {meta: 'denk' , value: 17.52 },
+              
+                {meta: 'denk' , value: 12.14 },
+              
+                {meta: 'denk' , value: 8.68 },
+              
+                {meta: 'denk' , value: 6.84 },
+              
+                {meta: 'denk' , value: 6.09 },
+              
+                {meta: 'denk' , value: 7.77 },
+              
+                {meta: 'denk' , value: None },
+              
+                {meta: 'denk' , value: None },
+              
+                {meta: 'denk' , value: None },
+              
+                {meta: 'denk' , value: None },
+              
+                {meta: 'denk' , value: None },
+              
+                {meta: 'denk' , value: None },
+              
+                {meta: 'denk' , value: None },
+              
+                {meta: 'denk' , value: None },
+              
+                {meta: 'denk' , value: None },
+              
+                {meta: 'denk' , value: None },
+              
+                {meta: 'denk' , value: None },
+              
+                {meta: 'denk' , value: None },
+              
+                {meta: 'denk' , value: None },
+              
+                {meta: 'denk' , value: None },
+              
+                {meta: 'denk' , value: None },
+              
+                {meta: 'denk' , value: None },
+              
+                {meta: 'denk' , value: None },
+              
+                {meta: 'denk' , value: None },
+              
+                {meta: 'denk' , value: None },
+              
+                {meta: 'denk' , value: None },
+              
+                {meta: 'denk' , value: None },
+              
+                {meta: 'denk' , value: None },
+              
+                {meta: 'denk' , value: None },
+              
+                {meta: 'denk' , value: None },
+              
+                {meta: 'denk' , value: None },
+              
+                {meta: 'denk' , value: None },
+              
+                {meta: 'denk' , value: None },
+              
+                {meta: 'denk' , value: None },
+              
+                {meta: 'denk' , value: None },
+              
+                {meta: 'denk' , value: None },
+              
+                {meta: 'denk' , value: None },
+              
+                {meta: 'denk' , value: None },
+              
+                {meta: 'denk' , value: None },
+              
+                {meta: 'denk' , value: None },
+              
+                {meta: 'denk' , value: None },
+              
+                {meta: 'denk' , value: None },
+              
+                {meta: 'denk' , value: None },
+              
+                {meta: 'denk' , value: None },
+              
+                {meta: 'denk' , value: None },
+              
+                {meta: 'denk' , value: None },
+              
+                {meta: 'denk' , value: None },
+              
+                {meta: 'denk' , value: None },
+              
+                {meta: 'denk' , value: None },
+              
+                {meta: 'denk' , value: None },
+              
+                {meta: 'denk' , value: None },
+              
+                {meta: 'denk' , value: None },
+              
+            ],
+          
+            [
+              
+                {meta: 'gl' , value: 5.33 },
+              
+                {meta: 'gl' , value: 7.13 },
+              
+                {meta: 'gl' , value: 6.71 },
+              
+                {meta: 'gl' , value: 7.29 },
+              
+                {meta: 'gl' , value: 6.52 },
+              
+                {meta: 'gl' , value: 12.82 },
+              
+                {meta: 'gl' , value: 7.4 },
+              
+                {meta: 'gl' , value: 5.26 },
+              
+                {meta: 'gl' , value: 7.78 },
+              
+                {meta: 'gl' , value: 7.1 },
+              
+                {meta: 'gl' , value: None },
+              
+                {meta: 'gl' , value: None },
+              
+                {meta: 'gl' , value: None },
+              
+                {meta: 'gl' , value: None },
+              
+                {meta: 'gl' , value: None },
+              
+                {meta: 'gl' , value: None },
+              
+                {meta: 'gl' , value: None },
+              
+                {meta: 'gl' , value: None },
+              
+                {meta: 'gl' , value: None },
+              
+                {meta: 'gl' , value: None },
+              
+                {meta: 'gl' , value: None },
+              
+                {meta: 'gl' , value: None },
+              
+                {meta: 'gl' , value: None },
+              
+                {meta: 'gl' , value: None },
+              
+                {meta: 'gl' , value: None },
+              
+                {meta: 'gl' , value: None },
+              
+                {meta: 'gl' , value: None },
+              
+                {meta: 'gl' , value: None },
+              
+                {meta: 'gl' , value: None },
+              
+                {meta: 'gl' , value: None },
+              
+                {meta: 'gl' , value: None },
+              
+                {meta: 'gl' , value: None },
+              
+                {meta: 'gl' , value: None },
+              
+                {meta: 'gl' , value: None },
+              
+                {meta: 'gl' , value: None },
+              
+                {meta: 'gl' , value: None },
+              
+                {meta: 'gl' , value: None },
+              
+                {meta: 'gl' , value: None },
+              
+                {meta: 'gl' , value: None },
+              
+                {meta: 'gl' , value: None },
+              
+                {meta: 'gl' , value: None },
+              
+                {meta: 'gl' , value: None },
+              
+                {meta: 'gl' , value: None },
+              
+                {meta: 'gl' , value: None },
+              
+                {meta: 'gl' , value: None },
+              
+                {meta: 'gl' , value: None },
+              
+                {meta: 'gl' , value: None },
+              
+                {meta: 'gl' , value: None },
+              
+                {meta: 'gl' , value: None },
+              
+                {meta: 'gl' , value: None },
+              
+                {meta: 'gl' , value: None },
+              
+                {meta: 'gl' , value: None },
+              
+                {meta: 'gl' , value: None },
+              
+                {meta: 'gl' , value: None },
+              
+                {meta: 'gl' , value: None },
+              
+                {meta: 'gl' , value: None },
+              
+            ],
+          
+            [
+              
+                {meta: 'ppnl' , value: 0.05 },
+              
+                {meta: 'ppnl' , value: 0.16 },
+              
+                {meta: 'ppnl' , value: 0.29 },
+              
+                {meta: 'ppnl' , value: 0.1 },
+              
+                {meta: 'ppnl' , value: 0.0 },
+              
+                {meta: 'ppnl' , value: 0.03 },
+              
+                {meta: 'ppnl' , value: 0.05 },
+              
+                {meta: 'ppnl' , value: 0.05 },
+              
+                {meta: 'ppnl' , value: 0.05 },
+              
+                {meta: 'ppnl' , value: 0.0 },
+              
+                {meta: 'ppnl' , value: None },
+              
+                {meta: 'ppnl' , value: None },
+              
+                {meta: 'ppnl' , value: None },
+              
+                {meta: 'ppnl' , value: None },
+              
+                {meta: 'ppnl' , value: None },
+              
+                {meta: 'ppnl' , value: None },
+              
+                {meta: 'ppnl' , value: None },
+              
+                {meta: 'ppnl' , value: None },
+              
+                {meta: 'ppnl' , value: None },
+              
+                {meta: 'ppnl' , value: None },
+              
+                {meta: 'ppnl' , value: None },
+              
+                {meta: 'ppnl' , value: None },
+              
+                {meta: 'ppnl' , value: None },
+              
+                {meta: 'ppnl' , value: None },
+              
+                {meta: 'ppnl' , value: None },
+              
+                {meta: 'ppnl' , value: None },
+              
+                {meta: 'ppnl' , value: None },
+              
+                {meta: 'ppnl' , value: None },
+              
+                {meta: 'ppnl' , value: None },
+              
+                {meta: 'ppnl' , value: None },
+              
+                {meta: 'ppnl' , value: None },
+              
+                {meta: 'ppnl' , value: None },
+              
+                {meta: 'ppnl' , value: None },
+              
+                {meta: 'ppnl' , value: None },
+              
+                {meta: 'ppnl' , value: None },
+              
+                {meta: 'ppnl' , value: None },
+              
+                {meta: 'ppnl' , value: None },
+              
+                {meta: 'ppnl' , value: None },
+              
+                {meta: 'ppnl' , value: None },
+              
+                {meta: 'ppnl' , value: None },
+              
+                {meta: 'ppnl' , value: None },
+              
+                {meta: 'ppnl' , value: None },
+              
+                {meta: 'ppnl' , value: None },
+              
+                {meta: 'ppnl' , value: None },
+              
+                {meta: 'ppnl' , value: None },
+              
+                {meta: 'ppnl' , value: None },
+              
+                {meta: 'ppnl' , value: None },
+              
+                {meta: 'ppnl' , value: None },
+              
+                {meta: 'ppnl' , value: None },
+              
+                {meta: 'ppnl' , value: None },
+              
+                {meta: 'ppnl' , value: None },
+              
+                {meta: 'ppnl' , value: None },
+              
+                {meta: 'ppnl' , value: None },
+              
+                {meta: 'ppnl' , value: None },
+              
+                {meta: 'ppnl' , value: None },
+              
+                {meta: 'ppnl' , value: None },
+              
+            ],
+          
+            [
+              
+                {meta: 'pvda' , value: 20.68 },
+              
+                {meta: 'pvda' , value: 13.5 },
+              
+                {meta: 'pvda' , value: 10.03 },
+              
+                {meta: 'pvda' , value: 13.93 },
+              
+                {meta: 'pvda' , value: 20.2 },
+              
+                {meta: 'pvda' , value: 14.3 },
+              
+                {meta: 'pvda' , value: 18.18 },
+              
+                {meta: 'pvda' , value: 11.41 },
+              
+                {meta: 'pvda' , value: 11.99 },
+              
+                {meta: 'pvda' , value: 16.6 },
+              
+                {meta: 'pvda' , value: None },
+              
+                {meta: 'pvda' , value: None },
+              
+                {meta: 'pvda' , value: None },
+              
+                {meta: 'pvda' , value: None },
+              
+                {meta: 'pvda' , value: None },
+              
+                {meta: 'pvda' , value: None },
+              
+                {meta: 'pvda' , value: None },
+              
+                {meta: 'pvda' , value: None },
+              
+                {meta: 'pvda' , value: None },
+              
+                {meta: 'pvda' , value: None },
+              
+                {meta: 'pvda' , value: None },
+              
+                {meta: 'pvda' , value: None },
+              
+                {meta: 'pvda' , value: None },
+              
+                {meta: 'pvda' , value: None },
+              
+                {meta: 'pvda' , value: None },
+              
+                {meta: 'pvda' , value: None },
+              
+                {meta: 'pvda' , value: None },
+              
+                {meta: 'pvda' , value: None },
+              
+                {meta: 'pvda' , value: None },
+              
+                {meta: 'pvda' , value: None },
+              
+                {meta: 'pvda' , value: None },
+              
+                {meta: 'pvda' , value: None },
+              
+                {meta: 'pvda' , value: None },
+              
+                {meta: 'pvda' , value: None },
+              
+                {meta: 'pvda' , value: None },
+              
+                {meta: 'pvda' , value: None },
+              
+                {meta: 'pvda' , value: None },
+              
+                {meta: 'pvda' , value: None },
+              
+                {meta: 'pvda' , value: None },
+              
+                {meta: 'pvda' , value: None },
+              
+                {meta: 'pvda' , value: None },
+              
+                {meta: 'pvda' , value: None },
+              
+                {meta: 'pvda' , value: None },
+              
+                {meta: 'pvda' , value: None },
+              
+                {meta: 'pvda' , value: None },
+              
+                {meta: 'pvda' , value: None },
+              
+                {meta: 'pvda' , value: None },
+              
+                {meta: 'pvda' , value: None },
+              
+                {meta: 'pvda' , value: None },
+              
+                {meta: 'pvda' , value: None },
+              
+                {meta: 'pvda' , value: None },
+              
+                {meta: 'pvda' , value: None },
+              
+                {meta: 'pvda' , value: None },
+              
+                {meta: 'pvda' , value: None },
+              
+                {meta: 'pvda' , value: None },
+              
+                {meta: 'pvda' , value: None },
+              
+            ],
+          
+            [
+              
+                {meta: 'pvdd' , value: 0.9 },
+              
+                {meta: 'pvdd' , value: 0.71 },
+              
+                {meta: 'pvdd' , value: 0.92 },
+              
+                {meta: 'pvdd' , value: 1.43 },
+              
+                {meta: 'pvdd' , value: 0.74 },
+              
+                {meta: 'pvdd' , value: 0.71 },
+              
+                {meta: 'pvdd' , value: 1.07 },
+              
+                {meta: 'pvdd' , value: 0.78 },
+              
+                {meta: 'pvdd' , value: 1.71 },
+              
+                {meta: 'pvdd' , value: 0.8 },
+              
+                {meta: 'pvdd' , value: None },
+              
+                {meta: 'pvdd' , value: None },
+              
+                {meta: 'pvdd' , value: None },
+              
+                {meta: 'pvdd' , value: None },
+              
+                {meta: 'pvdd' , value: None },
+              
+                {meta: 'pvdd' , value: None },
+              
+                {meta: 'pvdd' , value: None },
+              
+                {meta: 'pvdd' , value: None },
+              
+                {meta: 'pvdd' , value: None },
+              
+                {meta: 'pvdd' , value: None },
+              
+                {meta: 'pvdd' , value: None },
+              
+                {meta: 'pvdd' , value: None },
+              
+                {meta: 'pvdd' , value: None },
+              
+                {meta: 'pvdd' , value: None },
+              
+                {meta: 'pvdd' , value: None },
+              
+                {meta: 'pvdd' , value: None },
+              
+                {meta: 'pvdd' , value: None },
+              
+                {meta: 'pvdd' , value: None },
+              
+                {meta: 'pvdd' , value: None },
+              
+                {meta: 'pvdd' , value: None },
+              
+                {meta: 'pvdd' , value: None },
+              
+                {meta: 'pvdd' , value: None },
+              
+                {meta: 'pvdd' , value: None },
+              
+                {meta: 'pvdd' , value: None },
+              
+                {meta: 'pvdd' , value: None },
+              
+                {meta: 'pvdd' , value: None },
+              
+                {meta: 'pvdd' , value: None },
+              
+                {meta: 'pvdd' , value: None },
+              
+                {meta: 'pvdd' , value: None },
+              
+                {meta: 'pvdd' , value: None },
+              
+                {meta: 'pvdd' , value: None },
+              
+                {meta: 'pvdd' , value: None },
+              
+                {meta: 'pvdd' , value: None },
+              
+                {meta: 'pvdd' , value: None },
+              
+                {meta: 'pvdd' , value: None },
+              
+                {meta: 'pvdd' , value: None },
+              
+                {meta: 'pvdd' , value: None },
+              
+                {meta: 'pvdd' , value: None },
+              
+                {meta: 'pvdd' , value: None },
+              
+                {meta: 'pvdd' , value: None },
+              
+                {meta: 'pvdd' , value: None },
+              
+                {meta: 'pvdd' , value: None },
+              
+                {meta: 'pvdd' , value: None },
+              
+                {meta: 'pvdd' , value: None },
+              
+                {meta: 'pvdd' , value: None },
+              
+                {meta: 'pvdd' , value: None },
+              
+            ],
+          
+            [
+              
+                {meta: 'pvv' , value: 19.43 },
+              
+                {meta: 'pvv' , value: 29.54 },
+              
+                {meta: 'pvv' , value: 29.04 },
+              
+                {meta: 'pvv' , value: 21.37 },
+              
+                {meta: 'pvv' , value: 19.27 },
+              
+                {meta: 'pvv' , value: 18.39 },
+              
+                {meta: 'pvv' , value: 19.38 },
+              
+                {meta: 'pvv' , value: 16.13 },
+              
+                {meta: 'pvv' , value: 17.36 },
+              
+                {meta: 'pvv' , value: 18.39 },
+              
+                {meta: 'pvv' , value: None },
+              
+                {meta: 'pvv' , value: None },
+              
+                {meta: 'pvv' , value: None },
+              
+                {meta: 'pvv' , value: None },
+              
+                {meta: 'pvv' , value: None },
+              
+                {meta: 'pvv' , value: None },
+              
+                {meta: 'pvv' , value: None },
+              
+                {meta: 'pvv' , value: None },
+              
+                {meta: 'pvv' , value: None },
+              
+                {meta: 'pvv' , value: None },
+              
+                {meta: 'pvv' , value: None },
+              
+                {meta: 'pvv' , value: None },
+              
+                {meta: 'pvv' , value: None },
+              
+                {meta: 'pvv' , value: None },
+              
+                {meta: 'pvv' , value: None },
+              
+                {meta: 'pvv' , value: None },
+              
+                {meta: 'pvv' , value: None },
+              
+                {meta: 'pvv' , value: None },
+              
+                {meta: 'pvv' , value: None },
+              
+                {meta: 'pvv' , value: None },
+              
+                {meta: 'pvv' , value: None },
+              
+                {meta: 'pvv' , value: None },
+              
+                {meta: 'pvv' , value: None },
+              
+                {meta: 'pvv' , value: None },
+              
+                {meta: 'pvv' , value: None },
+              
+                {meta: 'pvv' , value: None },
+              
+                {meta: 'pvv' , value: None },
+              
+                {meta: 'pvv' , value: None },
+              
+                {meta: 'pvv' , value: None },
+              
+                {meta: 'pvv' , value: None },
+              
+                {meta: 'pvv' , value: None },
+              
+                {meta: 'pvv' , value: None },
+              
+                {meta: 'pvv' , value: None },
+              
+                {meta: 'pvv' , value: None },
+              
+                {meta: 'pvv' , value: None },
+              
+                {meta: 'pvv' , value: None },
+              
+                {meta: 'pvv' , value: None },
+              
+                {meta: 'pvv' , value: None },
+              
+                {meta: 'pvv' , value: None },
+              
+                {meta: 'pvv' , value: None },
+              
+                {meta: 'pvv' , value: None },
+              
+                {meta: 'pvv' , value: None },
+              
+                {meta: 'pvv' , value: None },
+              
+                {meta: 'pvv' , value: None },
+              
+                {meta: 'pvv' , value: None },
+              
+                {meta: 'pvv' , value: None },
+              
+            ],
+          
+            [
+              
+                {meta: 'sgp' , value: 1.23 },
+              
+                {meta: 'sgp' , value: 1.28 },
+              
+                {meta: 'sgp' , value: 1.11 },
+              
+                {meta: 'sgp' , value: 1.86 },
+              
+                {meta: 'sgp' , value: 2.26 },
+              
+                {meta: 'sgp' , value: 0.59 },
+              
+                {meta: 'sgp' , value: 1.56 },
+              
+                {meta: 'sgp' , value: 2.67 },
+              
+                {meta: 'sgp' , value: 2.62 },
+              
+                {meta: 'sgp' , value: 2.47 },
+              
+                {meta: 'sgp' , value: None },
+              
+                {meta: 'sgp' , value: None },
+              
+                {meta: 'sgp' , value: None },
+              
+                {meta: 'sgp' , value: None },
+              
+                {meta: 'sgp' , value: None },
+              
+                {meta: 'sgp' , value: None },
+              
+                {meta: 'sgp' , value: None },
+              
+                {meta: 'sgp' , value: None },
+              
+                {meta: 'sgp' , value: None },
+              
+                {meta: 'sgp' , value: None },
+              
+                {meta: 'sgp' , value: None },
+              
+                {meta: 'sgp' , value: None },
+              
+                {meta: 'sgp' , value: None },
+              
+                {meta: 'sgp' , value: None },
+              
+                {meta: 'sgp' , value: None },
+              
+                {meta: 'sgp' , value: None },
+              
+                {meta: 'sgp' , value: None },
+              
+                {meta: 'sgp' , value: None },
+              
+                {meta: 'sgp' , value: None },
+              
+                {meta: 'sgp' , value: None },
+              
+                {meta: 'sgp' , value: None },
+              
+                {meta: 'sgp' , value: None },
+              
+                {meta: 'sgp' , value: None },
+              
+                {meta: 'sgp' , value: None },
+              
+                {meta: 'sgp' , value: None },
+              
+                {meta: 'sgp' , value: None },
+              
+                {meta: 'sgp' , value: None },
+              
+                {meta: 'sgp' , value: None },
+              
+                {meta: 'sgp' , value: None },
+              
+                {meta: 'sgp' , value: None },
+              
+                {meta: 'sgp' , value: None },
+              
+                {meta: 'sgp' , value: None },
+              
+                {meta: 'sgp' , value: None },
+              
+                {meta: 'sgp' , value: None },
+              
+                {meta: 'sgp' , value: None },
+              
+                {meta: 'sgp' , value: None },
+              
+                {meta: 'sgp' , value: None },
+              
+                {meta: 'sgp' , value: None },
+              
+                {meta: 'sgp' , value: None },
+              
+                {meta: 'sgp' , value: None },
+              
+                {meta: 'sgp' , value: None },
+              
+                {meta: 'sgp' , value: None },
+              
+                {meta: 'sgp' , value: None },
+              
+                {meta: 'sgp' , value: None },
+              
+                {meta: 'sgp' , value: None },
+              
+                {meta: 'sgp' , value: None },
+              
+            ],
+          
+            [
+              
+                {meta: 'sp' , value: 5.53 },
+              
+                {meta: 'sp' , value: 4.67 },
+              
+                {meta: 'sp' , value: 5.07 },
+              
+                {meta: 'sp' , value: 5.3 },
+              
+                {meta: 'sp' , value: 4.92 },
+              
+                {meta: 'sp' , value: 5.79 },
+              
+                {meta: 'sp' , value: 5.62 },
+              
+                {meta: 'sp' , value: 3.35 },
+              
+                {meta: 'sp' , value: 2.89 },
+              
+                {meta: 'sp' , value: 3.7 },
+              
+                {meta: 'sp' , value: None },
+              
+                {meta: 'sp' , value: None },
+              
+                {meta: 'sp' , value: None },
+              
+                {meta: 'sp' , value: None },
+              
+                {meta: 'sp' , value: None },
+              
+                {meta: 'sp' , value: None },
+              
+                {meta: 'sp' , value: None },
+              
+                {meta: 'sp' , value: None },
+              
+                {meta: 'sp' , value: None },
+              
+                {meta: 'sp' , value: None },
+              
+                {meta: 'sp' , value: None },
+              
+                {meta: 'sp' , value: None },
+              
+                {meta: 'sp' , value: None },
+              
+                {meta: 'sp' , value: None },
+              
+                {meta: 'sp' , value: None },
+              
+                {meta: 'sp' , value: None },
+              
+                {meta: 'sp' , value: None },
+              
+                {meta: 'sp' , value: None },
+              
+                {meta: 'sp' , value: None },
+              
+                {meta: 'sp' , value: None },
+              
+                {meta: 'sp' , value: None },
+              
+                {meta: 'sp' , value: None },
+              
+                {meta: 'sp' , value: None },
+              
+                {meta: 'sp' , value: None },
+              
+                {meta: 'sp' , value: None },
+              
+                {meta: 'sp' , value: None },
+              
+                {meta: 'sp' , value: None },
+              
+                {meta: 'sp' , value: None },
+              
+                {meta: 'sp' , value: None },
+              
+                {meta: 'sp' , value: None },
+              
+                {meta: 'sp' , value: None },
+              
+                {meta: 'sp' , value: None },
+              
+                {meta: 'sp' , value: None },
+              
+                {meta: 'sp' , value: None },
+              
+                {meta: 'sp' , value: None },
+              
+                {meta: 'sp' , value: None },
+              
+                {meta: 'sp' , value: None },
+              
+                {meta: 'sp' , value: None },
+              
+                {meta: 'sp' , value: None },
+              
+                {meta: 'sp' , value: None },
+              
+                {meta: 'sp' , value: None },
+              
+                {meta: 'sp' , value: None },
+              
+                {meta: 'sp' , value: None },
+              
+                {meta: 'sp' , value: None },
+              
+                {meta: 'sp' , value: None },
+              
+                {meta: 'sp' , value: None },
+              
+            ],
+          
+            [
+              
+                {meta: 'vnl' , value: 1.33 },
+              
+                {meta: 'vnl' , value: 1.6 },
+              
+                {meta: 'vnl' , value: 0.97 },
+              
+                {meta: 'vnl' , value: 1.38 },
+              
+                {meta: 'vnl' , value: 1.85 },
+              
+                {meta: 'vnl' , value: 1.05 },
+              
+                {meta: 'vnl' , value: 1.09 },
+              
+                {meta: 'vnl' , value: 0.9 },
+              
+                {meta: 'vnl' , value: 1.28 },
+              
+                {meta: 'vnl' , value: 2.6 },
+              
+                {meta: 'vnl' , value: None },
+              
+                {meta: 'vnl' , value: None },
+              
+                {meta: 'vnl' , value: None },
+              
+                {meta: 'vnl' , value: None },
+              
+                {meta: 'vnl' , value: None },
+              
+                {meta: 'vnl' , value: None },
+              
+                {meta: 'vnl' , value: None },
+              
+                {meta: 'vnl' , value: None },
+              
+                {meta: 'vnl' , value: None },
+              
+                {meta: 'vnl' , value: None },
+              
+                {meta: 'vnl' , value: None },
+              
+                {meta: 'vnl' , value: None },
+              
+                {meta: 'vnl' , value: None },
+              
+                {meta: 'vnl' , value: None },
+              
+                {meta: 'vnl' , value: None },
+              
+                {meta: 'vnl' , value: None },
+              
+                {meta: 'vnl' , value: None },
+              
+                {meta: 'vnl' , value: None },
+              
+                {meta: 'vnl' , value: None },
+              
+                {meta: 'vnl' , value: None },
+              
+                {meta: 'vnl' , value: None },
+              
+                {meta: 'vnl' , value: None },
+              
+                {meta: 'vnl' , value: None },
+              
+                {meta: 'vnl' , value: None },
+              
+                {meta: 'vnl' , value: None },
+              
+                {meta: 'vnl' , value: None },
+              
+                {meta: 'vnl' , value: None },
+              
+                {meta: 'vnl' , value: None },
+              
+                {meta: 'vnl' , value: None },
+              
+                {meta: 'vnl' , value: None },
+              
+                {meta: 'vnl' , value: None },
+              
+                {meta: 'vnl' , value: None },
+              
+                {meta: 'vnl' , value: None },
+              
+                {meta: 'vnl' , value: None },
+              
+                {meta: 'vnl' , value: None },
+              
+                {meta: 'vnl' , value: None },
+              
+                {meta: 'vnl' , value: None },
+              
+                {meta: 'vnl' , value: None },
+              
+                {meta: 'vnl' , value: None },
+              
+                {meta: 'vnl' , value: None },
+              
+                {meta: 'vnl' , value: None },
+              
+                {meta: 'vnl' , value: None },
+              
+                {meta: 'vnl' , value: None },
+              
+                {meta: 'vnl' , value: None },
+              
+                {meta: 'vnl' , value: None },
+              
+                {meta: 'vnl' , value: None },
+              
+            ],
+          
+            [
+              
+                {meta: 'vvd' , value: 18.58 },
+              
+                {meta: 'vvd' , value: 14.85 },
+              
+                {meta: 'vvd' , value: 13.35 },
+              
+                {meta: 'vvd' , value: 13.6 },
+              
+                {meta: 'vvd' , value: 12.27 },
+              
+                {meta: 'vvd' , value: 13.16 },
+              
+                {meta: 'vvd' , value: 16.76 },
+              
+                {meta: 'vvd' , value: 36.48 },
+              
+                {meta: 'vvd' , value: 33.11 },
+              
+                {meta: 'vvd' , value: 22.39 },
+              
+                {meta: 'vvd' , value: None },
+              
+                {meta: 'vvd' , value: None },
+              
+                {meta: 'vvd' , value: None },
+              
+                {meta: 'vvd' , value: None },
+              
+                {meta: 'vvd' , value: None },
+              
+                {meta: 'vvd' , value: None },
+              
+                {meta: 'vvd' , value: None },
+              
+                {meta: 'vvd' , value: None },
+              
+                {meta: 'vvd' , value: None },
+              
+                {meta: 'vvd' , value: None },
+              
+                {meta: 'vvd' , value: None },
+              
+                {meta: 'vvd' , value: None },
+              
+                {meta: 'vvd' , value: None },
+              
+                {meta: 'vvd' , value: None },
+              
+                {meta: 'vvd' , value: None },
+              
+                {meta: 'vvd' , value: None },
+              
+                {meta: 'vvd' , value: None },
+              
+                {meta: 'vvd' , value: None },
+              
+                {meta: 'vvd' , value: None },
+              
+                {meta: 'vvd' , value: None },
+              
+                {meta: 'vvd' , value: None },
+              
+                {meta: 'vvd' , value: None },
+              
+                {meta: 'vvd' , value: None },
+              
+                {meta: 'vvd' , value: None },
+              
+                {meta: 'vvd' , value: None },
+              
+                {meta: 'vvd' , value: None },
+              
+                {meta: 'vvd' , value: None },
+              
+                {meta: 'vvd' , value: None },
+              
+                {meta: 'vvd' , value: None },
+              
+                {meta: 'vvd' , value: None },
+              
+                {meta: 'vvd' , value: None },
+              
+                {meta: 'vvd' , value: None },
+              
+                {meta: 'vvd' , value: None },
+              
+                {meta: 'vvd' , value: None },
+              
+                {meta: 'vvd' , value: None },
+              
+                {meta: 'vvd' , value: None },
+              
+                {meta: 'vvd' , value: None },
+              
+                {meta: 'vvd' , value: None },
+              
+                {meta: 'vvd' , value: None },
+              
+                {meta: 'vvd' , value: None },
+              
+                {meta: 'vvd' , value: None },
+              
+                {meta: 'vvd' , value: None },
+              
+                {meta: 'vvd' , value: None },
+              
+                {meta: 'vvd' , value: None },
+              
+                {meta: 'vvd' , value: None },
+              
+                {meta: 'vvd' , value: None },
+              
+            ],
+          
+
+          ]
+        };
+
+        var chart = new Chartist.Line('.ten-days-graph', tenDaysData, options);
+
+        var twoMonthsData =
+        {
+          labels: [],
+          series: [
+
+          
+            [
+              
+                {meta: '_50plus' , value: 0.79 },
+              
+                {meta: '_50plus' , value: 0.93 },
+              
+                {meta: '_50plus' , value: 1.26 },
+              
+                {meta: '_50plus' , value: 5.32 },
+              
+                {meta: '_50plus' , value: 1.89 },
+              
+                {meta: '_50plus' , value: 8.57 },
+              
+                {meta: '_50plus' , value: 2.6 },
+              
+                {meta: '_50plus' , value: 1.06 },
+              
+                {meta: '_50plus' , value: 0.67 },
+              
+                {meta: '_50plus' , value: 7.8 },
+              
+                {meta: '_50plus' , value: 3.84 },
+              
+                {meta: '_50plus' , value: 3.09 },
+              
+                {meta: '_50plus' , value: 1.43 },
+              
+                {meta: '_50plus' , value: 1.12 },
+              
+                {meta: '_50plus' , value: 0.96 },
+              
+                {meta: '_50plus' , value: 1.02 },
+              
+                {meta: '_50plus' , value: 0.77 },
+              
+                {meta: '_50plus' , value: 1.14 },
+              
+                {meta: '_50plus' , value: 3.44 },
+              
+                {meta: '_50plus' , value: 2.23 },
+              
+                {meta: '_50plus' , value: 1.04 },
+              
+                {meta: '_50plus' , value: 0.77 },
+              
+                {meta: '_50plus' , value: 1.06 },
+              
+                {meta: '_50plus' , value: 0.69 },
+              
+                {meta: '_50plus' , value: 0.86 },
+              
+                {meta: '_50plus' , value: 1.37 },
+              
+                {meta: '_50plus' , value: hoi },
+              
+                {meta: '_50plus' , value: 2.57 },
+              
+                {meta: '_50plus' , value: 1.28 },
+              
+                {meta: '_50plus' , value: 1.58 },
+              
+                {meta: '_50plus' , value: 1.04 },
+              
+                {meta: '_50plus' , value: 7.86 },
+              
+                {meta: '_50plus' , value: 3.81 },
+              
+                {meta: '_50plus' , value: 2.06 },
+              
+                {meta: '_50plus' , value: 0.71 },
+              
+                {meta: '_50plus' , value: 3.0 },
+              
+            ],
+          
+            [
+              
+                {meta: 'cda' , value: 3.14 },
+              
+                {meta: 'cda' , value: 3.45 },
+              
+                {meta: 'cda' , value: 2.76 },
+              
+                {meta: 'cda' , value: 2.55 },
+              
+                {meta: 'cda' , value: 2.84 },
+              
+                {meta: 'cda' , value: 6.19 },
+              
+                {meta: 'cda' , value: 4.33 },
+              
+                {meta: 'cda' , value: 5.73 },
+              
+                {meta: 'cda' , value: 2.42 },
+              
+                {meta: 'cda' , value: 2.64 },
+              
+                {meta: 'cda' , value: 3.14 },
+              
+                {meta: 'cda' , value: 5.57 },
+              
+                {meta: 'cda' , value: 6.9 },
+              
+                {meta: 'cda' , value: 5.01 },
+              
+                {meta: 'cda' , value: 8.76 },
+              
+                {meta: 'cda' , value: 7.67 },
+              
+                {meta: 'cda' , value: 3.02 },
+              
+                {meta: 'cda' , value: 2.61 },
+              
+                {meta: 'cda' , value: 3.97 },
+              
+                {meta: 'cda' , value: 7.5 },
+              
+                {meta: 'cda' , value: 8.15 },
+              
+                {meta: 'cda' , value: 4.69 },
+              
+                {meta: 'cda' , value: 4.15 },
+              
+                {meta: 'cda' , value: 1.64 },
+              
+                {meta: 'cda' , value: 2.16 },
+              
+                {meta: 'cda' , value: 3.22 },
+              
+                {meta: 'cda' , value: 3.41 },
+              
+                {meta: 'cda' , value: 3.76 },
+              
+                {meta: 'cda' , value: 4.05 },
+              
+                {meta: 'cda' , value: 4.05 },
+              
+                {meta: 'cda' , value: 3.34 },
+              
+                {meta: 'cda' , value: 2.11 },
+              
+                {meta: 'cda' , value: 6.78 },
+              
+                {meta: 'cda' , value: 3.37 },
+              
+                {meta: 'cda' , value: 5.84 },
+              
+                {meta: 'cda' , value: 4.53 },
+              
+            ],
+          
+            [
+              
+                {meta: 'cu' , value: 3.6 },
+              
+                {meta: 'cu' , value: 2.57 },
+              
+                {meta: 'cu' , value: 2.02 },
+              
+                {meta: 'cu' , value: 1.37 },
+              
+                {meta: 'cu' , value: 1.58 },
+              
+                {meta: 'cu' , value: 2.45 },
+              
+                {meta: 'cu' , value: 2.17 },
+              
+                {meta: 'cu' , value: 2.59 },
+              
+                {meta: 'cu' , value: 0.95 },
+              
+                {meta: 'cu' , value: 1.19 },
+              
+                {meta: 'cu' , value: hoi },
+              
+                {meta: 'cu' , value: 1.89 },
+              
+                {meta: 'cu' , value: 1.5 },
+              
+                {meta: 'cu' , value: 1.91 },
+              
+                {meta: 'cu' , value: 2.63 },
+              
+                {meta: 'cu' , value: 2.33 },
+              
+                {meta: 'cu' , value: 1.35 },
+              
+                {meta: 'cu' , value: 1.04 },
+              
+                {meta: 'cu' , value: 1.75 },
+              
+                {meta: 'cu' , value: 8.45 },
+              
+                {meta: 'cu' , value: 3.47 },
+              
+                {meta: 'cu' , value: 2.71 },
+              
+                {meta: 'cu' , value: 2.37 },
+              
+                {meta: 'cu' , value: 2.17 },
+              
+                {meta: 'cu' , value: 1.35 },
+              
+                {meta: 'cu' , value: 2.57 },
+              
+                {meta: 'cu' , value: 2.35 },
+              
+                {meta: 'cu' , value: 1.6 },
+              
+                {meta: 'cu' , value: 1.79 },
+              
+                {meta: 'cu' , value: 2.89 },
+              
+                {meta: 'cu' , value: 2.62 },
+              
+                {meta: 'cu' , value: 1.08 },
+              
+                {meta: 'cu' , value: 1.69 },
+              
+                {meta: 'cu' , value: 1.64 },
+              
+                {meta: 'cu' , value: 1.66 },
+              
+                {meta: 'cu' , value: 2.58 },
+              
+            ],
+          
+            [
+              
+                {meta: 'd66' , value: 9.31 },
+              
+                {meta: 'd66' , value: 9.49 },
+              
+                {meta: 'd66' , value: 7.03 },
+              
+                {meta: 'd66' , value: 7.95 },
+              
+                {meta: 'd66' , value: 8.25 },
+              
+                {meta: 'd66' , value: 6.9 },
+              
+                {meta: 'd66' , value: 9.8 },
+              
+                {meta: 'd66' , value: 8.56 },
+              
+                {meta: 'd66' , value: 7.44 },
+              
+                {meta: 'd66' , value: 7.8 },
+              
+                {meta: 'd66' , value: 7.3 },
+              
+                {meta: 'd66' , value: 5.67 },
+              
+                {meta: 'd66' , value: 7.72 },
+              
+                {meta: 'd66' , value: 7.81 },
+              
+                {meta: 'd66' , value: 9.38 },
+              
+                {meta: 'd66' , value: 12.73 },
+              
+                {meta: 'd66' , value: 4.33 },
+              
+                {meta: 'd66' , value: 14.08 },
+              
+                {meta: 'd66' , value: 15.46 },
+              
+                {meta: 'd66' , value: 12.63 },
+              
+                {meta: 'd66' , value: 9.14 },
+              
+                {meta: 'd66' , value: 8.32 },
+              
+                {meta: 'd66' , value: 8.02 },
+              
+                {meta: 'd66' , value: 2.94 },
+              
+                {meta: 'd66' , value: 5.05 },
+              
+                {meta: 'd66' , value: 5.76 },
+              
+                {meta: 'd66' , value: 6.58 },
+              
+                {meta: 'd66' , value: 7.4 },
+              
+                {meta: 'd66' , value: 6.83 },
+              
+                {meta: 'd66' , value: 7.47 },
+              
+                {meta: 'd66' , value: 7.45 },
+              
+                {meta: 'd66' , value: 9.97 },
+              
+                {meta: 'd66' , value: 7.94 },
+              
+                {meta: 'd66' , value: 9.06 },
+              
+                {meta: 'd66' , value: 6.93 },
+              
+                {meta: 'd66' , value: 8.07 },
+              
+            ],
+          
+            [
+              
+                {meta: 'denk' , value: 8.36 },
+              
+                {meta: 'denk' , value: 8.95 },
+              
+                {meta: 'denk' , value: 7.81 },
+              
+                {meta: 'denk' , value: 7.93 },
+              
+                {meta: 'denk' , value: 9.71 },
+              
+                {meta: 'denk' , value: 9.18 },
+              
+                {meta: 'denk' , value: 8.78 },
+              
+                {meta: 'denk' , value: 9.08 },
+              
+                {meta: 'denk' , value: 5.67 },
+              
+                {meta: 'denk' , value: 7.51 },
+              
+                {meta: 'denk' , value: 7.69 },
+              
+                {meta: 'denk' , value: 7.56 },
+              
+                {meta: 'denk' , value: 7.01 },
+              
+                {meta: 'denk' , value: 5.84 },
+              
+                {meta: 'denk' , value: 6.73 },
+              
+                {meta: 'denk' , value: 8.01 },
+              
+                {meta: 'denk' , value: 3.91 },
+              
+                {meta: 'denk' , value: 6.92 },
+              
+                {meta: 'denk' , value: 9.8 },
+              
+                {meta: 'denk' , value: 5.66 },
+              
+                {meta: 'denk' , value: 5.66 },
+              
+                {meta: 'denk' , value: 7.68 },
+              
+                {meta: 'denk' , value: 8.08 },
+              
+                {meta: 'denk' , value: 59.4 },
+              
+                {meta: 'denk' , value: 15.36 },
+              
+                {meta: 'denk' , value: 10.94 },
+              
+                {meta: 'denk' , value: 13.5 },
+              
+                {meta: 'denk' , value: 11.23 },
+              
+                {meta: 'denk' , value: 18.54 },
+              
+                {meta: 'denk' , value: 17.75 },
+              
+                {meta: 'denk' , value: 17.52 },
+              
+                {meta: 'denk' , value: 12.14 },
+              
+                {meta: 'denk' , value: 8.68 },
+              
+                {meta: 'denk' , value: 6.84 },
+              
+                {meta: 'denk' , value: 6.09 },
+              
+                {meta: 'denk' , value: 7.77 },
+              
+            ],
+          
+            [
+              
+                {meta: 'gl' , value: 7.63 },
+              
+                {meta: 'gl' , value: 7.35 },
+              
+                {meta: 'gl' , value: 7.83 },
+              
+                {meta: 'gl' , value: 12.79 },
+              
+                {meta: 'gl' , value: 6.26 },
+              
+                {meta: 'gl' , value: 6.82 },
+              
+                {meta: 'gl' , value: 7.32 },
+              
+                {meta: 'gl' , value: 7.37 },
+              
+                {meta: 'gl' , value: 4.0 },
+              
+                {meta: 'gl' , value: 5.29 },
+              
+                {meta: 'gl' , value: 6.57 },
+              
+                {meta: 'gl' , value: 6.19 },
+              
+                {meta: 'gl' , value: 7.5 },
+              
+                {meta: 'gl' , value: 4.94 },
+              
+                {meta: 'gl' , value: 12.82 },
+              
+                {meta: 'gl' , value: 7.4 },
+              
+                {meta: 'gl' , value: 37.9 },
+              
+                {meta: 'gl' , value: 22.67 },
+              
+                {meta: 'gl' , value: 16.18 },
+              
+                {meta: 'gl' , value: 10.28 },
+              
+                {meta: 'gl' , value: 6.69 },
+              
+                {meta: 'gl' , value: 6.02 },
+              
+                {meta: 'gl' , value: 7.52 },
+              
+                {meta: 'gl' , value: 3.81 },
+              
+                {meta: 'gl' , value: 4.93 },
+              
+                {meta: 'gl' , value: 5.57 },
+              
+                {meta: 'gl' , value: 5.33 },
+              
+                {meta: 'gl' , value: 7.13 },
+              
+                {meta: 'gl' , value: 6.71 },
+              
+                {meta: 'gl' , value: 7.29 },
+              
+                {meta: 'gl' , value: 6.52 },
+              
+                {meta: 'gl' , value: 12.82 },
+              
+                {meta: 'gl' , value: 7.4 },
+              
+                {meta: 'gl' , value: 5.26 },
+              
+                {meta: 'gl' , value: 7.78 },
+              
+                {meta: 'gl' , value: 7.1 },
+              
+            ],
+          
+            [
+              
+                {meta: 'ppnl' , value: 0.06 },
+              
+                {meta: 'ppnl' , value: 0.11 },
+              
+                {meta: 'ppnl' , value: 0.08 },
+              
+                {meta: 'ppnl' , value: 0.09 },
+              
+                {meta: 'ppnl' , value: 0.1 },
+              
+                {meta: 'ppnl' , value: 0.06 },
+              
+                {meta: 'ppnl' , value: 0.05 },
+              
+                {meta: 'ppnl' , value: 0.16 },
+              
+                {meta: 'ppnl' , value: 0.03 },
+              
+                {meta: 'ppnl' , value: 0.11 },
+              
+                {meta: 'ppnl' , value: 0.07 },
+              
+                {meta: 'ppnl' , value: 0.11 },
+              
+                {meta: 'ppnl' , value: 0.19 },
+              
+                {meta: 'ppnl' , value: 0.15 },
+              
+                {meta: 'ppnl' , value: 0.15 },
+              
+                {meta: 'ppnl' , value: 0.23 },
+              
+                {meta: 'ppnl' , value: 0.12 },
+              
+                {meta: 'ppnl' , value: 0.05 },
+              
+                {meta: 'ppnl' , value: 0.05 },
+              
+                {meta: 'ppnl' , value: 0.05 },
+              
+                {meta: 'ppnl' , value: 0.05 },
+              
+                {meta: 'ppnl' , value: 0.1 },
+              
+                {meta: 'ppnl' , value: 0.15 },
+              
+                {meta: 'ppnl' , value: 0.01 },
+              
+                {meta: 'ppnl' , value: 0.0 },
+              
+                {meta: 'ppnl' , value: 0.02 },
+              
+                {meta: 'ppnl' , value: 0.05 },
+              
+                {meta: 'ppnl' , value: 0.16 },
+              
+                {meta: 'ppnl' , value: 0.29 },
+              
+                {meta: 'ppnl' , value: 0.1 },
+              
+                {meta: 'ppnl' , value: 0.0 },
+              
+                {meta: 'ppnl' , value: 0.03 },
+              
+                {meta: 'ppnl' , value: 0.05 },
+              
+                {meta: 'ppnl' , value: 0.05 },
+              
+                {meta: 'ppnl' , value: 0.05 },
+              
+                {meta: 'ppnl' , value: 0.0 },
+              
+            ],
+          
+            [
+              
+                {meta: 'pvda' , value: 24.77 },
+              
+                {meta: 'pvda' , value: 23.77 },
+              
+                {meta: 'pvda' , value: 18.88 },
+              
+                {meta: 'pvda' , value: 15.86 },
+              
+                {meta: 'pvda' , value: 18.77 },
+              
+                {meta: 'pvda' , value: 16.85 },
+              
+                {meta: 'pvda' , value: 17.49 },
+              
+                {meta: 'pvda' , value: 17.49 },
+              
+                {meta: 'pvda' , value: 38.49 },
+              
+                {meta: 'pvda' , value: 24.82 },
+              
+                {meta: 'pvda' , value: 19.99 },
+              
+                {meta: 'pvda' , value: 26.11 },
+              
+                {meta: 'pvda' , value: 20.19 },
+              
+                {meta: 'pvda' , value: 15.88 },
+              
+                {meta: 'pvda' , value: 10.18 },
+              
+                {meta: 'pvda' , value: 14.91 },
+              
+                {meta: 'pvda' , value: 13.48 },
+              
+                {meta: 'pvda' , value: 11.51 },
+              
+                {meta: 'pvda' , value: 12.04 },
+              
+                {meta: 'pvda' , value: 13.32 },
+              
+                {meta: 'pvda' , value: 22.29 },
+              
+                {meta: 'pvda' , value: 33.06 },
+              
+                {meta: 'pvda' , value: 19.03 },
+              
+                {meta: 'pvda' , value: 7.37 },
+              
+                {meta: 'pvda' , value: 9.99 },
+              
+                {meta: 'pvda' , value: 12.24 },
+              
+                {meta: 'pvda' , value: 20.68 },
+              
+                {meta: 'pvda' , value: 13.5 },
+              
+                {meta: 'pvda' , value: 10.03 },
+              
+                {meta: 'pvda' , value: 13.93 },
+              
+                {meta: 'pvda' , value: 20.2 },
+              
+                {meta: 'pvda' , value: 14.3 },
+              
+                {meta: 'pvda' , value: 18.18 },
+              
+                {meta: 'pvda' , value: 11.41 },
+              
+                {meta: 'pvda' , value: 11.99 },
+              
+                {meta: 'pvda' , value: 16.6 },
+              
+            ],
+          
+            [
+              
+                {meta: 'pvdd' , value: 2.1 },
+              
+                {meta: 'pvdd' , value: 1.37 },
+              
+                {meta: 'pvdd' , value: 1.3 },
+              
+                {meta: 'pvdd' , value: 1.77 },
+              
+                {meta: 'pvdd' , value: 1.19 },
+              
+                {meta: 'pvdd' , value: 1.12 },
+              
+                {meta: 'pvdd' , value: 1.57 },
+              
+                {meta: 'pvdd' , value: 0.97 },
+              
+                {meta: 'pvdd' , value: 0.55 },
+              
+                {meta: 'pvdd' , value: 0.66 },
+              
+                {meta: 'pvdd' , value: 0.76 },
+              
+                {meta: 'pvdd' , value: 1.02 },
+              
+                {meta: 'pvdd' , value: 2.28 },
+              
+                {meta: 'pvdd' , value: hoi },
+              
+                {meta: 'pvdd' , value: 0.61 },
+              
+                {meta: 'pvdd' , value: 0.64 },
+              
+                {meta: 'pvdd' , value: 0.61 },
+              
+                {meta: 'pvdd' , value: 0.51 },
+              
+                {meta: 'pvdd' , value: 0.5 },
+              
+                {meta: 'pvdd' , value: 0.99 },
+              
+                {meta: 'pvdd' , value: 0.78 },
+              
+                {meta: 'pvdd' , value: 1.18 },
+              
+                {meta: 'pvdd' , value: 0.61 },
+              
+                {meta: 'pvdd' , value: 0.51 },
+              
+                {meta: 'pvdd' , value: 0.51 },
+              
+                {meta: 'pvdd' , value: 0.96 },
+              
+                {meta: 'pvdd' , value: 0.9 },
+              
+                {meta: 'pvdd' , value: 0.71 },
+              
+                {meta: 'pvdd' , value: 0.92 },
+              
+                {meta: 'pvdd' , value: 1.43 },
+              
+                {meta: 'pvdd' , value: 0.74 },
+              
+                {meta: 'pvdd' , value: 0.71 },
+              
+                {meta: 'pvdd' , value: 1.07 },
+              
+                {meta: 'pvdd' , value: 0.78 },
+              
+                {meta: 'pvdd' , value: 1.71 },
+              
+                {meta: 'pvdd' , value: 0.8 },
+              
+            ],
+          
+            [
+              
+                {meta: 'pvv' , value: 15.95 },
+              
+                {meta: 'pvv' , value: 21.75 },
+              
+                {meta: 'pvv' , value: 27.51 },
+              
+                {meta: 'pvv' , value: 25.02 },
+              
+                {meta: 'pvv' , value: 23.27 },
+              
+                {meta: 'pvv' , value: 16.87 },
+              
+                {meta: 'pvv' , value: 16.88 },
+              
+                {meta: 'pvv' , value: 19.77 },
+              
+                {meta: 'pvv' , value: 25.99 },
+              
+                {meta: 'pvv' , value: 23.5 },
+              
+                {meta: 'pvv' , value: 26.11 },
+              
+                {meta: 'pvv' , value: 17.89 },
+              
+                {meta: 'pvv' , value: 18.95 },
+              
+                {meta: 'pvv' , value: 16.99 },
+              
+                {meta: 'pvv' , value: 16.11 },
+              
+                {meta: 'pvv' , value: 16.38 },
+              
+                {meta: 'pvv' , value: 14.5 },
+              
+                {meta: 'pvv' , value: 19.3 },
+              
+                {meta: 'pvv' , value: 18.37 },
+              
+                {meta: 'pvv' , value: 19.43 },
+              
+                {meta: 'pvv' , value: 20.23 },
+              
+                {meta: 'pvv' , value: 16.84 },
+              
+                {meta: 'pvv' , value: 18.38 },
+              
+                {meta: 'pvv' , value: 9.12 },
+              
+                {meta: 'pvv' , value: 25.35 },
+              
+                {meta: 'pvv' , value: 19.68 },
+              
+                {meta: 'pvv' , value: 19.43 },
+              
+                {meta: 'pvv' , value: 29.54 },
+              
+                {meta: 'pvv' , value: 29.04 },
+              
+                {meta: 'pvv' , value: 21.37 },
+              
+                {meta: 'pvv' , value: 19.27 },
+              
+                {meta: 'pvv' , value: 18.39 },
+              
+                {meta: 'pvv' , value: 19.38 },
+              
+                {meta: 'pvv' , value: 16.13 },
+              
+                {meta: 'pvv' , value: 17.36 },
+              
+                {meta: 'pvv' , value: 18.39 },
+              
+            ],
+          
+            [
+              
+                {meta: 'sgp' , value: 1.08 },
+              
+                {meta: 'sgp' , value: 1.08 },
+              
+                {meta: 'sgp' , value: 0.67 },
+              
+                {meta: 'sgp' , value: 0.7 },
+              
+                {meta: 'sgp' , value: 1.08 },
+              
+                {meta: 'sgp' , value: 1.42 },
+              
+                {meta: 'sgp' , value: 1.52 },
+              
+                {meta: 'sgp' , value: 1.62 },
+              
+                {meta: 'sgp' , value: 0.77 },
+              
+                {meta: 'sgp' , value: 1.53 },
+              
+                {meta: 'sgp' , value: 1.35 },
+              
+                {meta: 'sgp' , value: 1.37 },
+              
+                {meta: 'sgp' , value: 1.25 },
+              
+                {meta: 'sgp' , value: 1.13 },
+              
+                {meta: 'sgp' , value: 1.13 },
+              
+                {meta: 'sgp' , value: 1.27 },
+              
+                {meta: 'sgp' , value: 0.7 },
+              
+                {meta: 'sgp' , value: 0.65 },
+              
+                {meta: 'sgp' , value: 0.84 },
+              
+                {meta: 'sgp' , value: 2.05 },
+              
+                {meta: 'sgp' , value: 1.17 },
+              
+                {meta: 'sgp' , value: 1.6 },
+              
+                {meta: 'sgp' , value: 1.43 },
+              
+                {meta: 'sgp' , value: 0.81 },
+              
+                {meta: 'sgp' , value: 1.19 },
+              
+                {meta: 'sgp' , value: 1.49 },
+              
+                {meta: 'sgp' , value: 1.23 },
+              
+                {meta: 'sgp' , value: 1.28 },
+              
+                {meta: 'sgp' , value: 1.11 },
+              
+                {meta: 'sgp' , value: 1.86 },
+              
+                {meta: 'sgp' , value: 2.26 },
+              
+                {meta: 'sgp' , value: 0.59 },
+              
+                {meta: 'sgp' , value: 1.56 },
+              
+                {meta: 'sgp' , value: 2.67 },
+              
+                {meta: 'sgp' , value: 2.62 },
+              
+                {meta: 'sgp' , value: 2.47 },
+              
+            ],
+          
+            [
+              
+                {meta: 'sp' , value: 3.65 },
+              
+                {meta: 'sp' , value: 4.39 },
+              
+                {meta: 'sp' , value: 4.16 },
+              
+                {meta: 'sp' , value: 4.64 },
+              
+                {meta: 'sp' , value: 5.34 },
+              
+                {meta: 'sp' , value: 5.59 },
+              
+                {meta: 'sp' , value: 4.12 },
+              
+                {meta: 'sp' , value: 5.27 },
+              
+                {meta: 'sp' , value: 3.33 },
+              
+                {meta: 'sp' , value: 3.4 },
+              
+                {meta: 'sp' , value: 5.75 },
+              
+                {meta: 'sp' , value: 5.32 },
+              
+                {meta: 'sp' , value: 5.39 },
+              
+                {meta: 'sp' , value: 22.01 },
+              
+                {meta: 'sp' , value: 5.79 },
+              
+                {meta: 'sp' , value: 4.92 },
+              
+                {meta: 'sp' , value: 3.07 },
+              
+                {meta: 'sp' , value: 6.02 },
+              
+                {meta: 'sp' , value: 3.97 },
+              
+                {meta: 'sp' , value: 4.42 },
+              
+                {meta: 'sp' , value: 4.59 },
+              
+                {meta: 'sp' , value: 4.19 },
+              
+                {meta: 'sp' , value: 4.71 },
+              
+                {meta: 'sp' , value: 1.74 },
+              
+                {meta: 'sp' , value: 2.72 },
+              
+                {meta: 'sp' , value: 3.86 },
+              
+                {meta: 'sp' , value: 5.53 },
+              
+                {meta: 'sp' , value: 4.67 },
+              
+                {meta: 'sp' , value: 5.07 },
+              
+                {meta: 'sp' , value: 5.3 },
+              
+                {meta: 'sp' , value: 4.92 },
+              
+                {meta: 'sp' , value: 5.79 },
+              
+                {meta: 'sp' , value: 5.62 },
+              
+                {meta: 'sp' , value: 3.35 },
+              
+                {meta: 'sp' , value: 2.89 },
+              
+                {meta: 'sp' , value: 3.7 },
+              
+            ],
+          
+            [
+              
+                {meta: 'vnl' , value: 1.56 },
+              
+                {meta: 'vnl' , value: 1.11 },
+              
+                {meta: 'vnl' , value: 5.22 },
+              
+                {meta: 'vnl' , value: 2.92 },
+              
+                {meta: 'vnl' , value: 3.69 },
+              
+                {meta: 'vnl' , value: 2.3 },
+              
+                {meta: 'vnl' , value: 1.57 },
+              
+                {meta: 'vnl' , value: 1.16 },
+              
+                {meta: 'vnl' , value: 0.74 },
+              
+                {meta: 'vnl' , value: 1.06 },
+              
+                {meta: 'vnl' , value: 3.15 },
+              
+                {meta: 'vnl' , value: 1.16 },
+              
+                {meta: 'vnl' , value: 0.88 },
+              
+                {meta: 'vnl' , value: 0.89 },
+              
+                {meta: 'vnl' , value: 1.47 },
+              
+                {meta: 'vnl' , value: 1.83 },
+              
+                {meta: 'vnl' , value: 0.99 },
+              
+                {meta: 'vnl' , value: 0.79 },
+              
+                {meta: 'vnl' , value: 2.37 },
+              
+                {meta: 'vnl' , value: 1.15 },
+              
+                {meta: 'vnl' , value: 1.81 },
+              
+                {meta: 'vnl' , value: 1.03 },
+              
+                {meta: 'vnl' , value: 1.0 },
+              
+                {meta: 'vnl' , value: 0.9 },
+              
+                {meta: 'vnl' , value: 1.14 },
+              
+                {meta: 'vnl' , value: 1.32 },
+              
+                {meta: 'vnl' , value: 1.33 },
+              
+                {meta: 'vnl' , value: 1.6 },
+              
+                {meta: 'vnl' , value: 0.97 },
+              
+                {meta: 'vnl' , value: 1.38 },
+              
+                {meta: 'vnl' , value: 1.85 },
+              
+                {meta: 'vnl' , value: 1.05 },
+              
+                {meta: 'vnl' , value: 1.09 },
+              
+                {meta: 'vnl' , value: 0.9 },
+              
+                {meta: 'vnl' , value: 1.28 },
+              
+                {meta: 'vnl' , value: 2.6 },
+              
+            ],
+          
+            [
+              
+                {meta: 'vvd' , value: 18.01 },
+              
+                {meta: 'vvd' , value: 13.7 },
+              
+                {meta: 'vvd' , value: 13.47 },
+              
+                {meta: 'vvd' , value: 11.08 },
+              
+                {meta: 'vvd' , value: 16.03 },
+              
+                {meta: 'vvd' , value: 15.69 },
+              
+                {meta: 'vvd' , value: 21.8 },
+              
+                {meta: 'vvd' , value: 19.17 },
+              
+                {meta: 'vvd' , value: 8.96 },
+              
+                {meta: 'vvd' , value: 12.68 },
+              
+                {meta: 'vvd' , value: 13.2 },
+              
+                {meta: 'vvd' , value: 17.06 },
+              
+                {meta: 'vvd' , value: 18.83 },
+              
+                {meta: 'vvd' , value: 15.24 },
+              
+                {meta: 'vvd' , value: 23.28 },
+              
+                {meta: 'vvd' , value: 20.65 },
+              
+                {meta: 'vvd' , value: 15.24 },
+              
+                {meta: 'vvd' , value: 12.71 },
+              
+                {meta: 'vvd' , value: 11.24 },
+              
+                {meta: 'vvd' , value: 11.83 },
+              
+                {meta: 'vvd' , value: 14.94 },
+              
+                {meta: 'vvd' , value: 11.82 },
+              
+                {meta: 'vvd' , value: 23.48 },
+              
+                {meta: 'vvd' , value: 8.88 },
+              
+                {meta: 'vvd' , value: 29.38 },
+              
+                {meta: 'vvd' , value: 31.01 },
+              
+                {meta: 'vvd' , value: 18.58 },
+              
+                {meta: 'vvd' , value: 14.85 },
+              
+                {meta: 'vvd' , value: 13.35 },
+              
+                {meta: 'vvd' , value: 13.6 },
+              
+                {meta: 'vvd' , value: 12.27 },
+              
+                {meta: 'vvd' , value: 13.16 },
+              
+                {meta: 'vvd' , value: 16.76 },
+              
+                {meta: 'vvd' , value: 36.48 },
+              
+                {meta: 'vvd' , value: 33.11 },
+              
+                {meta: 'vvd' , value: 22.39 },
+              
+            ],
+          
+
+          ]
+        };
+
+        var chart = new Chartist.Line('.two-months-graph', twoMonthsData, options);
+
+        //hover effect
+        $('.chair').mouseenter(function()
+        {
+            $('._'+$(this).attr('party')+'_graphic').addClass('highlighted_cell');
+            $('._'+$(this).attr('party')+'_background').addClass('highlighted_legend_item');
+            $('._'+$(this).attr('party')+'_background').addClass('_'+$(this).attr('party')+'_highlighted');
+        });
+
+        $('.chair').mouseleave(function()
+        {
+            $('._'+$(this).attr('party')+'_graphic').removeClass('highlighted_cell');
+            $('._'+$(this).attr('party')+'_background').removeClass('highlighted_legend_item');
+            $('._'+$(this).attr('party')+'_background').removeClass('_'+$(this).attr('party')+'_highlighted');
+        });
+
+        $('.party_name').mouseenter(function()
+        {
+            $('._'+$(this).attr('party')+'_graphic').addClass('highlighted_cell');
+            $(this).addClass('highlighted_legend_item');
+            $(this).addClass('_'+$(this).attr('party')+'_highlighted');
+        });
+
+        $('.party_name').mouseleave(function()
+        {
+            $('._'+$(this).attr('party')+'_graphic').removeClass('highlighted_cell');
+            $(this).removeClass('highlighted_legend_item');
+            $(this).removeClass('_'+$(this).attr('party')+'_highlighted');
+        });
+
+	});
+	</script>
+
+    <title>Stemming 2017</title>
+</head>
+<body>
+
+<h1>Wat is de stemming in Nederland?</h1>
+
+<h2>Onze beste gok op basis van taalanalyse op Twitter</h2>
+
+<div id="chair_visualization">
+    <div id="chairs">
+        <table class="outer_table_2x3"><tr><td>
+            <table class="inner_table_6x6"><tr>
+                
+
+                <td class="chair _vvd_graphic" party="vvd"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _vvd_graphic" party="vvd"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _vvd_graphic" party="vvd"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _vvd_graphic" party="vvd"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _vvd_graphic" party="vvd"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+                    </tr><tr>
+                
+
+                
+
+                <td class="chair _vvd_graphic" party="vvd"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _vvd_graphic" party="vvd"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _vvd_graphic" party="vvd"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _vvd_graphic" party="vvd"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _vvd_graphic" party="vvd"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+                    </tr><tr>
+                
+
+                
+
+                <td class="chair _vvd_graphic" party="vvd"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _vvd_graphic" party="vvd"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _vvd_graphic" party="vvd"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _vvd_graphic" party="vvd"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _vvd_graphic" party="vvd"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+                    </tr><tr>
+                
+
+                
+
+                <td class="chair _vvd_graphic" party="vvd"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _vvd_graphic" party="vvd"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _vvd_graphic" party="vvd"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _vvd_graphic" party="vvd"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _vvd_graphic" party="vvd"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+                    </tr><tr>
+                
+
+                
+
+                <td class="chair _vvd_graphic" party="vvd"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _vvd_graphic" party="vvd"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _vvd_graphic" party="vvd"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _vvd_graphic" party="vvd"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _vvd_graphic" party="vvd"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+                    </tr></table></td>
+
+                    
+
+                    <td><table><tr>
+                
+
+                
+
+                <td class="chair _vvd_graphic" party="vvd"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _vvd_graphic" party="vvd"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _vvd_graphic" party="vvd"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _vvd_graphic" party="vvd"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _vvd_graphic" party="vvd"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+                    </tr><tr>
+                
+
+                
+
+                <td class="chair _vvd_graphic" party="vvd"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _vvd_graphic" party="vvd"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _pvv_graphic" party="pvv"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _pvv_graphic" party="pvv"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _pvv_graphic" party="pvv"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+                    </tr><tr>
+                
+
+                
+
+                <td class="chair _pvv_graphic" party="pvv"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _pvv_graphic" party="pvv"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _pvv_graphic" party="pvv"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _pvv_graphic" party="pvv"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _pvv_graphic" party="pvv"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+                    </tr><tr>
+                
+
+                
+
+                <td class="chair _pvv_graphic" party="pvv"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _pvv_graphic" party="pvv"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _pvv_graphic" party="pvv"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _pvv_graphic" party="pvv"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _pvv_graphic" party="pvv"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+                    </tr><tr>
+                
+
+                
+
+                <td class="chair _pvv_graphic" party="pvv"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _pvv_graphic" party="pvv"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _pvv_graphic" party="pvv"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _pvv_graphic" party="pvv"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _pvv_graphic" party="pvv"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+                    </tr></table></td>
+
+                    
+                        </tr><tr>
+                    
+
+                    <td><table><tr>
+                
+
+                
+
+                <td class="chair _pvv_graphic" party="pvv"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _pvv_graphic" party="pvv"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _pvv_graphic" party="pvv"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _pvv_graphic" party="pvv"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _pvv_graphic" party="pvv"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+                    </tr><tr>
+                
+
+                
+
+                <td class="chair _pvv_graphic" party="pvv"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _pvv_graphic" party="pvv"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _pvv_graphic" party="pvv"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _pvv_graphic" party="pvv"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _pvv_graphic" party="pvv"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+                    </tr><tr>
+                
+
+                
+
+                <td class="chair _pvv_graphic" party="pvv"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _pvv_graphic" party="pvv"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _pvv_graphic" party="pvv"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _pvda_graphic" party="pvda"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _pvda_graphic" party="pvda"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+                    </tr><tr>
+                
+
+                
+
+                <td class="chair _pvda_graphic" party="pvda"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _pvda_graphic" party="pvda"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _pvda_graphic" party="pvda"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _pvda_graphic" party="pvda"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _pvda_graphic" party="pvda"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+                    </tr><tr>
+                
+
+                
+
+                <td class="chair _pvda_graphic" party="pvda"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _pvda_graphic" party="pvda"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _pvda_graphic" party="pvda"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _pvda_graphic" party="pvda"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _pvda_graphic" party="pvda"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+                    </tr></table></td>
+
+                    
+
+                    <td><table><tr>
+                
+
+                
+
+                <td class="chair _pvda_graphic" party="pvda"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _pvda_graphic" party="pvda"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _pvda_graphic" party="pvda"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _pvda_graphic" party="pvda"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _pvda_graphic" party="pvda"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+                    </tr><tr>
+                
+
+                
+
+                <td class="chair _pvda_graphic" party="pvda"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _pvda_graphic" party="pvda"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _pvda_graphic" party="pvda"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _pvda_graphic" party="pvda"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _pvda_graphic" party="pvda"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+                    </tr><tr>
+                
+
+                
+
+                <td class="chair _denk_graphic" party="denk"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _denk_graphic" party="denk"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _denk_graphic" party="denk"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _denk_graphic" party="denk"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _denk_graphic" party="denk"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+                    </tr><tr>
+                
+
+                
+
+                <td class="chair _denk_graphic" party="denk"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _denk_graphic" party="denk"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _denk_graphic" party="denk"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _denk_graphic" party="denk"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _denk_graphic" party="denk"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+                    </tr><tr>
+                
+
+                
+
+                <td class="chair _denk_graphic" party="denk"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _denk_graphic" party="denk"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _denk_graphic" party="denk"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _denk_graphic" party="denk"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _denk_graphic" party="denk"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+                    </tr></table></td>
+
+                    
+                        </tr><tr>
+                    
+
+                    <td><table><tr>
+                
+
+                
+
+                <td class="chair _denk_graphic" party="denk"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _denk_graphic" party="denk"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _d66_graphic" party="d66"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _d66_graphic" party="d66"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _d66_graphic" party="d66"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+                    </tr><tr>
+                
+
+                
+
+                <td class="chair _d66_graphic" party="d66"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _d66_graphic" party="d66"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _d66_graphic" party="d66"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _d66_graphic" party="d66"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _d66_graphic" party="d66"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+                    </tr><tr>
+                
+
+                
+
+                <td class="chair _d66_graphic" party="d66"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _d66_graphic" party="d66"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _d66_graphic" party="d66"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _d66_graphic" party="d66"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _gl_graphic" party="gl"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+                    </tr><tr>
+                
+
+                
+
+                <td class="chair _gl_graphic" party="gl"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _gl_graphic" party="gl"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _gl_graphic" party="gl"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _gl_graphic" party="gl"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _gl_graphic" party="gl"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+                    </tr><tr>
+                
+
+                
+
+                <td class="chair _gl_graphic" party="gl"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _gl_graphic" party="gl"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _gl_graphic" party="gl"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _gl_graphic" party="gl"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _gl_graphic" party="gl"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+                    </tr></table></td>
+
+                    
+
+                    <td><table><tr>
+                
+
+                
+
+                <td class="chair _sp_graphic" party="sp"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _sp_graphic" party="sp"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _sp_graphic" party="sp"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _sp_graphic" party="sp"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _sp_graphic" party="sp"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+                    </tr><tr>
+                
+
+                
+
+                <td class="chair _sp_graphic" party="sp"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _sp_graphic" party="sp"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _cda_graphic" party="cda"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _cda_graphic" party="cda"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _cda_graphic" party="cda"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+                    </tr><tr>
+                
+
+                
+
+                <td class="chair _cda_graphic" party="cda"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _cda_graphic" party="cda"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _cda_graphic" party="cda"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _50plus_graphic" party="50plus"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _50plus_graphic" party="50plus"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+                    </tr><tr>
+                
+
+                
+
+                <td class="chair _50plus_graphic" party="50plus"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _sgp_graphic" party="sgp"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _sgp_graphic" party="sgp"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _sgp_graphic" party="sgp"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _cu_graphic" party="cu"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+                    </tr><tr>
+                
+
+                
+
+                <td class="chair _cu_graphic" party="cu"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _cu_graphic" party="cu"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _vnl_graphic" party="vnl"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _vnl_graphic" party="vnl"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+
+                
+
+                <td class="chair _pvdd_graphic" party="pvdd"><img class="dynamic_svg" src="svg/chair.svg"></td>
+
+                
+                    </tr></table></td>
+
+                    
+                        </tr><tr>
+                    
+
+                    <td><table><tr>
+                
+
+                
+            </tr></table>
+        </td></tr></table>
+    </div>
+    <div id="legend">
+        <table id="legend_table">
+            
+            	<tr><td class="legend_item">32 x </td><td class="party_name _vvd_background" party="vvd">vvd</td></tr>
+            
+            	<tr><td class="legend_item">31 x </td><td class="party_name _pvv_background" party="pvv">pvv</td></tr>
+            
+            	<tr><td class="legend_item">22 x </td><td class="party_name _pvda_background" party="pvda">pvda</td></tr>
+            
+            	<tr><td class="legend_item">17 x </td><td class="party_name _denk_background" party="denk">denk</td></tr>
+            
+            	<tr><td class="legend_item">12 x </td><td class="party_name _d66_background" party="d66">d66</td></tr>
+            
+            	<tr><td class="legend_item">11 x </td><td class="party_name _gl_background" party="gl">gl</td></tr>
+            
+            	<tr><td class="legend_item">7 x </td><td class="party_name _sp_background" party="sp">sp</td></tr>
+            
+            	<tr><td class="legend_item">6 x </td><td class="party_name _cda_background" party="cda">cda</td></tr>
+            
+            	<tr><td class="legend_item">3 x </td><td class="party_name _50plus_background" party="50plus">50plus</td></tr>
+            
+            	<tr><td class="legend_item">3 x </td><td class="party_name _sgp_background" party="sgp">sgp</td></tr>
+            
+            	<tr><td class="legend_item">3 x </td><td class="party_name _cu_background" party="cu">cu</td></tr>
+            
+            	<tr><td class="legend_item">2 x </td><td class="party_name _vnl_background" party="vnl">vnl</td></tr>
+            
+            	<tr><td class="legend_item">1 x </td><td class="party_name _pvdd_background" party="pvdd">pvdd</td></tr>
+            
+        </table>
+    </div>
+</div>
+
+<div id="explanation_and_graphs">
+    <h3>Over dit onderzoek</h3>
+    <p><img id="twitter_logo" src="svg/twitter.svg">Onderzoekers van het Centre for Language and Speech Technology onderzoeken in hoeverre er een verband is te vinden tussen hoe vaak een politieke partij genoemd wordt op Twitter en hoe deze partij het doet in de peilingen en bij de verkiezingen zelf. Bij de parlementsverkiezingen van 2012 bleek er een sterk verband tussen deze twee te zijn (zie ons artikel Relating Political Party Mentions on Twitter with Polls and Election Results). Op deze pagina zijn een aantal grafieken te vinden met hoe vaak de naam van een politiek partij wordt genoemd in een tweet. De metingen beginnen op woensdag 18 februari en worden per uur bijgewerkt. De meest recente meting is altijd van drie uur geleden. De metingen worden gedaan op de tweets uit Twiqs, een dienst waarin ongeveer 40% van de Nederlandse tweets doorzoekbaar zijn.</p>
+
+    <div class="whitespace"></div>
+
+    <h3>% vermeldingen laatste 10 dagen</h3>
+    <div class="ct-chart ct-golden-section ten-days-graph">
+    </div>
+
+    <h3>% vermeldingen vanaf 2 maanden voor de verkiezingen</h3>
+    <div class="ct-chart ct-golden-section two-months-graph">
+    </div>
+
+    <div><img src="http://applejack.science.ru.nl/lamabadge.php/stemming2017" alt="badge" /></div>
+</div>
+
+</body>
+</html>
