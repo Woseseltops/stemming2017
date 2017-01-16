@@ -47,16 +47,16 @@ class PoliticalTweets:
 
         return self.history_of_party_mentions_percentages
 
-    def get_seats_per_party(self):
+    def get_seats_per_party(self,nrdays=10):
         partycounts = {}
-        partypercentages = {}
+        #partymeans = {}
         partyrestpercentages = {}
         for party in self.allparties:
             partycounts[party] = 0
-            partypercentages[party] = 0
+            #partymeans[party] = 0
             partyrestpercentages[party] = 0
         partycounts["allparties"] = 0
-        includedates = self.get_last_dates_ordered(10)
+        includedates = self.get_last_dates_ordered(nrdays)
 
         ### count total number of mentions per party ###
         for day in self.history_of_party_mentions_counts:
@@ -66,6 +66,14 @@ class PoliticalTweets:
                         self.history_of_party_mentions_counts[day][party] = 0
                     partycounts[party] += self.history_of_party_mentions_counts[day][party]
                     partycounts["allparties"] += self.history_of_party_mentions_counts[day][party]
+
+        ### detect peaks ###
+        for day in self.history_of_party_mentions_counts:
+            if day in includedates:
+                for party in self.allparties:
+                    if self.history_of_party_mentions_counts[day][party] > 2 * partycounts[party] / nrdays:
+                        print("Large count for party " + party + " on day " + str(day))
+
 
         ### compute seats ###
         for party in self.allparties:
