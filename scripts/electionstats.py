@@ -10,7 +10,7 @@ class PoliticalTweets:
         self.history_of_party_mentions_counts = {}
         self.history_of_party_mentions_percentages = {}
 
-    def readtweets(self):
+    def readtweets(self,denkfactor=0.5):
         try:
             tweetdb = pymysql.connect(host=self.db['host'], user=self.db['user'], passwd=self.db['passwd'],db=self.db['dbname'])
             cur = tweetdb.cursor()
@@ -20,6 +20,8 @@ class PoliticalTweets:
                     party = row[0]
                     day = row[1]
                     counts = row[3]
+                    if party == 'denk':
+                        counts = int(counts * denkfactor)
                     if not party in self.allparties:
                         self.allparties.append(party)
                     if not day in self.history_of_party_mentions_counts:
