@@ -40,6 +40,11 @@ p
     padding: 10px
 }
 
+a, a:hover, a:visited
+{
+    color: hsl(0, 26%, 60%);
+}
+
 .outer_table_2x3
 {
     border-spacing: 15px;
@@ -75,8 +80,8 @@ p
 
 .chair
 {
-    border-width: 1;
-    border-color: white;
+    border-width: 2;
+    border-color: hsla(0,0%,0%,0);
     border-style: dashed
 }
 
