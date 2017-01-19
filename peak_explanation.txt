@@ -1,4 +1,13 @@
+<h3>Updates:</h3>
 <ul>
-<li>16 december: partijcongres GroenLinks</li>
-<li>8 december: uitslag lijsttrekkersverkiezing PVDA</li>
+<li>15 januari: Mark Rutte sluit regeren met PVV uit</li>
+<li>12 januari: Lodewijk Ascher bij Jinek</li>
+<li>6 januari: bekendmaking kandidatenlijst PVV</li>
+<li>3 januari: VVD wil verbod vleesnamen voor vegetarische producten</li>
+<li>28 december: PVV wint in peiling I&O research</li>
+<li>26 december: Halbe Zijlstra in WNL op Zondag</li>
+<li>22 december: bekendmaking kandidatenlijst PvdA</li>
+<li>17 december: partijcongres GroenLinks</li>
+<li>9 december: uitslag lijsttrekkersverkiezing PvdA</li>
+<li>5 december: presentatie GeenPeil</li>
 </ul>
