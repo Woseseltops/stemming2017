@@ -104,7 +104,7 @@ a, a:hover, a:visited
 
 #chair_visualization
 {
-    width: 675px;
+    width: 785px;
     margin: auto;
 }
 
@@ -124,10 +124,11 @@ a, a:hover, a:visited
     border-spacing: 15px;
 }
 
-#twitter_logo
+#voxpopuli_logo
 {
     float: right;
     margin: 25px;
+    width: 100px;
 }
 
 #explanation_and_graphs
@@ -184,10 +185,10 @@ a, a:hover, a:visited
 
     #legend
     {
-        margin-left: 54vw;
+        margin-left: 35vw;
     }
 
-    #twitter_logo
+    #voxpopuli_logo
     {
         width: 25%
     }

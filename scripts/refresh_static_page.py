@@ -13,6 +13,8 @@ def backup_previous_static_page(static_page_location,backup_folder):
 
 def refresh_static_page(seats_per_party,history_of_party_mentions,peak_explanation_file_location,template):
 
+    NR_OF_DAYS_TO_SHOW_BEFORE_ELECTIONS = 56
+
     #Clean the party names
     seats_per_party_cleaned = {}
     for party_name,value in seats_per_party.items():
@@ -40,6 +42,7 @@ def refresh_static_page(seats_per_party,history_of_party_mentions,peak_explanati
     #Translate the history of party mentions to series of percentages
     party_mentions_ordered_by_time = sorted(history_of_party_mentions.items(),key=lambda x:x[0],reverse=False)
     date_names = [number_to_date_string(date_number) for date_number,value in party_mentions_ordered_by_time]
+    date_names = date_names[-NR_OF_DAYS_TO_SHOW_BEFORE_ELECTIONS:] #only the date names of the last two months
     series_of_percentages_per_party = {}
     series_of_last_ten_percentages_per_party = {}
     date_index = 0
@@ -54,10 +57,11 @@ def refresh_static_page(seats_per_party,history_of_party_mentions,peak_explanati
 
             percentage_of_mentions = round(percentage_of_mentions,2)
 
-            try:
-                series_of_percentages_per_party[party_name].append(percentage_of_mentions)
-            except KeyError:
-                series_of_percentages_per_party[party_name] = [percentage_of_mentions]
+            if len(party_mentions_ordered_by_time) - date_index <= NR_OF_DAYS_TO_SHOW_BEFORE_ELECTIONS:
+                try:
+                    series_of_percentages_per_party[party_name].append(percentage_of_mentions)
+                except KeyError:
+                    series_of_percentages_per_party[party_name] = [percentage_of_mentions]
 
             if len(party_mentions_ordered_by_time) - date_index <= 10:
                 try:
@@ -68,8 +72,6 @@ def refresh_static_page(seats_per_party,history_of_party_mentions,peak_explanati
         date_index += 1
 
     #Add empty values if we don't have all data until the elections yet
-    NR_OF_DAYS_TO_SHOW_BEFORE_ELECTIONS = 56
-
     for party_name, series_of_percentages in series_of_percentages_per_party.items():
 
         while len(series_of_percentages) < NR_OF_DAYS_TO_SHOW_BEFORE_ELECTIONS:
@@ -97,7 +99,8 @@ def refresh_static_page(seats_per_party,history_of_party_mentions,peak_explanati
     return Template(open(template).read()).render(seats=enumerate(seats),seats_per_party=seats_per_party,
                                                   series_of_percentages_per_party=series_of_percentages_per_party,
                                                   series_of_last_ten_percentages_per_party=series_of_last_ten_percentages_per_party,
-                                                  date_names=even_date_names,
+                                                  date_names=date_names,
+                                                  even_date_names=even_date_names,
                                                   last_ten_date_names=date_names[-10:],
                                                   peak_explanation=peak_explanation)
 

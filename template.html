@@ -69,7 +69,7 @@
           {% for party_name,series_of_percentages in series_of_last_ten_percentages_per_party %}
             [
               {% for percentage in series_of_percentages %}
-                {meta: '{{party_name}}' , value: {{percentage}} },
+                {meta: '{{last_ten_date_names[loop.index0] }} - {{party_name}}' , value: {{percentage}} },
               {% endfor %}
             ],
           {% endfor %}
@@ -82,7 +82,7 @@
         var twoMonthsData =
         {
           labels: [
-            {% for date_name in date_names %}
+            {% for date_name in even_date_names %}
 
                 {% if date_name == None %}
                     '',
@@ -96,7 +96,7 @@
           {% for party_name,series_of_percentages in series_of_percentages_per_party %}
             [
               {% for percentage in series_of_percentages %}
-                {meta: '{{party_name}}' , value: {% if percentage == None %}null{% else %}{{percentage}}{% endif %} },
+                {meta: '{{date_names[loop.index0] }} - {{party_name}}' , value: {% if percentage == None %}null{% else %}{{percentage}}{% endif %} },
               {% endfor %}
             ],
           {% endfor %}
@@ -173,7 +173,17 @@
     <div id="legend">
         <table id="legend_table">
             {% for party_name, number_of_chairs in seats_per_party %}
-            	<tr><td class="legend_item">{{number_of_chairs}} x </td><td class="party_name _{{party_name}}_background" party="{{party_name}}">{{party_name}}</td></tr>
+            	<tr>
+
+                    {% if loop.index < 10 %}
+                        <td class="legend_item">{{number_of_chairs}} x </td><td class="party_name _{{party_name}}_background" party="{{party_name}}">{{party_name}}</td>
+                    {% endif %}
+
+                    {% if loop.index < 9 %}
+                        <td class="legend_item">{{seats_per_party[loop.index+8][1]}} x </td><td class="party_name _{{seats_per_party[loop.index+8][0]}}_background" party="{{seats_per_party[loop.index+8][0]}}">{{seats_per_party[loop.index+8][0]}}</td>
+                    {% endif %}
+
+                </tr>
             {% endfor %}
         </table>
     </div>
@@ -181,7 +191,7 @@
 
 <div id="explanation_and_graphs">
     <h3>Over deze website</h3>
-    <p><a href="http://ericsanders.ruhosting.nl/personal/?page_id=54"><img id="voxpopuli_logo" src="voxpopulilogo2.png" height="100"></a>Op 15 maart gaat Nederland stemmen. Wij houden de stemming op Twitter bij. Hierboven staat de zetelverdeling in de tweede kamer gebasseerd op hoe vaak politieke partijen de laatste tien dagen op Twitter zijn genoemd. Bij de parlementsverkiezingen van 2012 bleek er een sterk verband te zijn tussen hoe vaak een politieke partij genoemd wordt op Twitter en hoe deze partij het doet in de peilingen (zie ons artikel <a href="http://ceur-ws.org/Vol-986/paper_9.pdf" target=_new>Relating Political Party Mentions on Twitter with Polls and Election Results</a>).</p>
+    <p><a target="new" href="http://ericsanders.ruhosting.nl/personal/?page_id=54"><img id="voxpopuli_logo" src="voxpopulilogo2.png"></a>Op 15 maart gaat Nederland stemmen. Wij houden de stemming op Twitter bij. Hierboven staat de zetelverdeling in de tweede kamer gebasseerd op hoe vaak politieke partijen de laatste tien dagen op Twitter zijn genoemd. Bij de parlementsverkiezingen van 2012 bleek er een sterk verband te zijn tussen hoe vaak een politieke partij genoemd wordt op Twitter en hoe deze partij het doet in de peilingen (zie ons artikel <a href="http://ceur-ws.org/Vol-986/paper_9.pdf" target=_new>Relating Political Party Mentions on Twitter with Polls and Election Results</a>).</p>
     <p>Hieronder staan grafieken met het verloop van het aantal partijvermeldingen op Twitter in de loop van de tijd. De eerste grafiek is van de laatste tien dagen, de tweede van de laatste twee maanden. Deze pagina wordt elk uur bijgewerkt met de nieuwste gegevens. De metingen worden gedaan op de tweets uit Twiqs, een dienst waarin ongeveer 40% van de Nederlandse tweets doorzoekbaar zijn. We bedanken SURFsara voor het beschikbaar stellen van de tweets via <a href="https://twinl.surfsara.nl" target=_new>https://twinl.surfsara.nl</a>.</p>
     <p>Voor vragen kunt u terecht bij Eric Sanders, <a href="mailto:e.sanders@let.ru.nl">e.sanders@let.ru.nl</a>.</p>
     </p>
