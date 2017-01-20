@@ -133,7 +133,7 @@ a, a:hover, a:visited
 
 #explanation_and_graphs
 {
-    width: 800px;
+    width: 870px;
     margin: auto;
 }
 
@@ -146,6 +146,25 @@ a, a:hover, a:visited
 {
     background: hsla(40,12%,90%,1);
     font-family: 'Muli';
+}
+
+.ct-golden-section
+{
+    width:800px;
+    display: inline-block;
+}
+
+.graph_legend
+{
+    display: inline-block;
+    vertical-align: top;
+}
+
+.graph_legend_item
+{
+    color: white;
+    font-size: 14px;
+    border-radius: 4px;
 }
 
 .credits

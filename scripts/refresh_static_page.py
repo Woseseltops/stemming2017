@@ -79,6 +79,8 @@ def refresh_static_page(seats_per_party,history_of_party_mentions,peak_explanati
 
         series_of_percentages_per_party[party_name] = series_of_percentages
 
+    party_names_order_by_yesterday_mentions = [party_name for party_name, value in sorted(party_mentions_ordered_by_time[-1][1].items(),
+                                                                            key=lambda x: x[1],reverse=True)]
 
     #Order the series, so the parties will always be presented to the Javascript in the same order
     series_of_percentages_per_party = sorted(series_of_percentages_per_party.items(),key=lambda x: x[0])
@@ -99,6 +101,7 @@ def refresh_static_page(seats_per_party,history_of_party_mentions,peak_explanati
     return Template(open(template).read()).render(seats=enumerate(seats),seats_per_party=seats_per_party,
                                                   series_of_percentages_per_party=series_of_percentages_per_party,
                                                   series_of_last_ten_percentages_per_party=series_of_last_ten_percentages_per_party,
+                                                  party_names_order_by_yesterday_mentions=party_names_order_by_yesterday_mentions,
                                                   date_names=date_names,
                                                   even_date_names=even_date_names,
                                                   last_ten_date_names=date_names[-10:],

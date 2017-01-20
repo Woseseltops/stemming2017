@@ -202,9 +202,22 @@
     <div class="ct-chart ct-golden-section ten-days-graph">
     </div>
 
+    <div class="graph_legend"><table>
+        {% for party_name in party_names_order_by_yesterday_mentions %}
+            <tr><td class="graph_legend_item _{{ party_name }}_background">{{ party_name }}</td></tr>
+        {% endfor %}
+    </table></div>
+
     <h3>% vermeldingen laatste 2 maanden</h3>
     <div class="ct-chart ct-golden-section two-months-graph">
     </div>
+
+    <div class="graph_legend"><table>
+        {% for party_name in party_names_order_by_yesterday_mentions %}
+            <tr><td class="graph_legend_item _{{ party_name }}_background">{{ party_name }}</td></tr>
+        {% endfor %}
+    </table></div>
+
 
 	<h3>Actueel</h3>
     <p>{{ peak_explanation }}</p>
