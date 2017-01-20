@@ -173,7 +173,17 @@
     <div id="legend">
         <table id="legend_table">
             {% for party_name, number_of_chairs in seats_per_party %}
-            	<tr><td class="legend_item">{{number_of_chairs}} x </td><td class="party_name _{{party_name}}_background" party="{{party_name}}">{{party_name}}</td></tr>
+            	<tr>
+
+                    {% if loop.index < 10 %}
+                        <td class="legend_item">{{number_of_chairs}} x </td><td class="party_name _{{party_name}}_background" party="{{party_name}}">{{party_name}}</td>
+                    {% endif %}
+
+                    {% if loop.index < 9 %}
+                        <td class="legend_item">{{seats_per_party[loop.index+8][1]}} x </td><td class="party_name _{{seats_per_party[loop.index+8][0]}}_background" party="{{seats_per_party[loop.index+8][0]}}">{{seats_per_party[loop.index+8][0]}}</td>
+                    {% endif %}
+
+                </tr>
             {% endfor %}
         </table>
     </div>
