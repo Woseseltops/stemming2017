@@ -128,6 +128,7 @@ a, a:hover, a:visited
 {
     float: right;
     margin: 25px;
+    width: 100px;
 }
 
 #explanation_and_graphs
