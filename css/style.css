@@ -148,6 +148,11 @@ a, a:hover, a:visited
     font-family: 'Muli';
 }
 
+.credits
+{
+    font-size: 12px;
+}
+
 /* Mobile only */
 
 @media only screen and (max-width: 500px)
