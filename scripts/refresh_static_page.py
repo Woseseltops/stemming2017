@@ -110,13 +110,15 @@ def refresh_static_page(seats_per_party,history_of_party_mentions,peak_explanati
 def number_to_date_string(date_number):
 
     if date_number[4:6] == '12':
-        month = 'de'
+        month = 'dec'
     elif date_number[4:6] == '01':
-        month = 'ja'
+        month = 'jan'
     elif date_number[4:6] == '02':
-        month = 'fe'
+        month = 'feb'
     elif date_number[4:6] == '03':
-        month = 'ma'
+        month = 'maa'
+    elif date_number[4:6] == '04':
+        month = 'apr'
 
     return date_number[6:] + ' '+month
 
