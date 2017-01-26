@@ -127,9 +127,9 @@ a, a:hover, a:visited
 #voxpopuli_logo
 {
     float: right;
-    margin: 25px;
-    width: 100px;
-}
+	margin: 10px;
+    margin-top: 0px;
+    width: 145px;}
 
 #explanation_and_graphs
 {
