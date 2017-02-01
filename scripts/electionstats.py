@@ -6,6 +6,9 @@ class PoliticalTweets:
     def __init__(self, db_host, db_user, db_password, db_name):
         self.db = {'host':db_host,'user':db_user,'passwd':db_password,'dbname':db_name}
         self.allparties = []
+        self.counts_per_party = {}
+        self.nrdays = 0
+        self.means_per_party = {}
         self.seats_per_party = {}
         self.history_of_party_mentions_counts = {}
         self.history_of_party_mentions_percentages = {}
@@ -28,11 +31,19 @@ class PoliticalTweets:
                         self.history_of_party_mentions_counts[day] = {}
                     if not party in self.history_of_party_mentions_counts[day]:
                         self.history_of_party_mentions_counts[day][party] = 0
+                    if not party in self.counts_per_party:
+                        self.counts_per_party = 0
                     self.history_of_party_mentions_counts[day][party] += counts   
+                    self.counts_per_party[party] += counts
                     if not "allparties" in self.history_of_party_mentions_counts[day]:
                         self.history_of_party_mentions_counts[day]["allparties"] = 0
                     self.history_of_party_mentions_counts[day]["allparties"] += counts   
                 cur.close()
+
+                self.nrdays = len(self.history_of_party_mentions_counts)
+                for party in self.allparties:
+                    self.means_per_party[party] = self.counts_per_party[party] / self.nrdays
+
             except:
                 tweetdb.rollback()
                 
@@ -78,16 +89,12 @@ class PoliticalTweets:
                 for party in self.allparties:
                     if not party in self.history_of_party_mentions_counts[day]:
                         self.history_of_party_mentions_counts[day][party] = 0
-                    partycounts[party] += self.history_of_party_mentions_counts[day][party]
-                    partycounts["allparties"] += self.history_of_party_mentions_counts[day][party]
-
-        ### detect peaks ###
-        for day in self.history_of_party_mentions_counts:
-            if day in includedates:
-                for party in self.allparties:
-                    if self.history_of_party_mentions_counts[day][party] > 2 * partycounts[party] / nrdays:
-                        print("Large count for party " + party + " on day " + str(day))
-
+                    if self.peakday(party,day):
+                        partycounts[party] += self.means_per_party[party]
+                        partycounts["allparties"] += self.means_per_party[party]
+                    else:
+                        partycounts[party] += self.history_of_party_mentions_counts[day][party]
+                        partycounts["allparties"] += self.history_of_party_mentions_counts[day][party]
 
         ### compute seats ###
         for party in self.allparties:
@@ -116,3 +123,9 @@ class PoliticalTweets:
         for party in self.seats_per_party:
             sum += self.seats_per_party[party]
         return sum
+
+    def peakday(self,party,day,peakfactor=2):
+        if self.history_of_party_mentions_counts[day][party] > peakfactor * self.means_per_party[party]
+            return True
+        else:
+            return False
