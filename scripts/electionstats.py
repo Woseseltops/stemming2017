@@ -125,7 +125,7 @@ class PoliticalTweets:
         return sum
 
     def peakday(self,party,day,peakfactor=2):
-        if self.history_of_party_mentions_counts[day][party] > peakfactor * self.means_per_party[party]
+        if self.history_of_party_mentions_counts[day][party] > peakfactor * self.means_per_party[party]:
             return True
         else:
             return False
