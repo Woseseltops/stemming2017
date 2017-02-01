@@ -32,7 +32,7 @@ class PoliticalTweets:
                     if not party in self.history_of_party_mentions_counts[day]:
                         self.history_of_party_mentions_counts[day][party] = 0
                     if not party in self.counts_per_party:
-                        self.counts_per_party = 0
+                        self.counts_per_party[party] = 0
                     self.history_of_party_mentions_counts[day][party] += counts   
                     self.counts_per_party[party] += counts
                     if not "allparties" in self.history_of_party_mentions_counts[day]:
