@@ -102,9 +102,18 @@ class PoliticalTweets:
             partyrestpercentages[party] = 150 * partycounts[party] / partycounts["allparties"] - self.seats_per_party[party]
 
         ### add rest seats ###
-        for party in sorted(partyrestpercentages, key=partyrestpercentages.get, reverse=True):
-            if self.sumofseats() < 150:
-                self.seats_per_party[party] += 1
+        while self.sumofseats() < 150:
+            biggestmeannrofvotesforrestseat = 0
+            for party in self.allparties:
+                meannrofvotesforrestseat = partycounts[party] / (self.seats_per_party[party] + 1)
+                if meannrofvotesforrestseat > biggestmeannrofvotesforrestseat:
+                    restseatparty = party
+                    biggestmeannrofvotesforrestseat = meannrofvotesforrestseat
+            self.seats_per_party[restseatparty] += 1
+
+        #for party in sorted(partyrestpercentages, key=partyrestpercentages.get, reverse=True):
+            #if self.sumofseats() < 150:
+                #self.seats_per_party[party] += 1
 
         return self.seats_per_party
 
