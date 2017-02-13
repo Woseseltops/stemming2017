@@ -105,11 +105,17 @@ class PoliticalTweets:
         while self.sumofseats() < 150:
             biggestmeannrofvotesforrestseat = 0
             for party in self.allparties:
-                meannrofvotesforrestseat = partycounts[party] / (self.seats_per_party[party] + 1)
+                if party in self.seats_per_party:
+                    meannrofvotesforrestseat = partycounts[party] / (self.seats_per_party[party] + 1)
+                else:
+                    meannrofvotesforrestseat = partycounts[party]
                 if meannrofvotesforrestseat > biggestmeannrofvotesforrestseat:
                     restseatparty = party
                     biggestmeannrofvotesforrestseat = meannrofvotesforrestseat
-            self.seats_per_party[restseatparty] += 1
+            if restseatparty in self.seats_per_party:
+                self.seats_per_party[restseatparty] += 1
+            else:
+                self.seats_per_party[restseatparty] = 1
 
         #for party in sorted(partyrestpercentages, key=partyrestpercentages.get, reverse=True):
             #if self.sumofseats() < 150:
