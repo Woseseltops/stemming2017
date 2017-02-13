@@ -67,7 +67,8 @@ class PoliticalTweets:
 
         return self.history_of_party_mentions_percentages
 
-    def get_seats_per_party(self,nrdays=10):
+    #def get_seats_per_party(self,nrdays=10,restseatmethod='largestmean'):
+    def get_seats_per_party(self,nrdays=10,restseatmethod='largestrest'):
 
         #If we have no real data, show fake data (for local development)
         if self.history_of_party_mentions_counts == {}:
@@ -102,24 +103,29 @@ class PoliticalTweets:
             partyrestpercentages[party] = 150 * partycounts[party] / partycounts["allparties"] - self.seats_per_party[party]
 
         ### add rest seats ###
-        while self.sumofseats() < 150:
-            biggestmeannrofvotesforrestseat = 0
-            for party in self.allparties:
-                if party in self.seats_per_party:
-                    meannrofvotesforrestseat = partycounts[party] / (self.seats_per_party[party] + 1)
-                else:
-                    meannrofvotesforrestseat = partycounts[party]
-                if meannrofvotesforrestseat > biggestmeannrofvotesforrestseat:
-                    restseatparty = party
-                    biggestmeannrofvotesforrestseat = meannrofvotesforrestseat
-            if restseatparty in self.seats_per_party:
-                self.seats_per_party[restseatparty] += 1
-            else:
-                self.seats_per_party[restseatparty] = 1
+        if restseatmethod == 'largestrest':
+            for party in sorted(partyrestpercentages, key=partyrestpercentages.get, reverse=True):
+                if self.sumofseats() < 150:
+                    self.seats_per_party[party] += 1
+                    #print(party)
 
-        #for party in sorted(partyrestpercentages, key=partyrestpercentages.get, reverse=True):
-            #if self.sumofseats() < 150:
-                #self.seats_per_party[party] += 1
+        else: # largestmean
+            while self.sumofseats() < 150:
+                biggestmeannrofvotesforrestseat = 0
+                for party in self.allparties:
+                    if party in self.seats_per_party:
+                        meannrofvotesforrestseat = partycounts[party] / (self.seats_per_party[party] + 1)
+                    else:
+                        meannrofvotesforrestseat = partycounts[party]
+                    if meannrofvotesforrestseat > biggestmeannrofvotesforrestseat:
+                        restseatparty = party
+                        biggestmeannrofvotesforrestseat = meannrofvotesforrestseat
+                if restseatparty in self.seats_per_party:
+                    self.seats_per_party[restseatparty] += 1
+                else:
+                    self.seats_per_party[restseatparty] = 1
+                #print(restseatparty)
+
 
         return self.seats_per_party
 
