@@ -67,8 +67,8 @@ class PoliticalTweets:
 
         return self.history_of_party_mentions_percentages
 
-    #def get_seats_per_party(self,nrdays=10,restseatmethod='largestmean'):
-    def get_seats_per_party(self,nrdays=10,restseatmethod='largestrest'):
+    def get_seats_per_party(self,nrdays=10,restseatmethod='largestmean'):
+    #def get_seats_per_party(self,nrdays=10,restseatmethod='largestrest'):
 
         #If we have no real data, show fake data (for local development)
         if self.history_of_party_mentions_counts == {}:
