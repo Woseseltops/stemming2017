@@ -3,6 +3,7 @@ from settings import import_settings
 from scripts import electionstats
 from time import time
 from jinja2 import Template
+from math import floor,ceil
 
 def backup_previous_static_page(static_page_location,backup_folder):
 
@@ -29,6 +30,9 @@ def refresh_static_page(seats_per_party,history_of_party_mentions,peak_explanati
             seats_per_party_cleaned[party_name] = value
 
     seats_per_party = seats_per_party_cleaned
+    nr_parties_with_seats = len(seats_per_party)
+    nr_rows_parties_with_seats_right = floor(nr_parties_with_seats/2)
+    nr_rows_parties_with_seats_left = ceil(nr_parties_with_seats/2)
 
     #Translate the chair statistics to a value for each seat
     seats_per_party = sorted(seats_per_party.items(),key=lambda x: x[1],reverse=True)
@@ -99,6 +103,8 @@ def refresh_static_page(seats_per_party,history_of_party_mentions,peak_explanati
 
     #Generate the page
     return Template(open(template).read()).render(seats=enumerate(seats),seats_per_party=seats_per_party,
+                                                  nr_rows_parties_with_seats_right = nr_rows_parties_with_seats_right,
+                                                  nr_rows_parties_with_seats_left = nr_rows_parties_with_seats_left,
                                                   series_of_percentages_per_party=series_of_percentages_per_party,
                                                   series_of_last_ten_percentages_per_party=series_of_last_ten_percentages_per_party,
                                                   party_names_order_by_yesterday_mentions=party_names_order_by_yesterday_mentions,
