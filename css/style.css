@@ -129,14 +129,16 @@ a, a:hover, a:visited
     float: right;
 	margin: 10px;
     margin-top: 0px;
-    width: 145px;}
+    width: 145px;
+}
 
 #elections2012
 {
-    #float: right;
+    float: left;
 	margin: 10px;
     margin-top: 10px;
-    width: 300px;}
+    width: 300px;
+}
 
 #explanation_and_graphs
 {
