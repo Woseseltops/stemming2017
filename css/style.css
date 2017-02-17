@@ -133,10 +133,10 @@ a, a:hover, a:visited
 
 #elections2012
 {
-    float: right;
+    #float: right;
 	margin: 10px;
     margin-top: 10px;
-    width: 400px;}
+    width: 300px;}
 
 #explanation_and_graphs
 {
