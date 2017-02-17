@@ -131,6 +131,13 @@ a, a:hover, a:visited
     margin-top: 0px;
     width: 145px;}
 
+#elections2012
+{
+    float: right;
+	margin: 10px;
+    margin-top: 10px;
+    width: 400px;}
+
 #explanation_and_graphs
 {
     width: 870px;
@@ -213,6 +220,11 @@ a, a:hover, a:visited
     }
 
     #voxpopuli_logo
+    {
+        width: 35%
+    }
+
+    #elections2012
     {
         width: 35%
     }
