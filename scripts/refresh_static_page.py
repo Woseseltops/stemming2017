@@ -136,7 +136,7 @@ if __name__ == '__main__':
     #Create a new one
     politicaltweets = electionstats.PoliticalTweets(current_settings['db_host'],current_settings['db_user'],
                                                     current_settings['db_password'],current_settings['db_name'])
-    politicaltweets.readtweets()
+    politicaltweets.readtweets(singleparty=True)
 
     seats_per_party = politicaltweets.get_seats_per_party()
     history_of_party_mentions = politicaltweets.get_history_of_party_mentions()
