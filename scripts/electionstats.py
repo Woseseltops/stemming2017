@@ -13,12 +13,16 @@ class PoliticalTweets:
         self.history_of_party_mentions_counts = {}
         self.history_of_party_mentions_percentages = {}
 
-    def readtweets(self,denkfactor=0.5):
+    def readtweets(self,denkfactor=0.5,singleparty=False):
+        if singleparty == True:
+            dbasetable = 'elections170315_multipartytweets'
+        else:
+            dbasetable = 'elections170315_singlepartytweets'
         try:
             tweetdb = pymysql.connect(host=self.db['host'], user=self.db['user'], passwd=self.db['passwd'],db=self.db['dbname'])
             cur = tweetdb.cursor()
             try:
-                cur.execute("SELECT * from elections170315")
+                cur.execute("SELECT * from " + dbasetable)
                 for row in cur:
                     party = row[0]
                     day = row[1]
