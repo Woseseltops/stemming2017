@@ -15,9 +15,9 @@ class PoliticalTweets:
 
     def readtweets(self,denkfactor=0.5,singleparty=False):
         if singleparty == True:
-            dbasetable = 'elections170315_multipartytweets'
-        else:
             dbasetable = 'elections170315_singlepartytweets'
+        else:
+            dbasetable = 'elections170315_multipartytweets'
         try:
             tweetdb = pymysql.connect(host=self.db['host'], user=self.db['user'], passwd=self.db['passwd'],db=self.db['dbname'])
             cur = tweetdb.cursor()
