@@ -138,7 +138,7 @@ if __name__ == '__main__':
                                                     current_settings['db_password'],current_settings['db_name'])
     politicaltweets.readtweets(singleparty=True)
 
-    seats_per_party = politicaltweets.get_seats_per_party()
+    seats_per_party = politicaltweets.get_seats_per_party(usewindow=True)
     history_of_party_mentions = politicaltweets.get_history_of_party_mentions()
     new_page_content = refresh_static_page(seats_per_party,history_of_party_mentions,
                                            current_settings['peak_explanation_file_location'],current_settings['template'])

@@ -72,7 +72,7 @@ class PoliticalTweets:
 
         return self.history_of_party_mentions_percentages
 
-    def get_seats_per_party(self,nrdays=10,restseatmethod='largestmean'):
+    def get_seats_per_party(self,nrdays=10,restseatmethod='largestmean',usewindow=False):
     #def get_seats_per_party(self,nrdays=10,restseatmethod='largestrest'):
 
         #If we have no real data, show fake data (for local development)
@@ -91,19 +91,23 @@ class PoliticalTweets:
         self.compute_means_per_party_last_x_days(nrdays)
 
         ### count total number of mentions per party ###
-        for day in self.history_of_party_mentions_counts:
-            if day in includedates:
-                for party in self.allparties:
-                    if not party in self.history_of_party_mentions_counts[day]:
-                        self.history_of_party_mentions_counts[day][party] = 0
+        daynr = 0
+        windowfactor = 1
+        for day in includedates:
+            daynr += 1
+            if usewindow:
+                windowfactor = daynr
+            for party in self.allparties:
+                if not party in self.history_of_party_mentions_counts[day]:
+                    self.history_of_party_mentions_counts[day][party] = 0
 
-                    ### remove peaks
-                    if self.peakday(party,day):
-                        partycounts[party] += self.means_per_party_last_x_days[party]
-                        partycounts["allparties"] += self.means_per_party_last_x_days[party]
-                    else:
-                        partycounts[party] += self.history_of_party_mentions_counts[day][party]
-                        partycounts["allparties"] += self.history_of_party_mentions_counts[day][party]
+                ### remove peaks
+                if self.peakday(party,day):
+                    partycounts[party] += self.means_per_party_last_x_days[party] * windowfactor
+                    partycounts["allparties"] += self.means_per_party_last_x_days[party] * windowfactor
+                else:
+                    partycounts[party] += self.history_of_party_mentions_counts[day][party] * windowfactor
+                    partycounts["allparties"] += self.history_of_party_mentions_counts[day][party] * windowfactor
 
         ### compute seats ###
         for party in self.allparties:
@@ -145,7 +149,7 @@ class PoliticalTweets:
         return sorted(self.history_of_party_mentions_counts.keys())
 
     def get_last_dates_ordered(self,count=10):
-        return sorted(self.history_of_party_mentions_counts.keys())[-count:]
+        return sorted(self.history_of_party_mentions_counts.keys())[-count-1:-1]
 
     def sumofseats(self):
         sum = 0
@@ -157,11 +161,11 @@ class PoliticalTweets:
         counts_per_party = {}
         for party in self.allparties:
             counts_per_party[party] = 0
-            for day in self.get_last_dates_ordered(nrdays)[:-1]:
+            for day in self.get_last_dates_ordered(nrdays):
                 counts_per_party[party] += self.history_of_party_mentions_counts[day][party]
 
         for party in self.allparties:
-            self.means_per_party_last_x_days[party] = counts_per_party[party] / (nrdays-1)
+            self.means_per_party_last_x_days[party] = counts_per_party[party] / nrdays
 
 
     def peakday(self,party,day,peakfactor=2):
@@ -169,3 +173,4 @@ class PoliticalTweets:
             if self.history_of_party_mentions_counts[day][party] > peakfactor * self.means_per_party[party]:
                 return True
         return False
+
