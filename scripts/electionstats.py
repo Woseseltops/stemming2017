@@ -88,7 +88,7 @@ class PoliticalTweets:
             partyrestpercentages[party] = 0
         partycounts["allparties"] = 0
         includedates = self.get_last_dates_ordered(nrdays)
-        compute_means_per_party_last_x_days(nrdays)
+        self.compute_means_per_party_last_x_days(nrdays)
 
         ### count total number of mentions per party ###
         for day in self.history_of_party_mentions_counts:
