@@ -9,6 +9,7 @@ class PoliticalTweets:
         self.counts_per_party = {}
         self.nrdays = 0
         self.means_per_party = {}
+        self.means_per_party_last_x_days = {}
         self.seats_per_party = {}
         self.history_of_party_mentions_counts = {}
         self.history_of_party_mentions_percentages = {}
@@ -87,6 +88,7 @@ class PoliticalTweets:
             partyrestpercentages[party] = 0
         partycounts["allparties"] = 0
         includedates = self.get_last_dates_ordered(nrdays)
+        compute_means_per_party_last_x_days(nrdays)
 
         ### count total number of mentions per party ###
         for day in self.history_of_party_mentions_counts:
@@ -94,9 +96,11 @@ class PoliticalTweets:
                 for party in self.allparties:
                     if not party in self.history_of_party_mentions_counts[day]:
                         self.history_of_party_mentions_counts[day][party] = 0
+
+                    ### remove peaks
                     if self.peakday(party,day):
-                        partycounts[party] += self.means_per_party[party]
-                        partycounts["allparties"] += self.means_per_party[party]
+                        partycounts[party] += self.means_per_party_last_x_days[party]
+                        partycounts["allparties"] += self.means_per_party_last_x_days[party]
                     else:
                         partycounts[party] += self.history_of_party_mentions_counts[day][party]
                         partycounts["allparties"] += self.history_of_party_mentions_counts[day][party]
@@ -148,6 +152,17 @@ class PoliticalTweets:
         for party in self.seats_per_party:
             sum += self.seats_per_party[party]
         return sum
+
+    def compute_means_per_party_last_x_days(self,nrdays=10):
+        counts_per_party = {}
+        for party in self.allparties:
+            counts_per_party[party] = 0
+            for day in self.get_last_dates_ordered(nrdays)[:-1]:
+                counts_per_party[party] += self.history_of_party_mentions_counts[day][party]
+
+        for party in self.allparties:
+            self.means_per_party_last_x_days[party] = counts_per_party[party] / (nrdays-1)
+
 
     def peakday(self,party,day,peakfactor=2):
         if party in self.history_of_party_mentions_counts[day]:
