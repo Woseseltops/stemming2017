@@ -11,7 +11,7 @@
     "identifier": "stemming2017",
     "name": "Stemming 2017",
     "version": "unknown",
-    "description": "ing2017 aims at identifying relevant content in social media streams. Text mining is the main approach.",
+    "description": "Stemming2017 aims at identifying relevant content in social media streams. Text mining is the main approach.",
     "license": "unknown",
 	"url": "http://stemming2017.nl/",
     "producer": {
