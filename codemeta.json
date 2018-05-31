@@ -1,0 +1,87 @@
+{
+    "@context": [
+        "https://doi.org/10.5063/schema/codemeta-2.0",
+        "http://schema.org",
+        {
+            "entryPoints": { "@reverse": "schema:actionApplication" },
+            "interfaceType": { "@id": "codemeta:interfaceType" }
+        }
+    ],
+    "@type": "SoftwareSourceCode",
+    "identifier": "stemming2017",
+    "name": "Stemming 2017",
+    "version": "unknown",
+    "description": "Stemming2017 aims at identifying relevant content in social media streams. Text mining is the main approach.",
+    "license": "unknown",
+	"url": "http://stemming2017.nl/",
+    "producer": {
+		"@id": "https://www.ru.nl/clst",
+		"@type": "Organization",
+		"name": "Centre for Language and Speech Technology",
+		"url": "https://www.ru.nl/clst",
+        "parentOrganization": {
+            "@id": "https://www.ru.nl/cls",
+            "@type": "Organization",
+            "name": "Centre for Language Studies",
+            "url": "https://www.ru.nl/cls",
+            "parentOrganization": {
+                "@id": "https://www.ru.nl",
+                "name": "Radboud University",
+                "@type": "Organization",
+                "url": "https://www.ru.nl",
+                "location": {
+                    "@type": "Place",
+                    "name": "Nijmegen"
+                }
+            }
+        }
+    },
+    "author": [
+		{
+			"@type": "Person",
+			"givenName": "Eric",
+			"familyName": "Sanders",
+			"affiliation": { "@id": "https://www.ru.nl/clst" }
+		},
+		{
+			"@type": "Person",
+			"givenName": "Wessel",
+			"familyName": "Stoop",
+			"affiliation": { "@id": "https://www.ru.nl/clst" }
+		}
+	],
+	"sourceOrganization": { "@id": "https://www.ru.nl/clst" },
+	"programmingLanguage": {
+		"@type": "ComputerLanguage",
+		"identifier": "python",
+		"name": "python"
+	},
+	"operatingSystem": "POSIX",
+	"codeRepository": "https://github.com/woseseltops/stemming2017",
+    "softwareRequirements": [
+        {
+			"@type": "SoftwareApplication",
+			"identifier": "django",
+			"name": "django"
+		}
+	],
+    "referencePublication": [
+		{
+			"@type": "ScholarlyArticle",
+			"name": "Relating Political Party Mentions on Twitter with Polls and Election Results",
+			"author": [ "Eric Sanders", "Antal van den Bosch" ],
+            "url": "http://ceur-ws.org/Vol-986/paper_9.pdf"
+		}
+	],
+	"issueTracker": "https://github.com/woseseltops/stemming2017/issues",
+	"developmentStatus": "inactive",
+	"keywords":  [ "nlp", "twitter", "politics" ],
+	"dateCreated": "2017",
+    "entryPoints": [
+        {
+            "@type": "EntryPoint",
+            "urlTemplate": "http://stemming2017.nl/",
+            "interfaceType": "WUI"
+        }
+    ]
+}
